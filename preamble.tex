@@ -1,0 +1,78 @@
+%File ini adalah file konfigurasi, tidak perlu diubah kecuali paham dengan apa yang ditambahkan
+
+%pengaturan margin
+\usepackage{geometry}
+\geometry{verbose,tmargin=3cm,bmargin=3cm,lmargin=4cm,rmargin=3cm}
+
+%paket bahasa indonesia
+%\usepackage[bahasa]{babel}
+% Mengatur bahasa latex
+\usepackage[indonesian]{babel}
+\usepackage[utf8]{inputenc}
+
+%direktor penyimpanan gambar
+\usepackage{graphicx}
+\graphicspath{{gambar/}}
+
+%paket untuk tabel
+\usepackage{tabularx}
+
+%paket untuk mengatur space
+\usepackage{setspace}
+\onehalfspacing
+
+% Untuk mengatur spacing antara paragraf
+\usepackage{parskip}
+
+% Membuat indent
+\usepackage{indentfirst}
+\setlength\parindent{1cm}
+
+% Membuat seluruh tulisan menjadi Times New Roman. 
+\usepackage{pslatex}
+
+%pentauran font
+\usepackage[T1]{fontenc}
+%\usepackage{times}
+
+% Mengatur font section
+\usepackage{sectsty}
+\sectionfont{\fontsize{12}{14}\selectfont}
+\subsectionfont{\fontsize{12}{14}\selectfont}
+\subsubsectionfont{\fontsize{12}{14}\selectfont}
+
+%menambahkan titik titik di daftar isi, gambar, tabel
+\usepackage{tocloft}
+%\renewcommand{\cftdot}{\textperiodcentered}
+%\renewcommand{\cftchapdotsep}{\cftdotsep}
+%\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}}
+%\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+%\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+%\usepackage[subfigure]{tocloft}
+%\renewcommand{\cftpartleader}{\dotfill}
+%\renewcommand{\cftpartafterpnum}{\cftparfillskip}
+%\renewcommand{\cftchapleader}{\dotfill}
+%\renewcommand{\cftsecleader}{\dotfill}
+%\renewcommand{\cftsubsecleader}{\dotfill}
+
+
+%tambah "bab" x di daftar isi 
+\renewcommand*\cftchappresnum{\MakeUppercase{bab}~}
+\renewcommand\chaptername{BAB}
+\settowidth{\cftchapnumwidth}{\cftchappresnum}
+\renewcommand{\cftchapaftersnumb}{\quad}
+\addtocontents{toc}{
+    %\renewcommand\protect*\protect\cftchappresnum{\MakeUppercase{\chaptername}~}}
+    \protect\renewcommand*\protect\cftchappresnum{\MakeUppercase{\chaptername}~}}
+
+%pengaturan chapter menjadi tengah dan angka romawi
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\Large\bfseries\centering}
+{\MakeUppercase{\chaptertitlename}\ \Roman{chapter}}
+{.5em}
+{\MakeUppercase}
+
+%paket untuk bibTex
+\usepackage{cite}
+\bibliographystyle{IEEEtran}

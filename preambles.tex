@@ -1,0 +1,197 @@
+% Mengatur bahasa latex
+\usepackage[indonesian]{babel}
+\usepackage[utf8]{inputenc}
+
+% Untuk pengaturan spacing
+\usepackage{setspace}
+\onehalfspacing
+
+% Untuk mengatur level section 
+\setcounter{secnumdepth}{6}
+
+% Digunakan untuk memasukan gambar ke laporan. 
+\usepackage{graphicx}
+\graphicspath{{gambar/}}
+\usepackage{float}
+\usepackage[hang,nooneline,scriptsize,md]{subfigure}
+\usepackage[subfigure]{tocloft}
+
+% Untuk mengatur spacing antara paragraf
+\usepackage{parskip}
+
+% Membuat indent
+\usepackage{indentfirst}
+\setlength\parindent{1cm}
+
+% Untuk mengkustomisasi margin
+\usepackage{scrextend}
+
+% Untuk mengatur header dan footer
+\usepackage{fancyhdr}
+
+% Membuat seluruh tulisan menjadi Times New Roman. 
+\usepackage{pslatex}
+
+% Merubah numbering chapter dan section untuk judul setiap bab menggunakan romawi dan judul anak bab menggunakan arabic
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}\hspace{0.05cm}}
+\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}\hspace{-0.25cm}}
+\renewcommand{\thesubsubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}\hspace{-0,35cm}}
+
+% Mengatur identasi judul section dan subsection
+%\titleformat{\section}[block]{\bfseries}{\thesection.}{1em}{}
+%\titleformat{\subsection}[block]{\hspace{2em}}{\thesubsection}{1em}{}
+
+% Merubah huruf kapital pada judul daftar isi, daftar gambar, dan daftar table
+\usepackage{tocloft}
+\renewcommand{\cfttoctitlefont}{\hfil\large\bfseries\MakeUppercase}
+\renewcommand{\cftloftitlefont}{\hfil\large\bfseries\MakeUppercase}
+\renewcommand{\cftlottitlefont}{\hfil\large\bfseries\MakeUppercase}
+
+\renewcommand\cftchappresnum{BAB }
+\renewcommand\cftchapaftersnum{}
+\newlength\mylen
+\settowidth\mylen{\bfseries BAB 1 :\ } % if more than 9 chapters, use "Chapter 10"
+\cftsetindents{chap}{0pt}{\mylen}
+
+% Mengatur font section
+\usepackage{sectsty}
+\sectionfont{\fontsize{12}{14}\selectfont}
+\subsectionfont{\fontsize{12}{14}\selectfont}
+\subsubsectionfont{\fontsize{12}{14}\selectfont}
+
+% Untuk merupakan format penulisan BAB
+\usepackage{titlesec}
+\titleformat{\chapter}
+{\doublespacing\fontsize{14pt}{16pt}\bfseries}
+{\MakeUppercase{\chaptertitlename\ \Roman{chapter}}\filcenter}
+{0.15cm}{\centering\uppercase}
+\titlespacing*{\chapter}{0pt}{-1cm}{20pt}
+
+% Mengatur spacing section
+\titlespacing*{\section}
+{0pt}{10pt}{0cm}
+\titlespacing*{\subsection}
+{0pt}{10pt}{0cm}
+\titlespacing*{\subsubsection}
+{0pt}{10pt}{0cm}
+
+% Digunakan untuk mengatur caption dalam dokumen.
+\usepackage[font=footnotesize,format=plain,labelfont=bf,up,textfont=up]{caption}
+
+% Untuk menghapus titik dua (colon)
+\captionsetup[figure]{labelsep=space}
+\captionsetup[table]{labelsep=space}
+
+% Mengatur nomor caption gambar
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+
+% Mengatur nomor caption table
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
+
+% Mengatur Hyphenation pada latex
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+% Untuk mengatur setting indent
+\setlength\parindent{1cm}
+
+% Untuk memasukkan table
+\usepackage{tabularx}
+\usepackage{multirow}
+
+% Untuk mengatur width
+\usepackage{changepage}
+
+% Menggatur setting halaman 
+\usepackage{geometry}
+\geometry{
+    left=4cm,            % <-- you want to adjust this
+    top=3cm,
+    right=3cm,
+    bottom=3cm,
+}
+
+% Teks testing
+\usepackage{blindtext}
+\usepackage{lipsum}
+
+% Untuk mengatur subscript supscript
+\usepackage{fixltx2e}
+
+% Untuk mengatur wrap picture
+\usepackage{wrapfig}
+
+% Untuk notasi matematika
+\usepackage{amsmath}
+\usepackage{stmaryrd}
+\usepackage{mathtools}
+
+% untuk mengatur label nomor pada rumus
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+
+% Untuk mengatur spacing daftar gambar
+\newcommand*{\noaddvspace}{\renewcommand*{\addvspace}[1]{}}
+\addtocontents{lof}{\protect\noaddvspace}
+
+%untuk mengatur package include table in excel
+% \usepackage{pgfplotstable}
+
+% untuk mengatur landscape page
+\usepackage{rotating}
+
+% untuk list
+\usepackage{enumitem}
+\newenvironment{packed_enum}{
+    \begin{enumerate}[leftmargin=1.5\parindent]
+        \setlength{\itemsep}{0pt}
+        \setlength{\parskip}{0pt}
+        \setlength{\parsep}{0pt}
+        }{\end{enumerate}}
+
+\newenvironment{packed_item}{
+    \begin{itemize}[leftmargin=1.5\parindent]
+        \setlength{\itemsep}{0pt}
+        \setlength{\parskip}{0pt}
+        \setlength{\parsep}{0pt}
+        }{\end{itemize}}
+
+%paket untuk bibTex
+\usepackage{cite}
+\bibliographystyle{IEEEtran}
+
+%paket untuk mengembed kode dalam LaTeX
+\usepackage{listings}
+\lstset{
+    basicstyle=\small,
+    %basicstyle=\ttfamily,
+    columns=fullflexible,
+    frame=single,
+}
+
+%paket untuk tabel
+\usepackage{longtable}
+
+%paket untuk url
+\usepackage{hyperref}
+
+% styling python
+\usepackage{color}
+\usepackage{listings}    
+\usepackage{courier}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color
+  basicstyle=\footnotesize,        % size of fonts used for the code
+  breaklines=true,                 % automatic line breaking only at whitespace
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  keywordstyle=\color{blue},       % keyword style
+  stringstyle=\color{mymauve},     % string literal style
+}
