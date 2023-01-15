@@ -40,7 +40,7 @@ pada file dengan tanda -e- di atas adalah file yang diperkenankan untuk diedit, 
 
 ## Petunjuk Penggunaan
 1. Unduh dan Install MikTeX (https://miktex.org/download) dan TeXstudio (https://www.texstudio.org/) untuk Sistem Operasi Windows, MacOS atau Linux
-2. Apabila menggunakan sistem operasi MacOS pilih as Administrator saat menjalankan MikTex, untuk sistem operasi lain bisa next sesuai dgn tampilan saat instalasi
+2. Apabila menggunakan sistem operasi MacOS **harus** pilih as Administrator saat menjalankan MikTex Console, untuk sistem operasi lain bisa next sesuai dgn tampilan saat instalasi
 3. Pada MikTex Console pilih opsi _Always_ pada Installed on-the-fly seperti pada gambar berikut
 ![MikTeX Setup](gambar/screenshot-miktex.png "MikTeX Setup")
 3. Unduh Repo ini dan extract, kemudian Open _laporan.tex_
