@@ -39,7 +39,7 @@ Unduh repo ini dengan menggunakan git atau dengan klik Download Zip yang ada di 
 pada file dengan tanda -e- di atas adalah file yang diperkenankan untuk diedit, sedangkan yang tidak ada -e- dilarang untuk diedit.
 
 ## Petunjuk Penggunaan
-1. Unduh TeXstudio (https://www.texstudio.org/) untuk Sistem Operasi Windows atau TeXmaker (https://www.xm1math.net/texmaker/) untuk Sistem Operasi Windows, Linux dan MacOS.
+1. Unduh TeXstudio (https://www.texstudio.org/) untuk Sistem Operasi Windows, MacOS atau Linux
 2. Unduh Repo ini dan extract, kemudian Open _laporan.tex_
 3. Pada sisi kiri terdapat daftar file yang terkoneksi dengan _laporan.tex_, salah satunya adalah _identitas.tex_
 4. Isi file _identitas.tex_ sesuai dengan data diri dan pembimbing kemudian simpan
