@@ -1,14 +1,14 @@
 
 # Template LaTeX Laporan Proyek Akhir D4 Teknik Elektronika UNY
 
-Repo ini berisi template LaTeX yang digunakan dalam penulisan Laporan Proyek Akhir mahasiswa D4 Teknik Elektronika UNY. Semua mahasiswa D4 Teknik Elektronika wajib menggunakan template LaTeX ini karena dengan menggunakan template ini penulisan laporan akan menjadi lebih cepat dengan format yang seragam.
+Repo ini berisi template LaTeX yang digunakan dalam penulisan Laporan Proyek Akhir mahasiswa D4 Teknik Elektronika UNY. Semua mahasiswa D4 Teknik Elektronika wajib menggunakan template LaTeX ini karena dengan menggunakan template ini penulisan laporan akan menjadi lebih cepat dengan format yang seragam sehingga mahasiswa dapat fokus pada konten dan tidak terkendala dengan format laporan yang kadang kala menjadi kendala tersendiri. Selain itu penyimpanan file laporan menjadi lebih mudah karena dapat di simpan di Github sehingga mudah untuk diakses.
 
 
 
 
-## Petunjuk Penggunaan
+## Penjelasan Isi File
 
-Unduh repo ini dengan menggunakan git atau dengan klik Download Zip yang ada  di pojok kanan atas dari repo ini. Terdapat beberapa file dalam repo ini, dan berikut adalah penjelasan dari masing-masing file:
+Unduh repo ini dengan menggunakan git atau dengan klik Download Zip yang ada di pojok kanan atas dari repo ini. Terdapat beberapa file dalam repo ini, dan berikut adalah penjelasan dari masing-masing file:
 
     .
     ├─e─ gambar                 # folder dimana semua gambar yang akan dimasukkan pada laporan disimpan, format gambar adalah jpg / png
@@ -40,3 +40,19 @@ Unduh repo ini dengan menggunakan git atau dengan klik Download Zip yang ada  di
     ├─── sampuldalam.tex        # sampul dalam
 
 pada file dengan tanda -e- di atas adalah file yang diperkenankan untuk diedit, sedangkan yang tidak ada -e- dilarang untuk diedit.
+
+## Petunjuk Penggunaan
+1. Unduh TeXstudio (https://www.texstudio.org/) untuk Sistem Operasi Windows atau TeXmaker (https://www.xm1math.net/texmaker/) untuk Sistem Operasi Windows, Linux dan MacOS.
+2. Unduh Repo ini dan extract, kemudian Open _laporan.tex_
+3. Pada sisi kiri terdapat daftar file yang terkoneksi dengan _laporan.tex_, salah satunya adalah _identitas.tex_
+4. Isi file _identitas.tex_ sesuai dengan data diri dan pembimbing kemudian simpan
+5. edit file _abstrak.tex_, _abstract.tex_, _katapengantar.tex_, _bab1.tex_ hingga _bab5.tex_, _lampiran.tex_, dan _pustaka.bib_ sesuai dengan kebutuhan
+6. Terdapat beberapa tutorial dalam _laporan.tex_ yang dapat dibaca pada _laporan.pdf_ seperti memasukkan gambar, membuat tabel, menuliskan persamaan, menuliskan sumber kode, dan membuat referensi dan sitasi
+7. Setelah semua selesai bisa klik tombol **run & view** maka dokumen LaTeX akan digenerate dan outputnya adalah _laporan.pdf_
+
+## Catatan
+Apabila ada pertanyaan dan konsultasi terkait template ini bisa tanyakan lewat email ke ardyseto@uny.ac.id
+## Pengembang
+
+- [@2black0](https://www.github.com/2black0)
+
