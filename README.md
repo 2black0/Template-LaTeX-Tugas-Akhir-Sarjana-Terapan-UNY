@@ -40,12 +40,18 @@ pada file dengan tanda -e- di atas adalah file yang diperkenankan untuk diedit, 
 
 ## Petunjuk Penggunaan
 1. Unduh dan Install MikTeX (https://miktex.org/download) dan TeXstudio (https://www.texstudio.org/) untuk Sistem Operasi Windows, MacOS atau Linux
-2. Unduh Repo ini dan extract, kemudian Open _laporan.tex_
-3. Pada sisi kiri terdapat daftar file yang terkoneksi dengan _laporan.tex_, salah satunya adalah _identitas.tex_
-4. Isi file _identitas.tex_ sesuai dengan data diri dan pembimbing kemudian simpan
-5. edit file _abstrak.tex_, _abstract.tex_, _katapengantar.tex_, _bab1.tex_ hingga _bab5.tex_, _lampiran.tex_, dan _pustaka.bib_ sesuai dengan kebutuhan
-6. Terdapat beberapa tutorial dalam _laporan.tex_ yang dapat dibaca pada _laporan.pdf_ seperti memasukkan gambar, membuat tabel, menuliskan persamaan, menuliskan sumber kode, dan membuat referensi dan sitasi
+2. Apabila menggunakan sistem operasi MacOS pilih as Administrator saat menjalankan MikTex, untuk sistem operasi lain bisa next sesuai dgn tampilan saat instalasi
+3. Pada MikTex Console pilih opsi _Always_ pada Installed on-the-fly seperti pada gambar berikut
+![MikTeX Setup](gambar/screenshot-miktex.png "MikTeX Setup")
+3. Unduh Repo ini dan extract, kemudian Open _laporan.tex_
+4. Pada sisi kiri terdapat daftar file yang terkoneksi dengan _laporan.tex_, salah satunya adalah _identitas.tex_
+5. Isi file _identitas.tex_ sesuai dengan data diri dan pembimbing kemudian simpan
+6. edit file _abstrak.tex_, _abstract.tex_, _katapengantar.tex_, _bab1.tex_ hingga _bab5.tex_, _lampiran.tex_, dan _pustaka.bib_ sesuai dengan kebutuhan
+7. Terdapat beberapa tutorial dalam _laporan.tex_ yang dapat dibaca pada _laporan.pdf_ seperti memasukkan gambar, membuat tabel, menuliskan persamaan, menuliskan sumber kode, dan membuat referensi dan sitasi
 7. Pastikan komputer sudah terhubung dengan internet karena diperlukan beberapa paket yang diunduh secara otomatis, kemudian setelah semua selesai bisa klik tombol **run & view** maka dokumen LaTeX akan digenerate dan outputnya adalah _laporan.pdf_
+
+## Screenshot
+![TexStudio on MacOS](gambar/screenshot-texstudio.png "TexStudio on MacOS")
 
 ## Catatan
 Apabila ada pertanyaan dan konsultasi terkait template ini bisa tanyakan lewat email ke ardyseto@uny.ac.id
