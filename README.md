@@ -17,16 +17,13 @@ Unduh repo ini dengan menggunakan git atau dengan klik Download Zip yang ada di 
     ├─e─ bab3.tex               # bab 3 desain dan implementasi
     ├─e─ bab4.tex               # bab 4 hasil dan pengujian
     ├─e─ bab5.tex               # bab 5 kesimpulan dan saran
-    ├─── daftargambar.tex       # file untuk membuat daftar gambar
-    ├─── daftarisi.tex          # file untuk membuat daftar isi
+    ├─── daftar.tex             # file untuk membuat daftar isi, gambar, dan tabel
     ├─── daftarpustaka.tex      # file untuk membuat daftar pustaka
     ├─e─ daftarsingkatan.tex    # file untuk membuat daftar singkatan
-    ├─── daftartabel.tex        # file untuk membuat daftar tabel
     ├─e─ database.hyphenate.tex # file untuk membuat daftar kata yang terpotong / hypehenate
     ├─e─ identitas.tex          # identitas dari penulis, dll
     ├─e─ katapengantar.tex      # kata pengantar
-    ├─e─ lampiran1.tex          # lampiran A
-    ├─e─ lampiran2.tex          # lampiran B
+    ├─e─ lampiran.tex           # lampiran
     ├─── laporan.pdf            # file pdf hasil generate
     ├─e─ laporan.tex            # file utama
     ├─── pengesahan.tex         # halaman pengesahan
