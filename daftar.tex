@@ -1,0 +1,34 @@
+% Table of contents
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{DAFTAR ISI}
+%\renewcommand{\cftdotsep}{\cftnodots}
+\setlength{\cftbeforetoctitleskip}{-0.5cm}
+\renewcommand{\cfttoctitlefont}{\hfill\large\bfseries}
+\renewcommand{\cftaftertoctitle}{\hfill\hfill}
+\renewcommand\contentsname{DAFTAR ISI}
+\tableofcontents
+
+\include{daftarsingkatan}
+
+% List of fig
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{DAFTAR GAMBAR}
+\setlength{\cftbeforeloftitleskip}{-0.5cm}
+\renewcommand{\cftloftitlefont}{\hfill\large\bfseries}
+\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cftfigleader}{\dotfill}
+\renewcommand\listfigurename{DAFTAR GAMBAR}
+\listoffigures
+
+% List of table
+\clearpage
+\phantomsection
+\addcontentsline{toc}{chapter}{DAFTAR TABEL}
+\setlength{\cftbeforeloftitleskip}{-0.5cm}
+\renewcommand{\cftloftitlefont}{\hfill\large\bfseries}
+\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cfttableader}{\dotfill}
+\renewcommand\listtablename{\centerline {\large\bfseries  DAFTAR TABEL}}
+\listoftables
