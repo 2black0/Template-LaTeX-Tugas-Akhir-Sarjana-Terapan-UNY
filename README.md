@@ -39,6 +39,11 @@ Unduh repo ini dengan menggunakan git atau dengan klik Download Zip yang ada di 
 pada file dengan tanda -e- di atas adalah file yang diperkenankan untuk diedit, sedangkan yang tidak ada -e- dilarang untuk diedit.
 
 ## Petunjuk Penggunaan
+
+### Overleaf - Browser
+Versi template overleaf masih on going, setelah approved akan diupdate
+
+### Windows / MacOS / Linux
 1. Unduh dan Install MikTeX (https://miktex.org/download) dan TeXstudio (https://www.texstudio.org/) untuk Sistem Operasi Windows, MacOS atau Linux
 2. Apabila menggunakan sistem operasi MacOS **harus** pilih as Administrator saat menjalankan MikTex Console, untuk sistem operasi lain bisa next sesuai dgn tampilan saat instalasi
 3. Pada MikTex Console pilih opsi _Always_ pada Installed on-the-fly seperti pada gambar berikut
