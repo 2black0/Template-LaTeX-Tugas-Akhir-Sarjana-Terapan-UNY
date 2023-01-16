@@ -1,6 +1,7 @@
 \documentclass[12pt, a4paper, onecolumn, oneside, final]{report}
 
 \input{identitas}
+<<<<<<< HEAD
 %\input{preamble}
 \input{preambles}
 \input{database.hyphenate}
@@ -15,14 +16,28 @@
 \include{abstract}
 %\include{persembahan}
 \include{katapengantar}
+=======
+\input{konfigurasi/preambles.tex}
+\input{database.hyphenate}
+\begin{document}
+\include{lembar/sampul.tex}
+\pagenumbering{roman}
+\include{lembar/sampuldalam.tex}
+\include{lembar/persetujuan.tex}
+\include{lembar/pernyataan.tex}
+\include{lembar/pengesahan.tex}
+\include{abstrak/abstrak.tex}
+\include{abstrak/abstract.tex}
+\include{lembar/katapengantar.tex}
+>>>>>>> 37411a41c51b7cb35cb8691317ba382e7dca4495
 \include{daftar}
 %\include{daftarisi}
 %\include{daftarnotasi}
 %\include{daftarsingkatan}
 %\include{daftargambar}
 %\include{daftartabel}
-%\include{daftarlampiran}
 \pagenumbering{arabic}
+<<<<<<< HEAD
 \include{bab1}
 \include{bab2}
 \include{bab3}
@@ -31,4 +46,13 @@
 \input{daftarpustaka}
 \input{lampiran}
 %\input{lampiran2}
+=======
+\include{bab/bab1}
+\include{bab/bab2}
+\include{bab/bab3}
+\include{bab/bab4}
+\include{bab/bab5}
+\include{pustaka/daftarpustaka}
+\include{lampiran}
+>>>>>>> 37411a41c51b7cb35cb8691317ba382e7dca4495
 \end{document}
