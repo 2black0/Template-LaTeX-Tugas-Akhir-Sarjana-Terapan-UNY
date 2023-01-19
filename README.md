@@ -38,7 +38,7 @@ pada file dengan tanda -e- di atas adalah file yang diperkenankan untuk diedit, 
 ## Petunjuk Penggunaan
 
 ### Overleaf - Browser
-Versi template overleaf masih on going, setelah approved akan diupdate
+Versi template overleaf dapat diklik pada link berikut https://www.overleaf.com/latex/templates/template-latex-laporan-proyek-akhir-d4-teknik-elektronika-uny/xktsdcjgcfqf
 
 ### Windows / MacOS / Linux
 1. Unduh dan Install MikTeX (https://miktex.org/download) sebagai distribusi dari LaTeX dan TeXstudio (https://www.texstudio.org/) sebagai editor untuk Sistem Operasi Windows, MacOS atau Linux
