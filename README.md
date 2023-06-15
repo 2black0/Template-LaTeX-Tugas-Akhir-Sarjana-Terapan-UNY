@@ -43,6 +43,7 @@ pada file dengan tanda -e- di atas adalah file yang diperkenankan untuk diedit, 
 ## Petunjuk Penggunaan
 
 ### Overleaf - Browser
+CATATAN: template yang ada di Overleaf bukan versi terbaru
 Versi template overleaf dapat diklik pada link berikut https://www.overleaf.com/latex/templates/template-latex-laporan-proyek-akhir-d4-teknik-elektronika-uny/xktsdcjgcfqf
 
 ### Windows / MacOS / Linux
