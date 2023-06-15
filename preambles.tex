@@ -180,6 +180,10 @@
 %paket untuk tabel
 \usepackage{longtable}
 
+%\setlength\LTleft{0pt}
+%\setlength\LTright{0pt}
+%\begin{longtable}{@{\extracolsep{\fill}}|c|c|c|@{}}
+
 %paket untuk url
 \usepackage{hyperref}
 
@@ -202,4 +206,17 @@
   keywordstyle=\color{blue},       % keyword style
   stringstyle=\color{mymauve},     % string literal style
 }
+
+%automatic number
+\usepackage{cleveref}
+
+\crefname{figure}{gambar}{gambar}
+\Crefname{figure}{Gambar}{Gambar}
+
+\crefname{table}{tabel}{tabel}
+\Crefname{table}{Tabel}{Tabel}
+
+\crefname{equation}{persamaan}{persamaan}
+\Crefname{equation}{Persamaan}{Persamaan}
+
 %% DILARANG EDIT BAGIAN INI

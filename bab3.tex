@@ -72,20 +72,25 @@ Ukuran gambar dapat diganti dengan mengganti nilai pada scale. Jangan lupa membe
     \centering
     \includegraphics[scale=0.1]{gambar-kucing}
     \caption{Gambar Kucing Lucu dan Imut dengan scala 0.1}
+    \label{fig:kucing}
 \end{figure}
+
+Setiap gambar harus dimention atau disebutkan didalam bacaan seperti berikut ini \cref{fig:kucing}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.4]{logo-uny}
     \caption{Logo UNY dengan scala 0.4}
+    \label{fig:logoUNY}
 \end{figure}
 
-Untuk menambahkan gambar secara landscape dapat dilihat pada contoh berikut ini.
+Untuk menambahkan gambar secara landscape dapat dilihat pada contoh berikut ini dan jangan lupa selalu menyebutkan nomor gambar disertai penjelasannya seperti ini \cref{fig:logoUNY}.
 
 \begin{sidewaysfigure}[htbp]
 	\centering
 	\includegraphics[width=0.6\textwidth]{logo-uny}
 	\caption{Logo UNY pada Landscape mode}
+    \label{fig:logoUNYlandscape}
 \end{sidewaysfigure}
 
 \begin{figure}[H]
@@ -97,33 +102,29 @@ Untuk menambahkan gambar secara landscape dapat dilihat pada contoh berikut ini.
      \includegraphics[width=0.4\linewidth]{logo-uny}
     }
     \caption{Dengan menempatkan gambar (a) dan (b), pembaca akan lebih mudah membandingkan keduanya.}
+    \label{fig:kucingdanUNY}
 \end{figure}
 
 \subsection{Membuat Tabel}
-Pada bagian ini akan dijelaskan bagaimana membuat tabel dalam sebuah dokumen \LaTeX. untuk membuat tabel memang agak sedikit sulit, sehingga saya menyarankan menggunakan tool berikut \url{https://www.tablesgenerator.com/} kemudian isikan tabel pada tool generator tersebut dan salin kodenya ke dalam dokumen \LaTeX. Berikut adalah contoh dari sebuah tabel.
+Pada bagian ini akan dijelaskan bagaimana membuat tabel dalam sebuah dokumen \LaTeX. untuk membuat tabel memang agak sedikit sulit, sehingga saya menyarankan menggunakan tool berikut \url{https://www.tablesgenerator.com/} kemudian isikan tabel pada tool generator tersebut dan salin kodenya ke dalam dokumen \LaTeX. Berikut adalah contoh dari sebuah tabel yang telah dibuat. Jangan lupa setiap tabel harus dimention dan dijelaskan dibacaan seperti berikut ini \cref{tab:spekPC}.
 
-\begin{longtable}{|c|c|}
+
+\begin{longtable}{|p{2cm}|p{7cm}|}
     \caption{Spesifikasi komputer untuk menjalankan simulator.}
-    \label{tb:spesifikasikomputersimulator} \\
+    \label{tab:spekPC} \\
     \hline
-    OS     & Ubuntu 20.04.2 LTS             \\
-    \hline
-    Kernel & 5.4.0-80-generic               \\
-    \hline
-    CPU    & Intel i3-8100 (4) @ 3.600GH    \\
-    \hline
-    GPU    & NVIDIA GeForce GTX 1050 Ti     \\
-    \hline
-    RAM    & 7901 MiB                       \\
-    \hline
+    OS     & Ubuntu 20.04.2 LTS             \\ \hline
+    Kernel & 5.4.0-80-generic               \\ \hline
+    CPU    & Intel i3-8100 (4) @ 3.600GH    \\ \hline
+    GPU    & NVIDIA GeForce GTX 1050 Ti     \\ \hline
+    RAM    & 7901 MiB                       \\ \hline
 \end{longtable}
 
-
-Kita juga bisa menambahkan tabel yang besar dengan format halaman landscape seperti contoh berikut.
+Kita juga bisa menambahkan tabel yang besar dengan format halaman landscape seperti contoh berikut dan mention tabel seperti berikut ini \cref{tab:landscape} dan berikut ini \cref{tab:tabelx}.
 \begin{sidewaysfigure}[htbp]
 	\begin{table}[H]
 		\caption{Tabel Sederhana}
-		\label{co:tabel}
+		\label{tab:landscape}
 		\begin{center}
 			\begin{tabularx}{0.8\textwidth} {
 					|>{\raggedright\arraybackslash}X
@@ -149,7 +150,7 @@ Kita juga bisa menambahkan tabel yang besar dengan format halaman landscape sepe
 
 \begin{table}[H]
 	\caption{Tabel Sederhana}
-	\label{co:tabel}
+	\label{tab:tabelx}
 	\begin{center}
 		\begin{tabularx}{0.8\textwidth} {
 				|>{\raggedright\arraybackslash}X
@@ -223,9 +224,10 @@ Berikut contoh listing kode bahasa pemrograman C/C++.
     \end{lstlisting}
 
 \subsection{Menambahkan Persamaan}
-Persamaan tidak lepas dari bidang ilmu teknik dan kadang perlu dituliskan dalam sebuah laporan. Sangat mudah menuliskan persamaan pada sebuah dokumen \LaTeX. Terdapat 2 jenis penulisan persamaan, yaitu inline dengan text seperti contoh ini \(x^2 + y^2 = z^2\) atau seperti ini $E=mc^2$. Jenis lain adalah dituliskan seperti dibawah ini, yang otomatis akan mendapatkan penomoran. Apabila belum familiar dengan kode untuk penulisan persamaan pada \LaTeX bisa menggunakan tool berikut \url{https://latex.codecogs.com/eqneditor/editor.php}.
+Persamaan tidak lepas dari bidang ilmu teknik dan kadang perlu dituliskan dalam sebuah laporan. Sangat mudah menuliskan persamaan pada sebuah dokumen \LaTeX. Terdapat 2 jenis penulisan persamaan, yaitu inline dengan text seperti contoh ini \(x^2 + y^2 = z^2\) atau seperti ini $E=mc^2$. Jenis lain adalah dituliskan seperti dibawah ini, yang otomatis akan mendapatkan penomoran. Apabila belum familiar dengan kode untuk penulisan persamaan pada \LaTeX bisa menggunakan tool berikut \url{https://latex.codecogs.com/eqneditor/editor.php}. Setiap persamaan harus dimention seperti berikut ini \cref{eq:satu} dan harus dijelaskan terkait persamaan tersebut untuk apa.
 
 \begin{equation}
+    \label{eq:satu}
     E=mc^2
 \end{equation}
 
