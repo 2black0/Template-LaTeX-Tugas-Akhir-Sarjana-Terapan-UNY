@@ -7,38 +7,45 @@ Repo ini berisi template LaTeX yang digunakan dalam penulisan Laporan Proyek Akh
 - 16 Januari 2023: Pembuatan template dari Laporan Proyek Akhir
 - 28 Februari 2023: Mengubah sub-bab dari Bab I Pendahuluan, Mengubah susunan daftar isi, Fix surat Pernyataan untuk judul yang panjang, Fix Halaman Pengesahan tidak 2 halaman, Menambahkan Halaman Persembahan
 - 15 Juni 2023: Perbaikan format Halaman Pengesahan, Perbaikan contoh tabel, Penambahan hyperlink untuk gambar, tabel, dan persamaan pada bacaan berdasarkan label
+- 22 Juni 2023: Perbaikan nama file untuk memudahkan idefitikasi
 
 ## Penjelasan Isi File
 
 Unduh repo ini dengan menggunakan git atau dengan klik Download Zip yang ada di pojok kanan atas dari repo ini. Terdapat beberapa file dalam repo ini, dan berikut adalah penjelasan dari masing-masing file:
 
-    .
-    ├─e─ gambar                 # folder dimana semua gambar yang akan dimasukkan pada laporan disimpan, format gambar adalah jpg / png
-    ├─── README.md              # file yang sedang anda baca ini
-    ├─e─ abstract.tex           # abstrak bahasa inggris
-    ├─e─ abstrak.tex            # abstrak bahasa indonesia
-    ├─e─ bab1.tex               # bab 1 pendahuluan
-    ├─e─ bab2.tex               # bab 2 tinjauan pustaka
-    ├─e─ bab3.tex               # bab 3 desain dan implementasi
-    ├─e─ bab4.tex               # bab 4 hasil dan pengujian
-    ├─e─ bab5.tex               # bab 5 kesimpulan dan saran
-    ├─── daftar.tex             # file untuk membuat daftar isi, gambar, dan tabel
-    ├─── daftarpustaka.tex      # file untuk membuat daftar pustaka
-    ├─e─ daftarsingkatan.tex    # file untuk membuat daftar singkatan
-    ├─e─ database.hyphenate.tex # file untuk membuat daftar kata yang terpotong / hypehenate
-    ├─e─ identitas.tex          # identitas dari penulis, dll
-    ├─e─ katapengantar.tex      # kata pengantar
-    ├─e─ lampiran.tex           # lampiran
-    ├─── laporan.pdf            # file pdf hasil generate
-    ├─e─ laporan.tex            # file utama
-    ├─── pengesahan.tex         # halaman pengesahan
-    ├─── pernyataan.tex         # surat pernyataan
-    ├─── persetujuan.tex        # lembar persetujuan
-    ├─e─ pustaka.bib            # daftar referensi
-    ├─── sampul.tex             # sampul luar
-    ├─── sampuldalam.tex        # sampul dalam
+|   a0-identitas.tex            # file pertama yang harus diedit berisi identitas dari tugas akhir seperti judul, nama mahasiswa, dll
+|   a1-database.hyphenate.tex   # berisi daftar kata yang perlu dipenggal
+|   a2-abstrak.tex              # abstrak dalam bahasa indonesia
+|   a3-abstract.tex             # abstrak dalam bahasa inggris
+|   a4-persembahan.tex          # halaman persembahan, edit sesuai kebutuhan
+|   a5-katapengantar.tex        # kata pengantar, edit sesuai kebutuhan
+|   a6-daftarsingkatan.tex      # daftar singkatan dalam bentuk tabel, edit sesuai dengan penggunaan singkatan yang ada pada laporan
+|   a7-pustaka.bib              # daftar referensi dalam format bib, untuk menggenerate bagian ini gunakan mendeley / zotero
+|   a8-lampiran.tex             # daftar lampiran, edit sesuai dengan kebutuhan
+|   b1-bab1.tex                 # bab 1
+|   b2-bab2.tex                 # bab 2
+|   b3-bab3.tex                 # bab 3
+|   b4-bab4.tex                 # bab 4
+|   b5-bab5.tex                 # bab 5
+|   laporan.pdf                 # file laporan dalam format pdf
+|   laporan.tex                 # file utama, jangan edit file ini 
+|   README.md                   # file yang sedang anda baca
+|   xx-daftar.tex               # abaikan, jangan diedit
+|   xx-daftarpustaka.tex        # abaikan, jangan diedit
+|   xx-pengesahan.tex           # abaikan, jangan diedit
+|   xx-pernyataan.tex           # abaikan, jangan diedit
+|   xx-persetujuan.tex          # abaikan, jangan diedit
+|   xx-preambles.tex            # abaikan, jangan diedit
+|   xx-sampul.tex               # abaikan, jangan diedit
+|   xx-sampuldalam.tex          # abaikan, jangan diedit
+\---gambar                      # folder berisi gambar, copy gambar yang dimasukkan pada laporan kesini dalam format jpg/png
+        gambar-kucing.jpg
+        logo-uny.png
+        screenshot-miktex.png
+        screenshot-texstudio.png
 
-pada file dengan tanda -e- di atas adalah file yang diperkenankan untuk diedit, sedangkan yang tidak ada -e- dilarang untuk diedit.
+
+file yang diawali dengan nama xx- terlarang untuk diedit selain itu silahkan edit sesuai dengan kebutuhan.
 
 ## Petunjuk Penggunaan
 
