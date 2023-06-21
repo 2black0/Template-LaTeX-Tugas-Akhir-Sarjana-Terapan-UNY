@@ -50,7 +50,7 @@ file yang diawali dengan nama xx- terlarang untuk diedit selain itu silahkan edi
 ## Petunjuk Penggunaan
 
 ### Overleaf - Browser
-Versi template overleaf dapat diklik pada link berikut https://www.overleaf.com/latex/templates/template-laporan-tugas-akhir-sarjana-terapan-teknik-elektro-dan-elektronika-15062023/vpjkgjwzcdrv
+Versi template overleaf dapat diklik pada link berikut https://www.overleaf.com/read/vvrrxrtfgwjg
 
 ### Windows / MacOS / Linux
 1. Unduh dan Install MikTeX (https://miktex.org/download) sebagai distribusi dari LaTeX dan TeXstudio (https://www.texstudio.org/) sebagai editor untuk Sistem Operasi Windows, MacOS atau Linux
