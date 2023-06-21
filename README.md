@@ -14,32 +14,32 @@ Repo ini berisi template LaTeX yang digunakan dalam penulisan Laporan Proyek Akh
 Unduh repo ini dengan menggunakan git atau dengan klik Download Zip yang ada di pojok kanan atas dari repo ini. Terdapat beberapa file dalam repo ini, dan berikut adalah penjelasan dari masing-masing file:
 
 .
-|   a0-identitas.tex            # file pertama yang harus diedit berisi identitas dari tugas akhir seperti judul, nama mahasiswa, dll
-|   a1-database.hyphenate.tex   # berisi daftar kata yang perlu dipenggal
-|   a2-abstrak.tex              # abstrak dalam bahasa indonesia
-|   a3-abstract.tex             # abstrak dalam bahasa inggris
-|   a4-persembahan.tex          # halaman persembahan, edit sesuai kebutuhan
-|   a5-katapengantar.tex        # kata pengantar, edit sesuai kebutuhan
-|   a6-daftarsingkatan.tex      # daftar singkatan dalam bentuk tabel, edit sesuai dengan penggunaan singkatan yang ada pada laporan
-|   a7-pustaka.bib              # daftar referensi dalam format bib, untuk menggenerate bagian ini gunakan mendeley / zotero
-|   a8-lampiran.tex             # daftar lampiran, edit sesuai dengan kebutuhan
-|   b1-bab1.tex                 # bab 1
-|   b2-bab2.tex                 # bab 2
-|   b3-bab3.tex                 # bab 3
-|   b4-bab4.tex                 # bab 4
-|   b5-bab5.tex                 # bab 5
-|   laporan.pdf                 # file laporan dalam format pdf
-|   laporan.tex                 # file utama, jangan edit file ini 
-|   README.md                   # file yang sedang anda baca
-|   xx-daftar.tex               # abaikan, jangan diedit
-|   xx-daftarpustaka.tex        # abaikan, jangan diedit
-|   xx-pengesahan.tex           # abaikan, jangan diedit
-|   xx-pernyataan.tex           # abaikan, jangan diedit
-|   xx-persetujuan.tex          # abaikan, jangan diedit
-|   xx-preambles.tex            # abaikan, jangan diedit
-|   xx-sampul.tex               # abaikan, jangan diedit
-|   xx-sampuldalam.tex          # abaikan, jangan diedit
-\---gambar                      # folder berisi gambar, copy gambar yang dimasukkan pada laporan kesini dalam format jpg/png
+├── a0-identitas.tex            # file pertama yang harus diedit berisi identitas dari tugas akhir seperti judul, nama mahasiswa, dll
+├── a1-database.hyphenate.tex   # berisi daftar kata yang perlu dipenggal
+├── a2-abstrak.tex              # abstrak dalam bahasa indonesia
+├── a3-abstract.tex             # abstrak dalam bahasa inggris
+├── a4-persembahan.tex          # halaman persembahan, edit sesuai kebutuhan
+├── a5-katapengantar.tex        # kata pengantar, edit sesuai kebutuhan
+├── a6-daftarsingkatan.tex      # daftar singkatan dalam bentuk tabel, edit sesuai dengan penggunaan singkatan yang ada pada laporan
+├── a7-pustaka.bib              # daftar referensi dalam format bib, untuk menggenerate bagian ini gunakan mendeley / zotero
+├── a8-lampiran.tex             # daftar lampiran, edit sesuai dengan kebutuhan
+├── b1-bab1.tex                 # bab 1
+├── b2-bab2.tex                 # bab 2
+├── b3-bab3.tex                 # bab 3
+├── b4-bab4.tex                 # bab 4
+├── b5-bab5.tex                 # bab 5
+├── laporan.pdf                 # file laporan dalam format pdf
+├── laporan.tex                 # file utama, jangan edit file ini 
+├── README.md                   # file yang sedang anda baca
+├── xx-daftar.tex               # abaikan, jangan diedit
+├── xx-daftarpustaka.tex        # abaikan, jangan diedit
+├── xx-pengesahan.tex           # abaikan, jangan diedit
+├── xx-pernyataan.tex           # abaikan, jangan diedit
+├── xx-persetujuan.tex          # abaikan, jangan diedit
+├── xx-preambles.tex            # abaikan, jangan diedit
+├── xx-sampul.tex               # abaikan, jangan diedit
+├── xx-sampuldalam.tex          # abaikan, jangan diedit
+├── gambar                      # folder berisi gambar, copy gambar yang dimasukkan pada laporan kesini dalam format jpg/png
         gambar-kucing.jpg
         logo-uny.png
         screenshot-miktex.png
