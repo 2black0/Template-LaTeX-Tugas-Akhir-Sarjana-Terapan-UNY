@@ -40,9 +40,13 @@
 \usepackage{pslatex}
 
 % Merubah numbering chapter dan section untuk judul setiap bab menggunakan romawi dan judul anak bab menggunakan arabic
-\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}\hspace{0.05cm}}
-\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}\hspace{-0.25cm}}
-\renewcommand{\thesubsubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}\hspace{-0,35cm}}
+%\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}\hspace{0.05cm}}
+%\renewcommand{\thesubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}\hspace{-0.25cm}}
+%\renewcommand{\thesubsubsection}{\arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{subsubsection}\hspace{-0,35cm}}
+\renewcommand{\thesection}{\Alph{section}}               %Roman numeral title
+\renewcommand{\thesubsection}{\arabic{subsection}} %Make sure the subsection label counter is capital A through Z followed
+\renewcommand{\thesubsubsection}{\alph{subsubsection}} %Make sure the subsection label counter is 1 through 9 with no '.', 'arabic'
+
 
 % Mengatur identasi judul section dan subsection
 %\titleformat{\section}[block]{\bfseries}{\thesection.}{1em}{}
@@ -53,6 +57,7 @@
 \renewcommand{\cfttoctitlefont}{\hfil\large\bfseries\MakeUppercase}
 \renewcommand{\cftloftitlefont}{\hfil\large\bfseries\MakeUppercase}
 \renewcommand{\cftlottitlefont}{\hfil\large\bfseries\MakeUppercase}
+\renewcommand{\cftchapdotsep}{\cftdotsep}
 
 \renewcommand\cftchappresnum{BAB }
 \renewcommand\cftchapaftersnum{}
