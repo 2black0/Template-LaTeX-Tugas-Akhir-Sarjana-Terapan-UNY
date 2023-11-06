@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2023.11.5)  6 NOV 2023 09:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2023.11.5)  6 NOV 2023 09:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -785,15 +785,15 @@ Package pdftex.def Info: gambar/logo-uny.png  used on input line 17.
 
 
 
-] [3]
+]
 \openout2 = `a3-abstract.aux'.
 
- (a3-abstract.tex [4
+ (a3-abstract.tex) [3
 
 
 
 
-]) [5]
+]
 \openout2 = `xx-pernyataan.aux'.
 
  (xx-pernyataan.tex
@@ -814,28 +814,28 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 18.
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 18.
- (/Users/ardyseto/Library/Application Support/MiKTeX/texmfs/install/tex/latex/stmaryrd/Ustmry.fd)) [6
+ (/Users/ardyseto/Library/Application Support/MiKTeX/texmfs/install/tex/latex/stmaryrd/Ustmry.fd)) [4
 
 
 
 ]
 \openout2 = `xx-persetujuan.aux'.
 
- (xx-persetujuan.tex) [7
+ (xx-persetujuan.tex) [5
 
 
 
 ]
 \openout2 = `xx-pengesahan.aux'.
 
- (xx-pengesahan.tex) [8
+ (xx-pengesahan.tex) [6
 
 
 
 ]
 \openout2 = `a4-persembahan.aux'.
 
- (a4-persembahan.tex) [9
+ (a4-persembahan.tex) [7
 
 
 
@@ -843,7 +843,7 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 18
 ]
 \openout2 = `a5-katapengantar.aux'.
 
- (a5-katapengantar.tex) [10
+ (a5-katapengantar.tex) [8
 
 
 
@@ -851,28 +851,28 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 18
 ]
 \openout2 = `xx-daftar.aux'.
 
- (xx-daftar.tex (laporan.toc [11
+ (xx-daftar.tex (laporan.toc [9
 
 
 
 
-] [12])
+] [10])
 \tf@toc=\write4
 \openout4 = `laporan.toc'.
 
- (a6-daftarsingkatan.tex [13]) [14
+ (a6-daftarsingkatan.tex [11]) [12
 
 ] (laporan.lof)
 \tf@lof=\write5
 \openout5 = `laporan.lof'.
 
- [15
+ [13
 
 ] (laporan.lot)
 \tf@lot=\write6
 \openout6 = `laporan.lot'.
 
-) [16
+) [14
 
 ]
 \openout2 = `b1-bab1.aux'.
@@ -936,7 +936,7 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 62.
-<gambar/gambar-kucing.jpg, id=613, 1204.5pt x 1204.5pt>
+<gambar/gambar-kucing.jpg, id=605, 1204.5pt x 1204.5pt>
 File: gambar/gambar-kucing.jpg Graphic file (type jpg)
 <use gambar/gambar-kucing.jpg>
 Package pdftex.def Info: gambar/gambar-kucing.jpg  used on input line 73.
@@ -1013,17 +1013,17 @@ Package rerunfilecheck Info: File `laporan.out' has not changed.
 (rerunfilecheck)             Checksum: B61BAC3B0B78B878094C6D6B19E2C2D8;13170.
  ) 
 Here is how much of TeX's memory you used:
- 22872 strings out of 474592
- 395719 string characters out of 5742936
+ 22870 strings out of 474592
+ 395704 string characters out of 5742936
  2029530 words of memory out of 5000000
  44336 multiletter control sequences out of 15000+600000
  591237 words of font info for 95 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  113i,19n,110p,1291b,2022s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc}</Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/courier/ucrr8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmb8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmr8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb>
-Output written on laporan.pdf (47 pages, 443909 bytes).
+Output written on laporan.pdf (45 pages, 442150 bytes).
 PDF statistics:
- 835 PDF objects out of 1000 (max. 8388607)
- 213 named destinations out of 1000 (max. 500000)
+ 827 PDF objects out of 1000 (max. 8388607)
+ 211 named destinations out of 1000 (max. 500000)
  739 words of extra memory for PDF output out of 10000 (max. 10000000)
 

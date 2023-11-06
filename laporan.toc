@@ -1,16 +1,16 @@
 \babel@toc {indonesian}{}\relax 
 \contentsline {chapter}{HALAMAN SAMPUL}{i}{Doc-Start}%
 \contentsline {chapter}{ABSTRAK}{ii}{section*.1}%
-\contentsline {chapter}{ABSTRACT}{iv}{section*.2}%
-\contentsline {chapter}{SURAT PERNYATAAN}{vi}{section*.2}%
-\contentsline {chapter}{LEMBAR PERSETUJUAN}{vii}{table.caption.3}%
-\contentsline {chapter}{HALAMAN PENGESAHAN}{viii}{table.caption.3}%
-\contentsline {chapter}{HALAMAN PERSEMBAHAN}{ix}{section*.5}%
-\contentsline {chapter}{KATA PENGANTAR}{x}{section*.6}%
-\contentsline {chapter}{DAFTAR ISI}{xi}{section*.7}%
-\contentsline {chapter}{DAFTAR SINGKATAN}{xiv}{section*.8}%
-\contentsline {chapter}{DAFTAR GAMBAR}{xv}{section*.10}%
-\contentsline {chapter}{DAFTAR TABEL}{xvi}{section*.11}%
+\contentsline {chapter}{ABSTRACT}{iii}{section*.2}%
+\contentsline {chapter}{SURAT PERNYATAAN}{iv}{section*.2}%
+\contentsline {chapter}{LEMBAR PERSETUJUAN}{v}{table.caption.3}%
+\contentsline {chapter}{HALAMAN PENGESAHAN}{vi}{table.caption.3}%
+\contentsline {chapter}{HALAMAN PERSEMBAHAN}{vii}{section*.5}%
+\contentsline {chapter}{KATA PENGANTAR}{viii}{section*.6}%
+\contentsline {chapter}{DAFTAR ISI}{ix}{section*.7}%
+\contentsline {chapter}{DAFTAR SINGKATAN}{xii}{section*.8}%
+\contentsline {chapter}{DAFTAR GAMBAR}{xiii}{section*.10}%
+\contentsline {chapter}{DAFTAR TABEL}{xiv}{section*.11}%
 \contentsline {chapter}{\numberline {1}PENDAHULUAN}{1}{chapter.1}%
 \contentsline {section}{\numberline {A}Latar Belakang Masalah}{1}{section.1.1}%
 \contentsline {section}{\numberline {B}Identifikasi Masalah}{2}{section.1.2}%
