@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2023.11.5)  6 NOV 2023 09:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2023.11.5)  6 NOV 2023 09:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -883,37 +883,37 @@ Bab 1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.20 
+l.22 
       [1
 
 
 
 
-] [2] [3]
+] [2]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 46.
  (/Users/ardyseto/Library/Application Support/MiKTeX/texmfs/install/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [4] [5] [6]) [7]
+) [3] [4]) [5] [6]
 \openout2 = `b2-bab2.aux'.
 
  (b2-bab2.tex
 Bab 2.
-[8
+[7
 
 
 
 
-] [9] [10]) [11]
+] [8]) [9]
 \openout2 = `b3-bab3.aux'.
 
  (b3-bab3.tex
 Bab 3.
-[12
+[10
 
 
 
 
-] [13] (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
+] [11] (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2023/02/27 1.9 listings language file
@@ -936,16 +936,16 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 62.
-<gambar/gambar-kucing.jpg, id=605, 1204.5pt x 1204.5pt>
+<gambar/gambar-kucing.jpg, id=598, 1204.5pt x 1204.5pt>
 File: gambar/gambar-kucing.jpg Graphic file (type jpg)
 <use gambar/gambar-kucing.jpg>
 Package pdftex.def Info: gambar/gambar-kucing.jpg  used on input line 73.
 (pdftex.def)             Requested size: 120.45705pt x 120.45705pt.
- [14]
 File: gambar/logo-uny.png Graphic file (type png)
 <use gambar/logo-uny.png>
 Package pdftex.def Info: gambar/logo-uny.png  used on input line 82.
 (pdftex.def)             Requested size: 226.44199pt x 230.65765pt.
+ [12 <./gambar/gambar-kucing.jpg>]
 File: gambar/logo-uny.png Graphic file (type png)
 <use gambar/logo-uny.png>
 Package pdftex.def Info: gambar/logo-uny.png  used on input line 91.
@@ -958,7 +958,7 @@ File: gambar/logo-uny.png Graphic file (type png)
 <use gambar/logo-uny.png>
 Package pdftex.def Info: gambar/logo-uny.png  used on input line 103.
 (pdftex.def)             Requested size: 159.333pt x 162.29802pt.
- [15 <./gambar/gambar-kucing.jpg>] [16] [17] [18] (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
+ [13] [14] (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 LaTeX Font Info:    Trying to load font information for OML+ptm on input line 185.
@@ -969,40 +969,40 @@ LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 185.
  (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
+) [15] [16] (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) [19] (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
+) (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (/Library/Application Support/MiKTeX/texmfs/install/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-) [20]) [21] [22]
+) [17]) [18]
 \openout2 = `b4-bab4.aux'.
 
  (b4-bab4.tex
 Bab 4.
-[23
+[19
 
 
 
 
-] [24]) [25]
+] [20]) [21]
 \openout2 = `b5-bab5.aux'.
 
  (b5-bab5.tex
 Bab 5.
-[26
+[22
 
 
 
 
-]) [27] (xx-daftarpustaka.tex (laporan.bbl)) (a8-lampiran.tex [28
+]) [23] (xx-daftarpustaka.tex (laporan.bbl)) (a8-lampiran.tex [24
 
 
 
 
-] [29
+] [25
 
-]) [30
+]) [26
 
 ] (laporan.aux (xx-sampul.aux) (xx-sampuldalam.aux) (a2-abstrak.aux) (a3-abstract.aux) (xx-pernyataan.aux) (xx-persetujuan.aux) (xx-pengesahan.aux) (a4-persembahan.aux) (a5-katapengantar.aux) (xx-daftar.aux) (b1-bab1.aux) (b2-bab2.aux) (b3-bab3.aux) (b4-bab4.aux) (b5-bab5.aux))
  ***********
@@ -1013,17 +1013,17 @@ Package rerunfilecheck Info: File `laporan.out' has not changed.
 (rerunfilecheck)             Checksum: B61BAC3B0B78B878094C6D6B19E2C2D8;13170.
  ) 
 Here is how much of TeX's memory you used:
- 22872 strings out of 474592
- 395770 string characters out of 5742936
- 2029530 words of memory out of 5000000
+ 22868 strings out of 474592
+ 395742 string characters out of 5742936
+ 2027530 words of memory out of 5000000
  44338 multiletter control sequences out of 15000+600000
  591237 words of font info for 95 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 113i,19n,110p,1291b,2022s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 113i,19n,110p,1291b,2167s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc}</Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/courier/ucrr8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmb8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmr8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb>
-Output written on laporan.pdf (45 pages, 442155 bytes).
+Output written on laporan.pdf (41 pages, 439165 bytes).
 PDF statistics:
- 827 PDF objects out of 1000 (max. 8388607)
- 211 named destinations out of 1000 (max. 500000)
+ 809 PDF objects out of 1000 (max. 8388607)
+ 207 named destinations out of 1000 (max. 500000)
  739 words of extra memory for PDF output out of 10000 (max. 10000000)
 
