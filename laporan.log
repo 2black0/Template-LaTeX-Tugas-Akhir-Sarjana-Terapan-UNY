@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2023.11.5)  6 NOV 2023 09:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2023.11.5)  6 NOV 2023 09:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -995,14 +995,14 @@ Bab 5.
 
 
 
-] [32]) [33] (xx-daftarpustaka.tex (laporan.bbl [34
+] [32]) [33] (xx-daftarpustaka.tex (laporan.bbl)) (a8-lampiran.tex [34
 
 
 
 
-])) (a8-lampiran.tex [35] [36
+] [35
 
-]) [37
+]) [36
 
 ] (laporan.aux (xx-sampul.aux) (xx-sampuldalam.aux) (a2-abstrak.aux) (a3-abstract.aux) (xx-pernyataan.aux) (xx-persetujuan.aux) (xx-pengesahan.aux) (a4-persembahan.aux) (a5-katapengantar.aux) (xx-daftar.aux) (b1-bab1.aux) (b2-bab2.aux) (b3-bab3.aux) (b4-bab4.aux) (b5-bab5.aux))
  ***********
@@ -1013,17 +1013,17 @@ Package rerunfilecheck Info: File `laporan.out' has not changed.
 (rerunfilecheck)             Checksum: B61BAC3B0B78B878094C6D6B19E2C2D8;13170.
  ) 
 Here is how much of TeX's memory you used:
- 22879 strings out of 474592
- 395819 string characters out of 5742936
+ 22878 strings out of 474592
+ 395812 string characters out of 5742936
  2024530 words of memory out of 5000000
  44338 multiletter control sequences out of 15000+600000
  591237 words of font info for 95 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 113i,19n,110p,1291b,2022s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 113i,19n,110p,1291b,2397s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/Library/Application Support/MiKTeX/texmfs/install/fonts/enc/dvips/base/8r.enc}</Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/courier/ucrr8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmb8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmr8a.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/urw/times/utmri8a.pfb>
-Output written on laporan.pdf (52 pages, 447288 bytes).
+Output written on laporan.pdf (51 pages, 446618 bytes).
 PDF statistics:
- 860 PDF objects out of 1000 (max. 8388607)
- 218 named destinations out of 1000 (max. 500000)
+ 856 PDF objects out of 1000 (max. 8388607)
+ 217 named destinations out of 1000 (max. 500000)
  739 words of extra memory for PDF output out of 10000 (max. 10000000)
 

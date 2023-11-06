@@ -92,5 +92,5 @@
 \contentsline {section}{\numberline {A.}Simpulan}{31}{section.5.1}%
 \contentsline {section}{\numberline {B.}Saran}{32}{section.5.2}%
 \contentsline {chapter}{DAFTAR PUSTAKA}{34}{section*.19}%
-\contentsline {chapter}{LAMPIRAN A KODE PROGRAM}{36}{appendix*.21}%
-\contentsline {chapter}{LAMPIRAN B GAMBAR-GAMBAR}{37}{appendix*.22}%
+\contentsline {chapter}{LAMPIRAN A KODE PROGRAM}{35}{appendix*.21}%
+\contentsline {chapter}{LAMPIRAN B GAMBAR-GAMBAR}{36}{appendix*.22}%
