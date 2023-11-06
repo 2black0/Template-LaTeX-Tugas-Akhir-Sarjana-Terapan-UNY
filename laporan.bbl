@@ -7,8 +7,7 @@
 \providecommand{\BIBentrySTDinterwordspacing}{\spaceskip=0pt\relax}
 \providecommand{\BIBentryALTinterwordstretchfactor}{4}
 \providecommand{\BIBentryALTinterwordspacing}{\spaceskip=\fontdimen2\font plus
-\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
-  \fontdimen4\font\relax}
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus \fontdimen4\font\relax}
 \providecommand{\BIBforeignlanguage}[2]{{%
 \expandafter\ifx\csname l@#1\endcsname\relax
 \typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
@@ -22,53 +21,33 @@
 \BIBdecl
 
 \bibitem{kongkanand2006}
-A.~Kongkanand, S.~Kuwabata, G.~Girishkumar, and P.~Kamat, ``{Single-Wall}
-  carbon nanotubes supported platinum nanoparticles with improved
-  electrocatalytic activity for oxygen reduction reaction,'' \emph{Langmuir},
-  vol.~22, no.~5, pp. 2392--2396, 2006.
+A.~Kongkanand, S.~Kuwabata, G.~Girishkumar, and P.~Kamat, ``{Single-Wall} carbon nanotubes supported platinum nanoparticles with improved electrocatalytic activity for oxygen reduction reaction,'' \emph{Langmuir}, vol.~22, no.~5, pp. 2392--2396, 2006.
 
 \bibitem{maxwell1996}
-I.~E. Maxwell, ``Driving forces for innovation in applied catalysis,'' in
-  \emph{11th International Congress On Catalysis - 40th Anniversary Proceedings
-  of the 11th {ICC}}, ser. Studies in Surface Science and Catalysis, E.~I. Joe
-  W.~Hightower, W. Nicholas~Delgass and A.~T. Bell, Eds.\hskip 1em plus 0.5em
-  minus 0.4em\relax Elsevier, 1996, vol. 101, pp. 1 -- 9.
+I.~E. Maxwell, ``Driving forces for innovation in applied catalysis,'' in \emph{11th International Congress On Catalysis - 40th Anniversary Proceedings of the 11th {ICC}}, ser. Studies in Surface Science and Catalysis, E.~I. Joe W.~Hightower, W. Nicholas~Delgass and A.~T. Bell, Eds.\hskip 1em plus 0.5em minus 0.4em\relax Elsevier, 1996, vol. 101, pp. 1 -- 9.
 
 \bibitem{markovic2001}
-N.~M. Markovic, T.~J. Schmidt, V.~Stamenkovic, and P.~N. Ross, ``Oxygen
-  reduction reaction on pt and pt bimetallic surfaces: A selective review,''
-  \emph{Fuel Cells}, vol.~1, no.~2, p. 105, 2001.
+N.~M. Markovic, T.~J. Schmidt, V.~Stamenkovic, and P.~N. Ross, ``Oxygen reduction reaction on pt and pt bimetallic surfaces: A selective review,'' \emph{Fuel Cells}, vol.~1, no.~2, p. 105, 2001.
 
 \bibitem{Kim2006}
-Y.~Kim, M.~Fregonese, H.~Mazille, D.~Feron, and G.~Santarini, ``Study of oxygen
-  reduction on stainless steel surfaces and its contribution to acoustic
-  emission recorded during corrosion processes,'' \emph{Corrosion Science},
-  vol.~48, no.~12, pp. 3945 -- 3959, 2006.
+Y.~Kim, M.~Fregonese, H.~Mazille, D.~Feron, and G.~Santarini, ``Study of oxygen reduction on stainless steel surfaces and its contribution to acoustic emission recorded during corrosion processes,'' \emph{Corrosion Science}, vol.~48, no.~12, pp. 3945 -- 3959, 2006.
 
 \bibitem{Leibb1993}
-G.~W.~R. Leibbrandt, R.~van Wijk, and F.~H. P.~M. Habraken, ``Growth and alloy
-  formation of pt on fe(100),'' \emph{Phys. Rev. B}, vol.~47, pp. 6630--6643,
-  1993.
+G.~W.~R. Leibbrandt, R.~van Wijk, and F.~H. P.~M. Habraken, ``Growth and alloy formation of pt on fe(100),'' \emph{Phys. Rev. B}, vol.~47, pp. 6630--6643, 1993.
 
 \bibitem{Fujita1996}
-T.~Fujita, Y.~Okawa, Y.~Matsumoto, and K.-i. Tanaka, ``Phase boundaries of
-  nanometer scale \textit{c}(2\textit{x}2)-o domains on the cu(100) surface,''
-  \emph{Phys. Rev. B}, vol.~54, pp. 2167--2174, 1996.
+T.~Fujita, Y.~Okawa, Y.~Matsumoto, and K.-i. Tanaka, ``Phase boundaries of nanometer scale \textit{c}(2\textit{x}2)-o domains on the cu(100) surface,'' \emph{Phys. Rev. B}, vol.~54, pp. 2167--2174, 1996.
 
 \bibitem{paw1994}
-P.~E. Bl\"ochl, ``Projector augmented-wave method,'' \emph{Phys. Rev. B},
-  vol.~50, pp. 17\,953--17\,979, Dec 1994.
+P.~E. Bl\"ochl, ``Projector augmented-wave method,'' \emph{Phys. Rev. B}, vol.~50, pp. 17\,953--17\,979, Dec 1994.
 
 \bibitem{kresse1999}
-G.~Kresse and D.~Joubert, ``From ultrasoft pseudopotentials to the projector
-  augmented-wave method,'' \emph{Phys. Rev. B}, vol.~59, pp. 1758--1775, 1999.
+G.~Kresse and D.~Joubert, ``From ultrasoft pseudopotentials to the projector augmented-wave method,'' \emph{Phys. Rev. B}, vol.~59, pp. 1758--1775, 1999.
 
 \bibitem{hohen1964}
-P.~Hohenberg and W.~Kohn, ``Inhomogeneous electron gas,'' \emph{Phys. Rev.},
-  vol. 136, p. "B864–B871", 1964.
+P.~Hohenberg and W.~Kohn, ``Inhomogeneous electron gas,'' \emph{Phys. Rev.}, vol. 136, p. "B864–B871", 1964.
 
 \bibitem{vasp1}
-G.~Kresse and J.~Hafner, ``Ab initio molecular dynamics for liquid metals,''
-  \emph{Phy. Rev. B}, vol.~47, p. 558, 1993.
+G.~Kresse and J.~Hafner, ``Ab initio molecular dynamics for liquid metals,'' \emph{Phy. Rev. B}, vol.~47, p. 558, 1993.
 
 \end{thebibliography}

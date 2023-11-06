@@ -1,44 +1,27 @@
-This is BibTeX, Version 0.99d
+This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: laporan.aux
-Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: IEEEtran.bst
-Reallocating 'name_of_file' (item size: 1) to 14 items.
 A level-1 auxiliary file: xx-sampul.aux
-Reallocating 'name_of_file' (item size: 1) to 19 items.
 A level-1 auxiliary file: xx-sampuldalam.aux
-Reallocating 'name_of_file' (item size: 1) to 15 items.
 A level-1 auxiliary file: a2-abstrak.aux
-Reallocating 'name_of_file' (item size: 1) to 16 items.
 A level-1 auxiliary file: a3-abstract.aux
-Reallocating 'name_of_file' (item size: 1) to 18 items.
 A level-1 auxiliary file: xx-pernyataan.aux
-Reallocating 'name_of_file' (item size: 1) to 19 items.
 A level-1 auxiliary file: xx-persetujuan.aux
-Reallocating 'name_of_file' (item size: 1) to 18 items.
 A level-1 auxiliary file: xx-pengesahan.aux
-Reallocating 'name_of_file' (item size: 1) to 19 items.
 A level-1 auxiliary file: a4-persembahan.aux
-Reallocating 'name_of_file' (item size: 1) to 21 items.
 A level-1 auxiliary file: a5-katapengantar.aux
-Reallocating 'name_of_file' (item size: 1) to 14 items.
 A level-1 auxiliary file: xx-daftar.aux
-Reallocating 'name_of_file' (item size: 1) to 12 items.
 A level-1 auxiliary file: b1-bab1.aux
-Reallocating 'name_of_file' (item size: 1) to 12 items.
 A level-1 auxiliary file: b2-bab2.aux
-Reallocating 'name_of_file' (item size: 1) to 12 items.
 A level-1 auxiliary file: b3-bab3.aux
-Reallocating 'name_of_file' (item size: 1) to 12 items.
 A level-1 auxiliary file: b4-bab4.aux
-Reallocating 'name_of_file' (item size: 1) to 12 items.
 A level-1 auxiliary file: b5-bab5.aux
-Reallocating 'name_of_file' (item size: 1) to 11 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'wiz_functions' (item size: 4) to 6000 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: a7-pustaka.bib
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
