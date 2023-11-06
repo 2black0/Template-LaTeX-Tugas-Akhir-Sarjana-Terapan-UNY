@@ -9,6 +9,7 @@ Repo ini berisi template LaTeX yang digunakan dalam penulisan Laporan Proyek Akh
 - 15 Juni 2023: Perbaikan format Halaman Pengesahan, Perbaikan contoh tabel, Penambahan hyperlink untuk gambar, tabel, dan persamaan pada bacaan berdasarkan label
 - 22 Juni 2023: Perbaikan nama file untuk memudahkan idefitikasi
 - 05 November 2023: Pemberian titik pada chapater di daftar isi, perbaikan hirarki penomoran
+- 06 November 2023: Perbaikan susunan abstrak (3 paragraf)
 
 ## Penjelasan Isi File
 
