@@ -73,6 +73,7 @@
 % Untuk menghapus titik dua (colon)
 \captionsetup[figure]{labelsep=space}
 \captionsetup[table]{labelsep=space}
+\captionsetup[lstlisting]{labelsep=space}
 
 % Mengatur nomor caption gambar dan table
 \renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
@@ -131,6 +132,37 @@
 
 %paket untuk mengembed kode dalam LaTeX
 \usepackage{listings}
+\renewcommand\lstlistingname{Kode}
+\renewcommand\lstlistlistingname{Kode}
+
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\linespread{1}\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    columns=fullflexible
+}
+
+\lstset{style=mystyle}
 
 %paket untuk tabel
 \usepackage{longtable}

@@ -58,13 +58,13 @@ Untuk menambahkan gambar hal yang harus dilakukan adalah:
     \item Memasukkan kode di bawah
 \end{packed_enum}
 
-\begin{lstlisting}[language=TeX]
-    \begin{figure}[H]
-        \centering
-        \includegraphics[scale=0.2]{gambar-kucing}
-        \caption{Gambar Kucing Lucu dan Imut}
-    \end{figure}
-\end{lstlisting}
+%\begin{lstlisting}[language=TeX]
+%    \begin{figure}[H]
+%        \centering
+%        \includegraphics[scale=0.2]{gambar-kucing}
+%        \caption{Gambar Kucing Lucu dan Imut}
+%    \end{figure}
+%\end{lstlisting}
 
 Ukuran gambar dapat diganti dengan mengganti nilai pada scale. Jangan lupa memberikan caption pada setiap gambar. Berikut adalah contoh dari gambar yang telah dimasukkan pada dokumen. Penomoran gambar sudah otomatis dan akan masuk ke daftar gambar juga secara otomatis. Apabila ada beberapa gambar yang akan di embed dengan 1 caption, maka silahkan edit terlebih dahulu dan dijadikan menjadi 1 gambar. Posisi gambar akan pasti setelah dari text ini, apabila ingin mengganti posisinya parameter \textit{H} dapat diganti dengan \textit{h, t, b, p} sesuai kebutuhan.
 
@@ -176,54 +176,14 @@ Kita juga bisa menambahkan tabel yang besar dengan format halaman landscape sepe
 \subsection{Menambahkan listing Kode Program}
 Berikut adalah beberapa contoh listing kode yang diembed ke dalam dokumen \LaTeX. kita bisa menentukan bahasa pemrograman yang digunakan, misal seperti python. Berikut adalah contoh dari kode java, python, octave, dan C. Selain itu juga banyak paket yang bisa digunakan untuk styling / highlighting sumber kode yang digunakan, apabila dirasa dibutuhkan bisa ditambahkan manual.
 
-\iffalse
-\subsubsection{Java}
-Berikut contoh listing kode bahasa pemrograman Java.
-\begin{lstlisting}[language=java]
-    class HelloWorldApp {
-        public static void main(String[] args) {
-            System.out.println("Hello World!"); // Display the string.
-            for (int i = 0; i < 100; ++i) {
-                System.out.println(i);
-            }
-        }
-    }
-    \end{lstlisting}
+\lstinputlisting[caption=Contoh Kode Program Python, label={lst:listing-python}, language=Python]{kode/code_sample.py}
 
-\subsubsection{Python}
-Berikut contoh listing kode bahasa pemrograman Python.
-\begin{lstlisting}[language=python]
-    adj = ["red", "big", "tasty"]
-    fruits = ["apple", "banana", "cherry"]
+\lstinputlisting[caption=Contoh Kode Program C++, label={lst:listing-cpp}, language=C++]{kode/code_sample.cpp}
 
-    for x in adj:
-        for y in fruits:
-            print(x, y)
-    \end{lstlisting}
+\lstinputlisting[caption=Contoh Kode Program Arduino, label={lst:listing-cpp}, language=C++]{kode/code_sample.ino}
 
-\subsubsection{Octave}
-Berikut contoh listing kode bahasa pemrograman Octave.
-\begin{lstlisting}[language=octave]
-    x = linspace(0, 2*pi, 100);
-    y = sin(x);
-    plot(x, y);
-    figure;
-    \end{lstlisting}
+\lstinputlisting[caption=Contoh Kode Program Java, label={lst:listing-java}, language=C++]{kode/code_sample.java}
 
-\subsubsection{C/C++}
-Berikut contoh listing kode bahasa pemrograman C/C++.
-\begin{lstlisting}[language=C]
-    void setup() {
-        Serial.begin(9600);
-    }
-
-    void loop() {
-        int sensorValue = analogRead(A0);
-        Serial.println(sensorValue);
-        delay(1);
-    }
-    \end{lstlisting}
-\fi
 
 \subsection{Menambahkan Persamaan}
 Persamaan tidak lepas dari bidang ilmu teknik dan kadang perlu dituliskan dalam sebuah laporan. Sangat mudah menuliskan persamaan pada sebuah dokumen \LaTeX. Terdapat 2 jenis penulisan persamaan, yaitu inline dengan text seperti contoh ini \(x^2 + y^2 = z^2\) atau seperti ini $E=mc^2$. Jenis lain adalah dituliskan seperti dibawah ini, yang otomatis akan mendapatkan penomoran. Apabila belum familiar dengan kode untuk penulisan persamaan pada \LaTeX bisa menggunakan tool berikut \url{https://latex.codecogs.com/eqneditor/editor.php}. Setiap persamaan harus dimention seperti berikut ini \cref{eq:satu} dan harus dijelaskan terkait persamaan tersebut untuk apa.
