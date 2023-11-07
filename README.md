@@ -52,6 +52,7 @@ Unduh repo ini dengan menggunakan git atau dengan klik Download Zip yang ada di 
                code_sample.ino
                code_sample.java
                code_sample.py
+               $${\color{red}Red}$$
 ```
 
 file yang diawali dengan nama xx- terlarang untuk diedit selain itu silahkan edit sesuai dengan kebutuhan.
