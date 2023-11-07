@@ -34,14 +34,15 @@ Unduh repo ini dengan menggunakan git atau dengan klik Download Zip yang ada di 
         ├──laporan.pdf                 # file laporan dalam format pdf
         ├──laporan.tex                 # file utama, jangan edit file ini 
         ├──README.md                   # file yang sedang anda baca
-        ├──xx-daftar.tex               # abaikan, jangan diedit
-        ├──xx-daftarpustaka.tex        # abaikan, jangan diedit
-        ├──xx-pengesahan.tex           # abaikan, jangan diedit
-        ├──xx-pernyataan.tex           # abaikan, jangan diedit
-        ├──xx-persetujuan.tex          # abaikan, jangan diedit
-        ├──xx-preambles.tex            # abaikan, jangan diedit
-        ├──xx-sampul.tex               # abaikan, jangan diedit
-        ├──xx-sampuldalam.tex          # abaikan, jangan diedit
+        ├──gambar                      # folder berisi file yang tidak boleh diedit 
+                xx-daftar.tex               
+                xx-daftarpustaka.tex        
+                xx-pengesahan.tex           
+                xx-pernyataan.tex           
+                xx-persetujuan.tex          
+                xx-preambles.tex            
+                xx-sampul.tex               
+                xx-sampuldalam.tex          
         ├──gambar                      # folder berisi gambar, copy gambar yang dimasukkan pada laporan kesini dalam format jpg/png
                gambar-kucing.jpg
                logo-uny.png
