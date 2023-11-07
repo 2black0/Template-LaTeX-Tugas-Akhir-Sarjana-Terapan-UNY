@@ -34,7 +34,7 @@ Unduh repo ini dengan menggunakan git atau dengan klik Download Zip yang ada di 
         ├──laporan.pdf                 # file laporan dalam format pdf
         ├──laporan.tex                 # file utama, jangan edit file ini 
         ├──README.md                   # file yang sedang anda baca
-        ├──gambar                      # folder berisi file yang tidak boleh diedit 
+        ├──untouch                     # folder berisi file yang tidak boleh diedit 
                 xx-daftar.tex               
                 xx-daftarpustaka.tex        
                 xx-pengesahan.tex           
