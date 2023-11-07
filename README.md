@@ -15,7 +15,7 @@ Repo ini berisi template LaTeX yang digunakan dalam penulisan Laporan Proyek Akh
 ## Penjelasan Isi File
 
 Unduh repo ini dengan menggunakan git atau dengan klik Download Zip yang ada di pojok kanan atas dari repo ini. Terdapat beberapa file dalam repo ini, dan berikut adalah penjelasan dari masing-masing file:
-```diff
+
         .
         ├──a0-identitas.tex            # file pertama yang harus diedit berisi identitas dari tugas akhir seperti judul, nama mahasiswa, dll
         ├──a1-database.hyphenate.tex   # berisi daftar kata yang perlu dipenggal
@@ -53,7 +53,6 @@ Unduh repo ini dengan menggunakan git atau dengan klik Download Zip yang ada di 
                code_sample.java
                code_sample.py
                $${\color{red}Red}$$
-```
 
 file yang diawali dengan nama xx- terlarang untuk diedit selain itu silahkan edit sesuai dengan kebutuhan.
 
