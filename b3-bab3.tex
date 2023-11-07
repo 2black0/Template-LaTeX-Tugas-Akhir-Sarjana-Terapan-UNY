@@ -174,16 +174,15 @@ Kita juga bisa menambahkan tabel yang besar dengan format halaman landscape sepe
 \end{table}
 
 \subsection{Menambahkan listing Kode Program}
-Berikut adalah beberapa contoh listing kode yang diembed ke dalam dokumen \LaTeX. kita bisa menentukan bahasa pemrograman yang digunakan, misal seperti python. Berikut adalah contoh dari kode java, python, octave, dan C. Selain itu juga banyak paket yang bisa digunakan untuk styling / highlighting sumber kode yang digunakan, apabila dirasa dibutuhkan bisa ditambahkan manual.
+Berikut adalah beberapa contoh listing kode yang diembed ke dalam dokumen \LaTeX. kita bisa menentukan bahasa pemrograman yang digunakan, misal seperti python. Berikut adalah contoh dari kode python \cref{lst:python1}, C++ \cref{lst:cpp1}, Arduino \cref{lst:arduino1} dan Java \cref{lst:java1}. Selain itu juga banyak paket yang bisa digunakan untuk styling / highlighting sumber kode yang digunakan, apabila dirasa dibutuhkan bisa ditambahkan manual.
 
-\lstinputlisting[caption=Contoh Kode Program Python, label={lst:listing-python}, language=Python]{kode/code_sample.py}
+\lstinputlisting[caption=Contoh Kode Program Python, label={lst:python1}, language=Python]{kode/code_sample.py}
 
-\lstinputlisting[caption=Contoh Kode Program C++, label={lst:listing-cpp}, language=C++]{kode/code_sample.cpp}
+\lstinputlisting[caption=Contoh Kode Program C++, label={lst:cpp1}, language=C++]{kode/code_sample.cpp}
 
-\lstinputlisting[caption=Contoh Kode Program Arduino, label={lst:listing-cpp}, language=C++]{kode/code_sample.ino}
+\lstinputlisting[caption=Contoh Kode Program Arduino, label={lst:arduino1}, language=C++]{kode/code_sample.ino}
 
-\lstinputlisting[caption=Contoh Kode Program Java, label={lst:listing-java}, language=C++]{kode/code_sample.java}
-
+\lstinputlisting[caption=Contoh Kode Program Java, label={lst:java1}, language=C++]{kode/code_sample.java}
 
 \subsection{Menambahkan Persamaan}
 Persamaan tidak lepas dari bidang ilmu teknik dan kadang perlu dituliskan dalam sebuah laporan. Sangat mudah menuliskan persamaan pada sebuah dokumen \LaTeX. Terdapat 2 jenis penulisan persamaan, yaitu inline dengan text seperti contoh ini \(x^2 + y^2 = z^2\) atau seperti ini $E=mc^2$. Jenis lain adalah dituliskan seperti dibawah ini, yang otomatis akan mendapatkan penomoran. Apabila belum familiar dengan kode untuk penulisan persamaan pada \LaTeX bisa menggunakan tool berikut \url{https://latex.codecogs.com/eqneditor/editor.php}. Setiap persamaan harus dimention seperti berikut ini \cref{eq:satu} dan harus dijelaskan terkait persamaan tersebut untuk apa.
