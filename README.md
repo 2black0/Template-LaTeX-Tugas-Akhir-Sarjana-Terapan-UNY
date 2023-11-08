@@ -11,7 +11,8 @@ Repo ini berisi template LaTeX yang digunakan dalam penulisan Laporan Proyek Akh
 - 22 Juni 2023: Perbaikan nama file untuk memudahkan idefitikasi
 - 05 November 2023: Pemberian titik pada chapater di daftar isi, perbaikan hirarki penomoran
 - 06 November 2023: Perbaikan susunan abstrak (3 paragraf), Perbaikan Abstrak 1 spasi dan Konten 2 spasi
-- 07 November 2023: Perbaikan format, penggantian format daftar pustaka dari IEEE -> APA 7th, Menambahkan contoh penulisan code beserta penomorannya
+- 07 November 2023: Perbaikan format pada beberapa bagian, penggantian format daftar pustaka dari IEEE -> APA 7th, Menambahkan contoh penulisan code beserta penomorannya, menambahkan contoh penulisan persamaan
+- 08 November 2023: Pengisian contoh isi Lampiran, Perbaikan contoh gambar dan tabel dan daftar singkatan
 
 ## Penjelasan Isi File
 
