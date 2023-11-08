@@ -84,92 +84,96 @@ Setiap gambar harus dimention atau disebutkan didalam bacaan seperti berikut ini
     \label{fig:logoUNY}
 \end{figure}
 
-Untuk menambahkan gambar secara landscape dapat dilihat pada contoh berikut ini dan jangan lupa selalu menyebutkan nomor gambar disertai penjelasannya seperti ini \cref{fig:logoUNY}.
+Untuk menambahkan gambar secara landscape dapat dilihat pada contoh berikut ini dan jangan lupa selalu menyebutkan nomor gambar disertai penjelasannya seperti ini \cref{fig:logoUNY} dan ini \cref{fig:kucingdanUNY}.
 
-\begin{sidewaysfigure}[htbp]
+\begin{figure}
 	\centering
-	\includegraphics[width=0.6\textwidth]{logo-uny}
-	\caption{Logo UNY pada Landscape mode}
-    \label{fig:logoUNYlandscape}
-\end{sidewaysfigure}
-
-\begin{figure}[H]
-    \centering
-    \subfigure[]{
-     \includegraphics[width=0.4\linewidth]{gambar-kucing}
-     }\hspace{0.1\linewidth}
-    \subfigure[]{
-     \includegraphics[width=0.4\linewidth]{logo-uny}
-    }
-    \caption{Dengan menempatkan gambar (a) dan (b), pembaca akan lebih mudah membandingkan keduanya.}
-    \label{fig:kucingdanUNY}
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{gambar-kucing}
+		\caption{Kucing Lucu 1}
+		\label{fig:kucing-a}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{logo-uny}
+		\caption{Logo UNY}
+		\label{fig:logo-uny-b}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{gambar-kucing}
+		\caption{Kucing Lucu 2}
+		\label{fig:kucing-c}
+	\end{subfigure}
+	   \caption{3 gambar yang disusun menjadi 1 bagian dengan penomoran (a), (b), dan (c)}
+	   \label{fig:kucingdanUNY}
 \end{figure}
 
 \subsection{Membuat Tabel}
-Pada bagian ini akan dijelaskan bagaimana membuat tabel dalam sebuah dokumen \LaTeX. untuk membuat tabel memang agak sedikit sulit, sehingga saya menyarankan menggunakan tool berikut \url{https://www.tablesgenerator.com/} kemudian isikan tabel pada tool generator tersebut dan salin kodenya ke dalam dokumen \LaTeX. Berikut adalah contoh dari sebuah tabel yang telah dibuat. Jangan lupa setiap tabel harus dimention dan dijelaskan dibacaan seperti berikut ini \cref{tab:spekPC}.
+Pada bagian ini akan dijelaskan bagaimana membuat tabel dalam sebuah dokumen \LaTeX. untuk membuat tabel memang agak sedikit sulit, sehingga saya menyarankan menggunakan tool berikut \url{https://www.tablesgenerator.com/} atau \url{https://www.latex-tables.com/} kemudian isikan tabel pada tool generator tersebut dan salin kodenya ke dalam dokumen \LaTeX. Berikut adalah contoh dari sebuah tabel yang telah dibuat. Jangan lupa setiap tabel harus dimention dan dijelaskan dibacaan seperti berikut ini \cref{tab:hresult}.
 
-\begin{longtable}{|p{2cm}|p{7cm}|}
-    \caption{Spesifikasi komputer untuk menjalankan simulator.}
-    \label{tab:spekPC} \\
-    \hline
-    OS     & Ubuntu 20.04.2 LTS             \\ \hline
-    Kernel & 5.4.0-80-generic               \\ \hline
-    CPU    & Intel i3-8100 (4) @ 3.600GH    \\ \hline
-    GPU    & NVIDIA GeForce GTX 1050 Ti     \\ \hline
-    RAM    & 7901 MiB                       \\ \hline
-\end{longtable}
+\begin{table}[h]
+	\caption{Performance Using Hard Decision Detection}
+	\label{tab:hresult}
+	\centering
+	\begin{tabular}{c rrrrrrr}
+		\hline\hline
+		Audio Name&\multicolumn{7}{c}{Sum of Extracted Bits} \\ [0.5ex] 
+		\hline
+		Police & 5 & -1 & 5& 5& -7& -5& 3\\
+		Midnight & 7 & -3 & 5& 3& -1& -3& 5\\
+		News & 9 & -3 & 7& 9& -5& -1& 9\\[0.8ex]
+		\hline
+	\end{tabular}
+\end{table}
 
-Kita juga bisa menambahkan tabel yang besar dengan format halaman landscape seperti contoh berikut dan mention tabel seperti berikut ini \cref{tab:landscape} dan berikut ini \cref{tab:tabelx}.
-\begin{sidewaysfigure}[htbp]
-	\begin{table}[H]
-		\caption{Tabel Sederhana}
-		\label{tab:landscape}
-		\begin{center}
-			\begin{tabularx}{0.8\textwidth} {
-					|>{\raggedright\arraybackslash}X
-					|>{\raggedright\arraybackslash}X
-					|>{\raggedright\arraybackslash}X
-					|}
-				\hline
-				$G$     & $\text{dim }G$      & $\text{dim }F$ \\
-				\hline
-				$SU(N)$ & $N^2 -1$            & $N$            \\
-				$SO(N)$ & $\frac{1}{2}N(N-1)$ & $N$            \\
-				$Sp(N)$ & $N(2N+1)$           & $2N$           \\
-				$E_6$   & $78$                & $27$           \\
-				$E_7$   & $133$               & $56$           \\
-				$E_8$   & $248$               & $248$          \\
-				$F_4$   & $52$                & $6$            \\
-				$G_2$   & $14$                & $7$            \\
-				\hline
-			\end{tabularx}
-		\end{center}
-	\end{table}
-\end{sidewaysfigure}
+Kita juga bisa menambahkan tabel yang besar dengan format halaman landscape seperti contoh berikut dan mention tabel seperti berikut ini \cref{tab:LPer} dan berikut ini \cref{tab:PPer}.
 
-\begin{table}[H]
-	\caption{Tabel Sederhana}
-	\label{tab:tabelx}
-	\begin{center}
-		\begin{tabularx}{0.8\textwidth} {
-				|>{\raggedright\arraybackslash}X
-				|>{\raggedright\arraybackslash}X
-				|>{\raggedright\arraybackslash}X
-				|}
-			\hline
-			$G$     & $\text{dim }G$      & $\text{dim }F$ \\
-			\hline
-			$SU(N)$ & $N^2 -1$            & $N$            \\
-			$SO(N)$ & $\frac{1}{2}N(N-1)$ & $N$            \\
-			$Sp(N)$ & $N(2N+1)$           & $2N$           \\
-			$E_6$   & $78$                & $27$           \\
-			$E_7$   & $133$               & $56$           \\
-			$E_8$   & $248$               & $248$          \\
-			$F_4$   & $52$                & $6$            \\
-			$G_2$   & $14$                & $7$            \\
-			\hline
-		\end{tabularx}
-	\end{center}
+\begin{sidewaystable}[htbp]
+	\caption{Performance After Post Filtering}
+	\label{tab:LPer}
+	\centering
+	\begin{tabular}{l c c rrrrrrr}
+		\hline\hline
+		Audio &Audibility & Decision &\multicolumn{7}{c}{Sum of Extracted Bits} 
+		\\ [0.5ex] 
+		\hline
+		& &soft &1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
+		\raisebox{1.5ex}{Police} & \raisebox{1.5ex}{5}&hard
+		& 2 & $-4$ & 4 & 4 & $-2$ & $-4$ & 4 \\[1ex]
+		& &soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
+		\raisebox{1.5ex}{Beethoven} & \raisebox{1.5ex}{5}& hard
+		&8 & $-8$ & 2 & 8 & $-8$ & $-8$ & 6 \\[1ex]
+		& &soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
+		\raisebox{1.5ex}{Metallica} & \raisebox{1.5ex}{5}& hard
+		&4 & $-8$ & 8 & 4 & $-8$ & $-8$ & 8 \\[1ex]
+		\hline
+	\end{tabular}
+\end{sidewaystable}
+	
+\begin{table}[h]
+	\caption{Performance After Post Filtering}
+	\label{tab:PPer}
+	\centering
+	\begin{tabular}{l c c rrrrrrr}
+		\hline\hline
+		Audio &Audibility & Decision &\multicolumn{7}{c}{Sum of Extracted Bits} 
+		\\ [0.5ex] 
+		\hline
+		& &soft &1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
+		\raisebox{1.5ex}{Police} & \raisebox{1.5ex}{5}&hard
+		& 2 & $-4$ & 4 & 4 & $-2$ & $-4$ & 4 \\[1ex]
+		& &soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
+		\raisebox{1.5ex}{Beethoven} & \raisebox{1.5ex}{5}& hard
+		&8 & $-8$ & 2 & 8 & $-8$ & $-8$ & 6 \\[1ex]
+		& &soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
+		\raisebox{1.5ex}{Metallica} & \raisebox{1.5ex}{5}& hard
+		&4 & $-8$ & 8 & 4 & $-8$ & $-8$ & 8 \\[1ex]
+		\hline
+	\end{tabular}
 \end{table}
 
 \subsection{Menambahkan listing Kode Program}
@@ -184,15 +188,20 @@ Berikut adalah beberapa contoh listing kode yang diembed ke dalam dokumen \LaTeX
 \lstinputlisting[caption=Contoh Kode Program Java, label={lst:java1}, language=C++]{kode/code_sample.java}
 
 \subsection{Menambahkan Persamaan}
-Persamaan tidak lepas dari bidang ilmu teknik dan kadang perlu dituliskan dalam sebuah laporan. Sangat mudah menuliskan persamaan pada sebuah dokumen \LaTeX. Terdapat 2 jenis penulisan persamaan, yaitu inline dengan text seperti contoh ini \(x^2 + y^2 = z^2\) atau seperti ini $E=mc^2$. Jenis lain adalah dituliskan seperti dibawah ini, yang otomatis akan mendapatkan penomoran. Apabila belum familiar dengan kode untuk penulisan persamaan pada \LaTeX bisa menggunakan tool berikut \url{https://latex.codecogs.com/eqneditor/editor.php}. Setiap persamaan harus dimention seperti berikut ini \cref{eq:satu} dan harus dijelaskan terkait persamaan tersebut untuk apa.
+Persamaan tidak lepas dari bidang ilmu teknik dan kadang perlu dituliskan dalam sebuah laporan. Sangat mudah menuliskan persamaan pada sebuah dokumen \LaTeX. Terdapat 2 jenis penulisan persamaan, yaitu inline dengan text seperti contoh ini \(x^2 + y^2 = z^2\) atau seperti ini $E=mc^2$. Jenis lain adalah dituliskan seperti dibawah ini, yang otomatis akan mendapatkan penomoran. Apabila belum familiar dengan kode untuk penulisan persamaan pada \LaTeX bisa menggunakan tool berikut \url{https://latex.codecogs.com/eqneditor/editor.php} atau \url{https://latexeditor.lagrida.com/}. Setiap persamaan harus dimention seperti berikut ini \cref{eq:satu} dan ini \cref{eq:equationDua} dan harus dijelaskan terkait persamaan tersebut untuk apa.
 
 \begin{equation}
     \label{eq:satu}
     E=mc^2
 \end{equation}
 
+\begin{equation}
+	\label{eq:equationDua}
+	m_n = k_p*e_n + \frac{k_e*T}{T_{reset}}\sum_{i=0}^{n}e_i + k_d\frac{e_n - e_{n-1}}{\delta t} + m_{R}
+\end{equation}
+
 \subsection{Referensi dan Sitasi}
-Referensi dan sitasi pada dokumen \LaTeX juga cukup mudah. Silahkan buka file \textit{pustaka.bib} dan amati beberapa contoh penulisan referensi yang ada. Untuk menggenerate bentuk referensi seperti ini dapat menggunakan Mendeley atau Zotero. Mensitasi referensi seperti ini \cite{Kim2006} dapat dilakukan dengan perintah \verb|\cite{nama_label}|.
+Referensi dan sitasi pada dokumen \LaTeX juga cukup mudah. Silahkan buka file \textit{pustaka.bib} dan amati beberapa contoh penulisan referensi yang ada. Untuk menggenerate bentuk referensi seperti ini dapat menggunakan Mendeley atau Zotero. Mensitasi referensi seperti ini \cite{Kim2006}, \cite{Fujita1996}, \cite{markovic2001} dapat dilakukan dengan perintah \verb|\cite{nama_label}|. Pemberian sitasi dengan benar membuat sitasi tersebut dapat di klik dan akan mengarahkan ke daftar pustaka.
 
 \section{Section 3.3}
 Desain dan Implementasi

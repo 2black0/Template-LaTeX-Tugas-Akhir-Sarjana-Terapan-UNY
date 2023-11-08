@@ -12,13 +12,10 @@
 \usepackage{setspace}
 \usepackage[raggedrightboxes]{ragged2e}
 
-
 % Digunakan untuk memasukan gambar ke laporan. 
 \usepackage{graphicx}
 \graphicspath{{gambar/}}
 \usepackage{float}
-\usepackage[hang,nooneline,scriptsize,md]{subfigure}
-\usepackage[subfigure]{tocloft}
 
 
 % Disable indent pada kalimat pertama dan mengatur jarak indent 1cm
@@ -69,7 +66,8 @@
 {0pt}{10pt}{0cm}
 
 % Digunakan untuk mengatur caption dalam dokumen.
-\usepackage[font=footnotesize,format=plain,labelfont=bf,up,textfont=up]{caption}
+\usepackage[font=small, format=plain, labelfont=bf, up, textfont=up]{caption}
+\usepackage{subcaption}
 
 % Untuk menghapus titik dua (colon)
 \captionsetup[figure]{labelsep=space}
@@ -128,8 +126,7 @@
 %paket untuk bibTex
 \usepackage{cite}
 \usepackage{natbib}
-\bibliographystyle{newapa}
-%\bibliographystyle{IEEEtran}
+\bibliographystyle{newapa} %IEEEtran
 
 %paket untuk mengembed kode dalam LaTeX
 \usepackage{listings}
