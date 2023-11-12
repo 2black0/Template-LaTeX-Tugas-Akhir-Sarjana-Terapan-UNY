@@ -63,7 +63,11 @@ file yang diawali dengan nama xx- terlarang untuk diedit selain itu silahkan edi
 
 [![Tutorial LaTeX 2 - Penulisan Isi pada Template LaTeX](https://www.youtube.com/watch?v=4Qk_2pknhsM/maxresdefault.jpg)](https://www.youtube.com/watch?v=4Qk_2pknhsM)
 
-[![Tutorial LaTeX 1 - Penggunaan Template untuk Penulisan Laporan Tugas Akhir D4 Teknik Elektronika UNY](https://i.ytimg.com/vi/lnPTVrOGB90/maxresdefault.jpg)](https://www.youtube.com/watch?v=lnPTVrOGB90)
+1. Tutorial LaTeX 1 - Penggunaan Template untuk Penulisan Laporan Tugas Akhir D4 Teknik Elektronika UNY
+[![Tutorial LaTeX 1 - Penggunaan Template untuk Penulisan Laporan Tugas Akhir D4 Teknik Elektronika UNY](https://i.ytimg.com/vi/lnPTVrOGB90/hqdefault.jpg)](https://www.youtube.com/watch?v=lnPTVrOGB90)
+
+1. Tutorial LaTeX 2 - Penulisan Isi pada Template LaTeX
+[![Tutorial LaTeX 2 - Penulisan Isi pada Template LaTeX](https://i.ytimg.com/vi/4Qk_2pknhsM/hqdefault.jpg)](https://www.youtube.com/watch?v=4Qk_2pknhsM)
 
 ## Petunjuk Penggunaan
 1. Unduh dan Install MikTeX (https://miktex.org/download) sebagai distribusi dari LaTeX (pilih sesuai sistem operasi yang digunakan), catatan bagi pengguna Windows **Wajib Memilih for All User** saat proses instalasi serta pilih opsi _Always_ pada Installed on-the-fly
