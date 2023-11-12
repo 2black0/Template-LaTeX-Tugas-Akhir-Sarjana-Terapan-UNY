@@ -74,7 +74,7 @@ file yang diawali dengan nama xx- terlarang untuk diedit selain itu silahkan edi
 6. Pastikan komputer sudah terhubung dengan internet karena diperlukan beberapa paket yang diunduh secara otomatis, kemudian setelah semua selesai bisa klik tombol **build & view** maka dokumen LaTeX akan digenerate dan outputnya adalah _laporan.pdf_ yang berada di sisi kanan
 
 ## Pembuatan isi file bib (bibliography)
-Pembuatan isi file bib (bibliography) dapat dilakukan dengan software Mendeley (download mendeley di https://www.mendeley.com/search/) atau Zoteor (download zotero di https://www.zotero.org/). Selain itu sangat direkomendasikan menggunakan JabRef (https://www.jabref.org/).
+Pembuatan isi file bib (bibliography) dapat dilakukan dengan software Mendeley (https://www.mendeley.com/search/) atau Zotero (https://www.zotero.org/). Selain itu sangat direkomendasikan menggunakan JabRef (https://www.jabref.org/).
 
 ## Screenshot
 ![TexStudio on MacOS](gambar/screenshot-texstudio-macos.png "TexStudio on MacOS")
