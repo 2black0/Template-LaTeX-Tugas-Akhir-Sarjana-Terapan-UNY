@@ -1,0 +1,79 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Arifin, Nasuha \& Hermawan}{Arifin
+  et~al.}{2015}]{Arifin_2015}
+Arifin, F., Nasuha, A., \& Hermawan, H.~D. (2015).
+\newblock Lip reading based on background subtraction and image projection.
+\newblock In {\em 2015 International Conference on Information Technology
+  Systems and Innovation (ICITSI)}, (pp.\ 1--3).
+
+\bibitem[\protect\citeauthoryear{Dhewa, Dharmawan \& Priyambodo}{Dhewa
+  et~al.}{2017}]{Dhewa_Dharmawan_Priyambodo_2017}
+Dhewa, O.~A., Dharmawan, A., \& Priyambodo, T.~K. (2017).
+\newblock Model of linear quadratic regulator (lqr) control method in hovering
+  state of quadrotor.
+\newblock {\em Journal of Telecommunication, Electronic and Computer
+  Engineering (JTEC)}, {\em 9\/}(3), 135–143.
+
+\bibitem[\protect\citeauthoryear{Gunawan, Pratama, Cahyadi, Winduratna, Yuwono
+  \& Wahyunggoro}{Gunawan et~al.}{2019}]{Pratama_2019}
+Gunawan, S.~A., Pratama, G. N.~P., Cahyadi, A.~I., Winduratna, B., Yuwono, Y.
+  C.~H., \& Wahyunggoro, O. (2019).
+\newblock Smoothed a-star algorithm for nonholonomic mobile robot path
+  planning.
+\newblock In {\em 2019 International Conference on Information and
+  Communications Technology (ICOIACT)}, (pp.\ 654--658).
+
+\bibitem[\protect\citeauthoryear{Mansur, Habib, Pratama, Cahyadi \&
+  Ardiyanto}{Mansur et~al.}{2017}]{Pratama_2017}
+Mansur, S., Habib, M., Pratama, G. N.~P., Cahyadi, A.~I., \& Ardiyanto, I.
+  (2017).
+\newblock Real time monocular visual odometry using optical flow: Study on
+  navigation of quadrotors uav.
+\newblock In {\em 2017 3rd International Conference on Science and Technology -
+  Computer (ICST)}, (pp.\ 122--126).
+
+\bibitem[\protect\citeauthoryear{Marpanaji, Yuwono, Mahali, Aji \&
+  Nugraha}{Marpanaji et~al.}{2019}]{Marpanaji_2019}
+Marpanaji, E., Yuwono, K.~T., Mahali, M.~I., Aji, P.~T., \& Nugraha, N. A.~B.
+  (2019).
+\newblock Experimental study of measuring radiation patterns for vhf and uhf
+  antennas.
+\newblock {\em Journal of Physics: Conference Series}, {\em 1413\/}(1), 012013.
+
+\bibitem[\protect\citeauthoryear{Nasuha, Arifin, Sardjono, Takahashi \&
+  Purnomo}{Nasuha et~al.}{2017}]{Nasuha_2017}
+Nasuha, A., Arifin, F., Sardjono, T., Takahashi, H., \& Purnomo, M. (2017).
+\newblock Automatic lip reading for daily indonesian words based on frame
+  difference and horizontal-vertical image projection.
+\newblock {\em Journal of Theoretical and Applied Information Technology}, {\em
+  95\/}(2), 393--402.
+
+\bibitem[\protect\citeauthoryear{Ogata}{Ogata}{1987}]{Ogata_1987}
+Ogata, K. (1987).
+\newblock {\em Discrete-Time Control Systems}.
+\newblock Australia, Sydney: Prentice Hall.
+
+\bibitem[\protect\citeauthoryear{Priambodo, Arifin, Nasuha \&
+  Winursito}{Priambodo et~al.}{2021}]{Priambodo_2021}
+Priambodo, A.~S., Arifin, F., Nasuha, A., \& Winursito, A. (2021).
+\newblock Face tracking for flying robot quadcopter based on haar cascade
+  classifier and pid controller.
+\newblock {\em Journal of Physics: Conference Series}, {\em 2111\/}(1), 012046.
+
+\bibitem[\protect\citeauthoryear{Priambodo \& Nugroho}{Priambodo \&
+  Nugroho}{2021}]{Priambodo_2021_AWS}
+Priambodo, A.~S. \& Nugroho, A.~P. (2021).
+\newblock Design \& implementation of solar powered automatic weather station
+  based on esp32 and gprs module.
+\newblock {\em Journal of Physics: Conference Series}, {\em 1737\/}(1), 012009.
+
+\bibitem[\protect\citeauthoryear{Priyambodo, Dhewa \& Susanto}{Priyambodo
+  et~al.}{2020}]{Priyambodo_Dhewa_Susanto_2020}
+Priyambodo, T.~K., Dhewa, O.~A., \& Susanto, T. (2020).
+\newblock Model of linear quadratic regulator (lqr) control system in waypoint
+  flight mission of flying wing uav.
+\newblock {\em Journal of Telecommunication, Electronic and Computer
+  Engineering (JTEC)}, {\em 12\/}(4), 43–49.
+
+\end{thebibliography}
