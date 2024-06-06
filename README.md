@@ -14,6 +14,7 @@ Repo ini berisi template LaTeX yang digunakan dalam penulisan Laporan Proyek Akh
 - 07 November 2023: Perbaikan format pada beberapa bagian, penggantian format daftar pustaka dari IEEE -> APA 7th, Menambahkan contoh penulisan code beserta penomorannya, menambahkan contoh penulisan persamaan
 - 08 November 2023: Pengisian contoh isi Lampiran, Perbaikan contoh gambar dan tabel dan daftar singkatan
 - 12 November 2023: Penambahan contoh sumber daftar pustaka (artikel, prosiding, buku)
+- 06 Juni 2024: Update opsi bibliographystyle untuk overleaf agar tidak error (pada file xx-preambles.tex, baris 129, \bibliographystyle{**newapa**} % ganti newapa dengan apalike apabila menggunakan overleaf)
 
 ## Penjelasan Isi File
 
