@@ -76,13 +76,18 @@ file yang diawali dengan nama xx- terlarang untuk diedit selain itu silahkan edi
 1. Tutorial LaTeX 5 - Penulisan Kode Program pada LaTeX
 [![Tutorial LaTeX 5 - Penulisan Kode Program pada LaTeX](https://i.ytimg.com/vi/JeSJ0mYfxA0/hqdefault.jpg)](https://www.youtube.com/watch?v=JeSJ0mYfxA0)
 
-## Petunjuk Penggunaan
+## Petunjuk Penggunaan Secara Lokal
 1. Unduh dan Install MikTeX (https://miktex.org/download) sebagai distribusi dari LaTeX (pilih sesuai sistem operasi yang digunakan), catatan bagi pengguna Windows **Wajib Memilih for All User** saat proses instalasi serta pilih opsi _Always_ pada Installed on-the-fly
 2. Unduh dan Install TeXstudio (https://www.texstudio.org/) sebagai editor untuk Sistem Operasi Windows, MacOS atau Linux
 3. Sebelum unduh repo ini pastikan telah mengupdate semua paket yang ada pada MikTex Console kemudian unduh Repo ini dan extract, kemudian Open _laporan.tex_ pada TexStudio
 4. Pada sisi kiri terdapat daftar file yang berada dalam folder kemudian edit file sesuai dengan kebutuhan
 5. Terdapat beberapa contoh dalam _laporan.tex_ yang dapat dibaca pada _laporan.pdf_ seperti memasukkan gambar, membuat tabel, menuliskan persamaan, menuliskan sumber kode, dan membuat referensi dan sitasi
 6. Pastikan komputer sudah terhubung dengan internet karena diperlukan beberapa paket yang diunduh secara otomatis, kemudian setelah semua selesai bisa klik tombol **build & view** maka dokumen LaTeX akan digenerate dan outputnya adalah _laporan.pdf_ yang berada di sisi kanan
+
+## Petunjuk Penggunaan Secara Online (via Overleaf)
+Cara ini adalah yang paling praktis, karena tidak perlu menginstall aplikasi apapun ke Laptop / Komputer. Cukup membuka browser sudah dapat melakukan proses edit file LaTeX secara langsung.
+Buka website overleaf.com dan register kemudian login. Klik new project dan upload file zip dari project ini. Silahkan edit sesuai kebutuhan.
+![TexStudio on MacOS](gambar/screenshot-overleaf.png "Editing LaTeX on Overleaf")
 
 ## Pembuatan isi file bib (bibliography)
 Pembuatan isi file bib (bibliography) dapat dilakukan dengan software Mendeley (https://www.mendeley.com/search/) atau Zotero (https://www.zotero.org/). Selain itu sangat direkomendasikan menggunakan JabRef (https://www.jabref.org/).
