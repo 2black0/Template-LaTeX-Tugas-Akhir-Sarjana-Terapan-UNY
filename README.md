@@ -17,6 +17,7 @@ Repo ini berisi template LaTeX yang digunakan dalam penulisan Laporan Proyek Akh
 - 06 Juni 2024: Update opsi bibliographystyle untuk overleaf agar tidak error (pada file xx-preambles.tex, baris 129, \bibliographystyle{**newapa**} % ganti newapa dengan apalike apabila menggunakan overleaf)
 - 07 Juni 2024: Menambahkan tutorial mengedit LaTeX pada overleaf.com di readme
 - 27 Juli 2024: mengganti penulisan sitasi APA Narrative citation (\cite{}) ke Parenthetical citation (\citep{}). Source: https://gking.harvard.edu/files/natnotes2.pdf
+- 01 Agutus 2024: Perbaikan judul dari BAB
 
 ## Penjelasan Isi File
 
