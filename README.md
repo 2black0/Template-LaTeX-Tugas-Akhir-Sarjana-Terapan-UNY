@@ -47,7 +47,8 @@ Clone repo ini dengan menggunakan git clone atau unduh dengan klik Download Zip 
                 xx-daftarpustaka.tex        
                 xx-pengesahan.tex           
                 xx-pernyataan.tex           
-                xx-persetujuan.tex          
+                xx-persetujuan-sempro.tex
+                xx-persetujuan-ujian.tex             
                 xx-preambles.tex            
                 xx-sampul.tex               
                 xx-sampuldalam.tex          
