@@ -1,174 +1,128 @@
 %==================================================================
-% Ini adalah file konfigurasi
+% Konfigurasi utama untuk dokumen LaTeX
 %==================================================================
 
 %% DILARANG EDIT BAGIAN INI
 
-% Mengatur bahasa latex
+% Mengatur bahasa dokumen ke Bahasa Indonesia dan encoding karakter
 \usepackage[indonesian]{babel}
 \usepackage[utf8]{inputenc}
 
-% Untuk pengaturan spacing
+% Pengaturan jarak antar baris dan penyesuaian kotak teks agar rata kiri
 \usepackage{setspace}
 \usepackage[raggedrightboxes]{ragged2e}
 
-% Digunakan untuk memasukan gambar ke laporan. 
+% Paket untuk memasukkan gambar dalam dokumen
 \usepackage{graphicx}
-\graphicspath{{gambar/}}
-\usepackage{float}
+\graphicspath{{gambar/}} % Menentukan folder default untuk gambar
+\usepackage{float}       % Mengatur posisi gambar dalam teks
 
+% Mengatur indentasi paragraf
+\usepackage{indentfirst}  % Memastikan paragraf pertama di setiap section memiliki indentasi
+\setlength\parindent{1cm} % Mengatur jarak indentasi paragraf menjadi 1 cm
 
-% Disable indent pada kalimat pertama dan mengatur jarak indent 1cm
-\usepackage{indentfirst}
-\setlength\parindent{1cm}
-
-% Membuat seluruh tulisan menjadi Times New Roman. 
+% Mengatur font utama dokumen menjadi Times New Roman
 \usepackage{pslatex}
 
-% Mengatur hirarki penomoran
-\renewcommand{\thesection}{\Alph{section}.\hspace{0.18cm}}
-\renewcommand{\thesubsection}{\arabic{subsection}.}
-\renewcommand{\thesubsubsection}{\alph{subsubsection}.}
+% Mengatur format penomoran section dan subsection
+\renewcommand{\thesection}{\Alph{section}.\hspace{0.18cm}} % Section: A, B, C, ...
+\renewcommand{\thesubsection}{\arabic{subsection}.}         % Subsection: 1, 2, 3, ...
 
-
-% Merubah huruf kapital pada judul daftar isi, daftar gambar, dan daftar table
+% Pengaturan daftar isi, daftar gambar, dan daftar tabel
 \usepackage{tocloft}
+\cftsetpnumwidth{1.5em}
+\cftsetrmarg{2em}
+\setlength{\cftsecnumwidth}{1.5em}
+\setlength{\cftsubsecnumwidth}{1.5em}
 \renewcommand{\cftchapdotsep}{\cftdotsep}
 \setlength{\cftbeforechapskip}{3pt}
 
-% Penulisan Bab pada Daftar isi
+% Penyesuaian judul bab dalam daftar isi agar ditampilkan sebagai "BAB"
 \renewcommand\cftchappresnum{BAB }
 \renewcommand\cftchapaftersnum{}
 \newlength\mylen
-\settowidth\mylen{\bfseries BAB 1 :\ } % if more than 9 chapters, use "Chapter 10"
+\settowidth\mylen{\bfseries BAB 1 :\ } % Menyesuaikan lebar penomoran bab
 \cftsetindents{chap}{0pt}{\mylen}
 
-% Mengatur font section
-\usepackage{sectsty}
-\sectionfont{\fontsize{12}{14}\selectfont}
-\subsectionfont{\fontsize{12}{14}\selectfont}
-\subsubsectionfont{\fontsize{12}{14}\selectfont}
-
-% Untuk merupakan format penulisan BAB
+% Pengaturan format dan penomoran judul bab
 \usepackage{titlesec}
-\titleformat{\chapter}
-{\doublespacing\fontsize{14pt}{16pt}\bfseries}
-{\MakeUppercase{\chaptertitlename\ \Roman{chapter}}\filcenter}
-{0.15cm}{\centering\uppercase}
+\titleformat{\chapter}{\doublespacing\fontsize{14pt}{16pt}\bfseries}{\MakeUppercase{\chaptertitlename\ \Roman{chapter}}\filcenter}{0.15cm}{\centering\uppercase}
+\titleformat{\section}{\fontsize{12}{14}\bfseries}{\thesection}{0.4cm}{}
+\titleformat{\subsection}{\fontsize{12}{14}\bfseries}{\thesubsection}{0.675cm}{}
+
+% Mengatur jarak dan format spacing untuk chapter, section dan subsection
 \titlespacing*{\chapter}{0pt}{-1cm}{20pt}
+\titlespacing*{\section}{0pt}{10pt}{0cm}
+\titlespacing*{\subsection}{0pt}{10pt}{0cm}
 
-% Mengatur spacing section
-\titlespacing*{\section}
-{0pt}{10pt}{0cm}
-\titlespacing*{\subsection}
-{0pt}{10pt}{0cm}
-\titlespacing*{\subsubsection}
-{0pt}{10pt}{0cm}
-
-% Digunakan untuk mengatur caption dalam dokumen.
+% Pengaturan untuk caption gambar dan tabel
 \usepackage[font=small, format=plain, labelfont=bf, up, textfont=up]{caption}
 \usepackage{subcaption}
 
-% Untuk menghapus titik dua (colon)
+% Menghapus tanda titik dua pada caption
 \captionsetup[figure]{labelsep=space}
 \captionsetup[table]{labelsep=space}
-\captionsetup[lstlisting]{labelsep=space}
 
-% Mengatur nomor caption gambar dan table
+% Mengatur nomor caption gambar dan tabel sesuai bab
 \renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
 \renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
 
-% Mengatur Hyphenation pada latex
+% Mengatur hyphenation (pemisahan kata) agar lebih rapi
 \tolerance=1
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
 \hbadness=10000
 
-% Untuk memasukkan table
+% Pengaturan tabel, multirow, dan ukuran kolom otomatis
 \usepackage{tabularx}
 \usepackage{multirow}
 
-% Menggatur margin halaman 
+% Pengaturan margin halaman
 \usepackage{geometry}
 \geometry{
-    left=4cm,            % <-- you want to adjust this
-    top=3cm,
-    right=3cm,
-    bottom=3cm,
+    left=4cm,          % Margin kiri
+    top=3cm,           % Margin atas
+    right=3cm,         % Margin kanan
+    bottom=3cm,        % Margin bawah
 }
 
-% Untuk notasi matematika
+% Paket untuk notasi matematika
 \usepackage{amsmath}
 
-% untuk mengatur label nomor pada rumus
+% Pengaturan nomor pada persamaan matematika sesuai bab
 \renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
 
-% untuk mengatur landscape page
+% Untuk halaman berorientasi landscape
 \usepackage{rotating}
 
-% untuk list
+% Pengaturan untuk list (daftar item dan angka)
 \usepackage{enumitem}
-\setlist{nosep}
-\newenvironment{packed_enum}{
+\setlist{nosep} % Menghilangkan jarak antar item dalam list
+\newenvironment{packed_enum}{ % Membuat lingkungan untuk daftar bernomor
     \begin{enumerate}[leftmargin=1.5\parindent]
         \setlength{\itemsep}{0pt}
         \setlength{\parskip}{0pt}
         \setlength{\parsep}{0pt}
         }{\end{enumerate}}
 
-\newenvironment{packed_item}{
+\newenvironment{packed_item}{ % Membuat lingkungan untuk daftar berpoin
     \begin{itemize}[leftmargin=1.375\parindent]
         \setlength{\itemsep}{0pt}
         \setlength{\parskip}{0pt}
         \setlength{\parsep}{0pt}
         }{\end{itemize}}
 
-%paket untuk bibTex
-\usepackage{cite}
-\usepackage{natbib}
-\bibliographystyle{newapa} % ganti newapa dengan apalike apabila menggunakan overleaf
+% Paket untuk bibliografi menggunakan BibTeX
+\usepackage[sort]{natbib}
+\bibliographystyle{newapa} % Ganti dengan apalike jika menggunakan Overleaf
 
-%paket untuk mengembed kode dalam LaTeX
-\usepackage{listings}
-\renewcommand\lstlistingname{Kode}
-\renewcommand\lstlistlistingname{Kode}
-
-\usepackage{xcolor}
-
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-
-\lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\linespread{1}\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2,
-    columns=fullflexible
-}
-
-\lstset{style=mystyle}
-
-%paket untuk tabel
+% Paket untuk tabel yang panjang dan melampaui satu halaman
 \usepackage{longtable}
 
-%paket untuk url
+% Paket untuk memasukkan hyperlink dalam dokumen
 \usepackage{hyperref}
 
-%automatic number
+% Pengaturan label otomatis untuk berbagai elemen (gambar, tabel, persamaan)
 \usepackage{cleveref}
 \crefname{figure}{gambar}{gambar}
 \Crefname{figure}{Gambar}{Gambar}
@@ -176,7 +130,20 @@
 \Crefname{table}{Tabel}{Tabel}
 \crefname{equation}{persamaan}{persamaan}
 \Crefname{equation}{Persamaan}{Persamaan}
-\crefname{listing}{kode}{kode}
-\Crefname{listing}{Kode}{Kode}
+\crefname{lstlisting}{kode}{kode}
+\Crefname{lstlisting}{Kode}{Kode}
+
+\AtBeginDocument{\renewcommand{\lstlistingname}{Kode}} 
+\AtBeginDocument{\renewcommand{\thelstlisting}{\thechapter.\arabic{lstlisting}}}
+
+% Paket untuk menampilkan kode program
+\usepackage{listings}
+\lstset{
+    basicstyle=\ttfamily\small,     % Mengatur font menjadi monospasi dan lebih kecil
+    breaklines=true,                   % Membungkus baris panjang
+    frame=single,                        % Menghilangkan bingkai
+    lineskip=0.25pt,                      % Mengatur jarak antar baris
+    columns=fullflexible               % Memperbaiki lebar kolom agar fleksibel
+}
 
 %% DILARANG EDIT BAGIAN INI
