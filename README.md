@@ -65,6 +65,27 @@ Clone repo ini dengan menggunakan git clone atau unduh dengan klik Download Zip 
 
 file yang diawali dengan nama xx- terlarang untuk diedit selain itu silahkan edit sesuai dengan kebutuhan.
 
+## Pengaturan Proposal / Laporan Tugas Akhir
+Perlu diketahui bahwa template ini dapat digunakan untuk pembuatan Proposal dan Laporan Tugas Akhir, namun untuk menggenerate Proposal atau Laporan perlu dilakukan beberapa konfigurasi. Silahkan cek pada file 'laporan-akhir.tex' dan edit bagian ini:
+```
+	...
+        \include{untouch/xx-persetujuan-sempro} %lembar persetujuan untuk seminar proposal
+	\include{untouch/xx-persetujuan-ujian} %lembar persetujuan untuk ujian 
+	\include{untouch/xx-pengesahan} %tutup untuk proposal
+
+	...
+	
+	\begin{spacing}{1.5}
+		\include{b1-bab1}
+		\include{b2-bab2}
+		\include{b3-bab3}
+		\include{b4-bab4} %tutup untuk proposal 
+		\include{b5-bab5} %tutup untuk proposal 
+	\end{spacing}
+
+        ...
+```
+
 ## Video Tutorial
 1. Tutorial LaTeX 1 - Penggunaan Template untuk Penulisan Laporan Tugas Akhir D4 Teknik Elektronika UNY
 [![Tutorial LaTeX 1 - Penggunaan Template untuk Penulisan Laporan Tugas Akhir D4 Teknik Elektronika UNY](https://i.ytimg.com/vi/lnPTVrOGB90/hqdefault.jpg)](https://www.youtube.com/watch?v=lnPTVrOGB90)
