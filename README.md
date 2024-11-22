@@ -66,7 +66,7 @@ Clone repo ini dengan menggunakan git clone atau unduh dengan klik Download Zip 
 file yang diawali dengan nama xx- terlarang untuk diedit selain itu silahkan edit sesuai dengan kebutuhan.
 
 ## Pengaturan Proposal / Laporan Tugas Akhir
-Perlu diketahui bahwa template ini dapat digunakan untuk pembuatan Proposal dan Laporan Tugas Akhir, namun untuk menggenerate Proposal atau Laporan perlu dilakukan beberapa konfigurasi. Silahkan cek pada file 'laporan-akhir.tex' dan edit bagian ini:
+Perlu diketahui bahwa template ini dapat digunakan untuk pembuatan Proposal dan Laporan Tugas Akhir, namun untuk menggenerate Proposal atau Laporan perlu dilakukan beberapa konfigurasi. Silahkan cek pada file `laporan-akhir.tex` dan edit bagian ini:
 ```
 ...
 \include{untouch/xx-persetujuan-sempro} %lembar persetujuan untuk proposal
