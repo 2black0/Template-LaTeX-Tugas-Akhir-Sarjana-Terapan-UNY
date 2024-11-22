@@ -68,22 +68,21 @@ file yang diawali dengan nama xx- terlarang untuk diedit selain itu silahkan edi
 ## Pengaturan Proposal / Laporan Tugas Akhir
 Perlu diketahui bahwa template ini dapat digunakan untuk pembuatan Proposal dan Laporan Tugas Akhir, namun untuk menggenerate Proposal atau Laporan perlu dilakukan beberapa konfigurasi. Silahkan cek pada file 'laporan-akhir.tex' dan edit bagian ini:
 ```
-	...
-        \include{untouch/xx-persetujuan-sempro} %lembar persetujuan untuk seminar proposal
-	\include{untouch/xx-persetujuan-ujian} %lembar persetujuan untuk ujian 
-	\include{untouch/xx-pengesahan} %tutup untuk proposal
+...
+\include{untouch/xx-persetujuan-sempro} %lembar persetujuan untuk proposal
+\include{untouch/xx-persetujuan-ujian} %lembar persetujuan untuk laporan akhir
+\include{untouch/xx-pengesahan} %lembar pengesahan untuk laporan akhir
 
-	...
-	
-	\begin{spacing}{1.5}
-		\include{b1-bab1}
-		\include{b2-bab2}
-		\include{b3-bab3}
-		\include{b4-bab4} %tutup untuk proposal 
-		\include{b5-bab5} %tutup untuk proposal 
-	\end{spacing}
+...
 
-        ...
+\begin{spacing}{1.5}
+        \include{b1-bab1}
+        \include{b2-bab2}
+        \include{b3-bab3}
+        \include{b4-bab4} %tutup untuk proposal
+        \include{b5-bab5} %tutup untuk proposal 
+\end{spacing}
+...
 ```
 
 ## Video Tutorial
