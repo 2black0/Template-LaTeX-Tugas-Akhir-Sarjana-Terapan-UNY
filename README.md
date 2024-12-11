@@ -19,6 +19,7 @@ Repo ini berisi template LaTeX yang digunakan dalam penulisan Laporan Proyek Akh
 - 27 Juli 2024: mengganti penulisan sitasi APA Narrative citation (\cite{}) ke Parenthetical citation (\citep{}). Source: https://gking.harvard.edu/files/natnotes2.pdf
 - 01 Agutus 2024: Perbaikan judul dari BAB
 - 07 November 2024: Perbaikan preamble, Penambahan lembar pengesahan untuk Seminar Proposal TA, dan perbaikan format
+- 11 Desember 2024: Penambahan README terkait instalasi pada MacOS
 
 ## Penjelasan Isi File
 
