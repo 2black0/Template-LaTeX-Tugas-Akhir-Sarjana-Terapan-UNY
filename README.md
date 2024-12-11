@@ -111,7 +111,7 @@ Perlu diketahui bahwa template ini dapat digunakan untuk pembuatan Proposal dan 
 6. Pastikan komputer sudah terhubung dengan internet karena diperlukan beberapa paket yang diunduh secara otomatis, kemudian setelah semua selesai bisa klik tombol **build & view** maka dokumen LaTeX akan digenerate dan outputnya adalah _laporan.pdf_ yang berada di sisi kanan
 
 ## Petunjuk Instalasi (MacOS) Penggunaan Secara Lokal - Alternatif
-`source: https://daangeijs.nl/posts/latex-vscode/`
+source: `https://sudorealm.com/blog/how-to-write-latex-documents-with-visual-studio-code-on-mac`
 1. Install Brew
 > /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 2. Install MacTex
@@ -121,8 +121,19 @@ Perlu diketahui bahwa template ini dapat digunakan untuk pembuatan Proposal dan 
 4. Update LaTeX
 > sudo tlmgr update --self
 > sudo tlmgr update --all
-5. Install Visual Studio Code dan Addons Latex Workshop
-6. Visual Studio Code dapat digunakan untuk menulis dengan format LaTeX, build dan view.
+5. Konfigurasi Path
+cek apakah ada tlmgr pada folder ini
+>  ls /usr/local/texlive/2024/bin/universal-darwin
+kemudian tambahkan path ke zsh / bash
+> nano ~/.zshrc
+atau
+> nano ~/.bashrc
+kemudian tambahkan path ke zsh / bash
+> export PATH="/usr/local/texlive/2024/bin/universal-darwin:$PATH"
+simpan, keluar dan reload ulang dengan perintah
+> source ~/.zshrc
+6. Install Visual Studio Code dan Addons Latex Workshop
+7. Visual Studio Code dapat digunakan untuk menulis dengan format LaTeX, build dan view.
 
 ## Petunjuk Penggunaan Secara Online (via Overleaf)
 Cara ini adalah yang paling praktis, karena tidak perlu menginstall aplikasi apapun ke Laptop / Komputer. Cukup membuka browser sudah dapat melakukan proses edit file LaTeX secara langsung.
