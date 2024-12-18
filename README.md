@@ -20,7 +20,7 @@ Repo ini berisi template LaTeX yang digunakan dalam penulisan Laporan Proyek Akh
 - 01 Agutus 2024: Perbaikan judul dari BAB
 - 07 November 2024: Perbaikan preamble, Penambahan lembar pengesahan untuk Seminar Proposal TA, dan perbaikan format
 - 11 Desember 2024: Penambahan README terkait instalasi pada MacOS
-- 18 Desember 2024: Penambahan pemilihan Proposal atau Laporan yang dapat dipilih pada \newcommand{\Jenis}{Laporan} atau \newcommand{\Jenis}{Proposal} pada file laporan.tex
+- 18 Desember 2024: Penambahan pemilihan Proposal atau Laporan yang dapat dipilih pada \newcommand{\Jenis}{Laporan} atau \newcommand{\Jenis}{Proposal} pada file laporan.tex. Penambahan contoh penggunaan Tikz untuk gambar / grafik
 
 ## Penjelasan Isi File
 
