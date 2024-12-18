@@ -20,6 +20,7 @@ Repo ini berisi template LaTeX yang digunakan dalam penulisan Laporan Proyek Akh
 - 01 Agutus 2024: Perbaikan judul dari BAB
 - 07 November 2024: Perbaikan preamble, Penambahan lembar pengesahan untuk Seminar Proposal TA, dan perbaikan format
 - 11 Desember 2024: Penambahan README terkait instalasi pada MacOS
+- 18 Desember 2024: Penambahan pemilihan Proposal atau Laporan yang dapat dipilih pada \newcommand{\Jenis}{Laporan} atau \newcommand{\Jenis}{Proposal} pada file laporan.tex
 
 ## Penjelasan Isi File
 
@@ -40,6 +41,7 @@ Clone repo ini dengan menggunakan git clone atau unduh dengan klik Download Zip 
         ├──b3-bab3.tex                 # bab 3
         ├──b4-bab4.tex                 # bab 4
         ├──b5-bab5.tex                 # bab 5
+        ├──b6-bab6.tex                 # bab 6 HANYA BERISI TUTORIAL PENULISAN PADA LATEX
         ├──laporan.pdf                 # file laporan dalam format pdf
         ├──laporan.tex                 # file utama, jangan edit file ini 
         ├──README.md                   # file yang sedang anda baca
@@ -48,11 +50,13 @@ Clone repo ini dengan menggunakan git clone atau unduh dengan klik Download Zip 
                 xx-daftarpustaka.tex        
                 xx-pengesahan.tex           
                 xx-pernyataan.tex           
-                xx-persetujuan-sempro.tex
+                xx-persetujuan-proposal.tex
                 xx-persetujuan-ujian.tex             
                 xx-preambles.tex            
-                xx-sampul.tex               
-                xx-sampuldalam.tex          
+                xx-sampul-proposal.tex               
+                xx-sampuldalam-proposal.tex
+                xx-sampul-laporan.tex               
+                xx-sampuldalam-laporan.tex            
         ├──gambar                      # folder berisi gambar, copy gambar yang dimasukkan pada laporan kesini dalam format jpg/png
                gambar-kucing.jpg
                logo-uny.png
@@ -67,23 +71,10 @@ Clone repo ini dengan menggunakan git clone atau unduh dengan klik Download Zip 
 file yang diawali dengan nama xx- terlarang untuk diedit selain itu silahkan edit sesuai dengan kebutuhan.
 
 ## Pengaturan Proposal / Laporan Tugas Akhir
-Perlu diketahui bahwa template ini dapat digunakan untuk pembuatan Proposal dan Laporan Tugas Akhir, namun untuk menggenerate Proposal atau Laporan perlu dilakukan beberapa konfigurasi. Silahkan cek pada file `laporan-akhir.tex` dan edit bagian ini:
+Perlu diketahui bahwa template ini dapat digunakan untuk pembuatan Proposal dan Laporan Tugas Akhir, namun untuk menggenerate Proposal atau Laporan perlu dipilih melalui file `laporan.tex` pada baris 12 dan 13 dan berikan tanda % untuk menutup salah satu yang tidak diinginkan:
 ```
-...
-\include{untouch/xx-persetujuan-sempro} %lembar persetujuan untuk proposal
-\include{untouch/xx-persetujuan-ujian} %lembar persetujuan untuk laporan akhir
-\include{untouch/xx-pengesahan} %lembar pengesahan untuk laporan akhir
-
-...
-
-\begin{spacing}{1.5}
-        \include{b1-bab1}
-        \include{b2-bab2}
-        \include{b3-bab3}
-        \include{b4-bab4} %tutup untuk proposal
-        \include{b5-bab5} %tutup untuk proposal 
-\end{spacing}
-...
+%\newcommand{\Jenis}{Proposal} %Pilih salah satu antara Proposal atau Laporan
+\newcommand{\Jenis}{Laporan} %Pilih salah satu antara Proposal atau Laporan
 ```
 
 ## Video Tutorial
