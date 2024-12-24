@@ -90,7 +90,12 @@
 \usepackage{amsmath}
 
 % Pengaturan nomor pada persamaan matematika sesuai bab
+%\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+\makeatletter
 \renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+\renewcommand{\@eqnnum}{\theequation}
+\def\tagform@#1{\maketag@@@{#1}} % This line removes the parentheses
+\makeatother
 
 % Untuk halaman berorientasi landscape
 \usepackage{rotating}
@@ -128,6 +133,7 @@
 \Crefname{figure}{Gambar}{Gambar}
 \crefname{table}{tabel}{tabel}
 \Crefname{table}{Tabel}{Tabel}
+\crefformat{equation}{persamaan~#2#1#3}
 \crefname{equation}{persamaan}{persamaan}
 \Crefname{equation}{Persamaan}{Persamaan}
 \crefname{lstlisting}{kode}{kode}

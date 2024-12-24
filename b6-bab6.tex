@@ -1,6 +1,8 @@
 \chapter[Penulisan dengan \LaTeX - INI HANYA TUTORIAL]{\\ Penulisan dengan \LaTeX  - INI HANYA TUTORIAL}
 
-\section{List atau Daftar dengan \texttt{packed\_enum}}
+\section{Membuat List atau Daftar}
+Terdapat 2 cara yaitu dengan list yang terdapat penomoran 1,2,3 dst atau dengan bullet poin. Secara detail dapat dibaca pada subsection di bawah.
+\subsection{List atau Daftar dengan \texttt{packed\_enum}}
 Lingkungan \texttt{packed\_enum} digunakan untuk membuat daftar bernomor dengan jarak yang lebih rapat antar item. Ini sangat berguna untuk menampilkan langkah atau tahapan yang memiliki urutan. Berikut adalah contoh penggunaannya:
 
 \begin{lstlisting}
@@ -20,7 +22,7 @@ Hasilnya akan tampak seperti berikut:
     \item Langkah keempat adalah melakukan pengujian awal untuk mengevaluasi performa.
 \end{packed_enum}
 
-\section{List atau Daftar dengan \texttt{packed\_item}}
+\subsection{List atau Daftar dengan \texttt{packed\_item}}
 Lingkungan \texttt{packed\_item} digunakan untuk membuat daftar berpoin dengan jarak antar item yang lebih rapat, cocok untuk poin-poin yang tidak memerlukan urutan tertentu. Berikut adalah contoh penggunaannya:
 
 \begin{lstlisting}
@@ -40,7 +42,7 @@ Hasilnya akan tampak seperti berikut:
     \item Menambah fitur penghematan energi.
 \end{packed_item}
 
-\section{Menuliskan Kode dengan Listing}
+\section{Menuliskan Kode Program dengan Listing}
 Lingkungan \texttt{lstlisting} memungkinkan kita untuk menuliskan atau menyisipkan kode Python, C++, Arduino, Java atau lainnya dalam dokumen LaTeX dengan format yang rapi dan terstruktur. Pada bagian ini, kita akan melihat dua cara untuk menuliskan kode Python: secara langsung di dalam dokumen dan dengan mengambil dari file eksternal.
 
 \Cref{lst:python_direct} menunjukkan fungsi Python yang menghitung faktorial dari sebuah angka. Kode ini ditulis langsung di dalam dokumen LaTeX menggunakan lingkungan \texttt{lstlisting} dengan format diawali dengan \texttt{\textbackslash begin\{lstlisting\}[language=Python, caption=Contoh Kode Python Langsung, label=lst:python\_direct]} dan diakhiri dengan \texttt{\textbackslash end\{lstlisting\}}, dimana:
