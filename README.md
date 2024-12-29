@@ -168,7 +168,98 @@ simpan, keluar dan reload ulang dengan perintah
 source ~/.zshrc
 ``` 
 6. Install Visual Studio Code dan Addons Latex Workshop
-7. Visual Studio Code dapat digunakan untuk menulis dengan format LaTeX, build dan view.
+7. Setelah itu buka VSCode dan tekan Shift + Ctrl + P (Windows) atau Shift + Cmd + P (macOS) untuk melihat seluruh perintah dan pilih "Open User Settings JSON" kemudian tambahkan kode berikut
+<details>
+<summary>Klik untuk buka kode JSON</summary>
+
+```json
+"latex-workshop.latex.tools": [
+ {
+  "name": "latexmk",
+  "command": "latexmk",
+  "args": [
+   "-synctex=1",
+   "-interaction=nonstopmode",
+   "-file-line-error",
+   "-pdf",
+   "-outdir=%OUTDIR%",
+   "%DOC%"
+  ],
+  "env": {}
+ },
+ {
+  "name": "xelatex",
+  "command": "xelatex",
+  "args": [
+   "-synctex=1",
+   "-interaction=nonstopmode",
+   "-file-line-error",
+   "%DOC%"
+  ],
+  "env": {}
+ },
+ {
+  "name": "pdflatex",
+  "command": "pdflatex",
+  "args": [
+   "-synctex=1",
+   "-interaction=nonstopmode",
+   "-file-line-error",
+   "%DOC%"
+  ],
+  "env": {}
+ },
+ {
+  "name": "bibtex",
+  "command": "bibtex",
+  "args": [
+   "%DOCFILE%"
+  ],
+  "env": {}
+ }
+],
+"latex-workshop.latex.recipes": [
+ {
+  "name": "pdfLaTeX",
+  "tools": [
+   "pdflatex"
+  ]
+ },
+ {
+  "name": "latexmk 🔃",
+  "tools": [
+   "latexmk"
+  ]
+ },
+ {
+  "name": "xelatex",
+  "tools": [
+   "xelatex"
+  ]
+ },
+ {
+  "name": "pdflatex ➞ bibtex ➞ pdflatex`×2",
+  "tools": [
+   "pdflatex",
+   "bibtex",
+   "pdflatex",
+   "pdflatex"
+  ]
+ },
+ {
+ "name": "xelatex ➞ bibtex ➞ xelatex`×2",
+ "tools": [
+   "xelatex",
+   "bibtex",
+   "xelatex",
+   "xelatex"
+  ]
+ }
+]
+```
+</details>
+
+8. Visual Studio Code dapat digunakan untuk menulis dengan format LaTeX
 
 ## Langkah Pengerjaan
 1. Edit file `a0-identitas.tex` dengan mengisi judul, nama mahasiswa, nim, dosen pembimbing, dan lain-lain sesuai kebutuhan
