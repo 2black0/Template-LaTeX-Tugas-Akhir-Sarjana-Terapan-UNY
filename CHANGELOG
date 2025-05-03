@@ -1,0 +1,89 @@
+# 📝 Catatan Perubahan (Changelog)
+
+Dokumen ini mencatat semua perubahan penting dalam proyek Template LaTeX Laporan Tugas Akhir.  
+Mengacu pada praktik terbaik dokumentasi pengembangan perangkat lunak dan format [Keep a Changelog](https://keepachangelog.com/).
+
+---
+
+## [Belum Dirilis]
+- Dokumentasi tambahan dan penyempurnaan minor lainnya.
+
+---
+
+## 📅 2024
+
+### 🗓️ 24 Desember 2024
+- Perbaikan format penomoran persamaan dari `(1.1)` menjadi `1.1` (tanpa tanda kurung).
+- Referensi persamaan kini menampilkan "persamaan 1.1" dibanding hanya "1.1".
+
+### 🗓️ 18 Desember 2024
+- Penambahan opsi jenis dokumen (`Proposal` atau `Laporan`) melalui `\newcommand{\Jenis}` pada `laporan.tex`.
+- Penambahan contoh penggunaan TikZ untuk pembuatan gambar dan grafik.
+
+### 🗓️ 11 Desember 2024
+- Penambahan panduan instalasi LaTeX di MacOS pada README.
+
+### 🗓️ 7 November 2024
+- Perbaikan preamble LaTeX.
+- Penambahan halaman pengesahan untuk **Seminar Proposal Tugas Akhir**.
+- Penyempurnaan format dokumen.
+
+### 🗓️ 1 Agustus 2024
+- Perbaikan format penulisan judul BAB.
+
+### 🗓️ 27 Juli 2024
+- Perubahan gaya sitasi dari **narrative citation** (`\cite{}`) ke **parenthetical citation** (`\citep{}`).
+  - 📖 Referensi: [Harvard Notes](https://gking.harvard.edu/files/natnotes2.pdf)
+
+### 🗓️ 7 Juni 2024
+- Penambahan tutorial penggunaan Overleaf untuk mengedit dokumen LaTeX di README.
+
+### 🗓️ 6 Juni 2024
+- Perubahan gaya bibliografi di `xx-preambles.tex` (baris ke-129) dari `newapa` menjadi `apalike` agar kompatibel dengan Overleaf.
+
+---
+
+## 📅 2023
+
+### 🗓️ 12 November 2023
+- Penambahan contoh daftar pustaka: artikel ilmiah, prosiding, buku.
+
+### 🗓️ 8 November 2023
+- Penambahan contoh isi untuk **Lampiran**.
+- Perbaikan contoh gambar, tabel, dan daftar singkatan.
+
+### 🗓️ 7 November 2023
+- Perbaikan format beberapa bagian dokumen.
+- Penggantian gaya pustaka dari IEEE ke APA 7th.
+- Penambahan contoh penulisan kode program dengan penomoran.
+- Penambahan contoh penulisan persamaan.
+
+### 🗓️ 6 November 2023
+- Perbaikan struktur abstrak menjadi 3 paragraf.
+- Penyesuaian spasi: 1 spasi untuk abstrak, 2 spasi untuk isi dokumen.
+
+### 🗓️ 5 November 2023
+- Penambahan titik pada entri daftar isi untuk tiap bab.
+- Perbaikan hierarki penomoran bab dan subbab.
+
+### 🗓️ 22 Juni 2023
+- Penyesuaian nama file untuk memudahkan pengelolaan dan identifikasi.
+
+### 🗓️ 15 Juni 2023
+- Perbaikan format halaman pengesahan.
+- Penambahan hyperlink otomatis untuk gambar, tabel, dan persamaan berdasarkan label.
+- Penyempurnaan contoh tabel.
+
+### 🗓️ 28 Februari 2023
+- Perubahan struktur subbab pada **Bab I Pendahuluan**.
+- Penyesuaian susunan daftar isi.
+- Perbaikan pemformatan judul panjang di surat pernyataan.
+- Perbaikan halaman pengesahan agar tidak terbagi dua halaman.
+- Penambahan halaman persembahan.
+
+### 🗓️ 16 Januari 2023
+- Pembuatan awal template berdasarkan format laporan proyek akhir.
+
+---
+
+> 💡 Saran dan kontribusi sangat diapresiasi! Silakan kirim _pull request_ atau buka _issue_ di repositori ini.
