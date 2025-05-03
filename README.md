@@ -62,11 +62,17 @@ Template-LaTeX-Laporan-Tugas-Akhir
 ## 🧩 Fitur Utama
 
 ✅ Format sesuai standar Prodi D4 Teknik Elektronika
+
 ✅ Mendukung kompilasi proposal & laporan akhir
+
 ✅ Contoh gambar, kode program, persamaan, tabel, dan sitasi
+
 ✅ Dukungan referensi otomatis (BibTeX)
+
 ✅ Dokumentasi & tutorial lengkap
+
 ✅ Kompatibel dengan TexStudio dan Overleaf
+
 
 ---
 
