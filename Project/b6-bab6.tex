@@ -1,7 +1,19 @@
-\chapter[Penulisan dengan \LaTeX - INI HANYA TUTORIAL]{\\ Penulisan dengan \LaTeX  - INI HANYA TUTORIAL}
+\chapter[Penulisan dengan \LaTeX - INI HANYA TUTORIAL]{Penulisan dengan \LaTeX - INI HANYA TUTORIAL}
+
+\section{Menampilkan Gambar dan Referensi}
+Gambar dapat ditampilkan menggunakan lingkungan \texttt{figure} dan dapat dirujuk menggunakan label. Hasilnya adalah terlihat seperti pada \figref{fig:kucing-example}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.1]{gambar-kucing}
+    \caption{Gambar Kucing Lucu dan Imut dengan scala 0.1}
+    \label{fig:kucing-example}
+\end{figure}
+
+Setiap gambar harus dimention atau disebutkan didalam bacaan seperti contoh di atas. Berikut ini \figref{fig:kucing-example} dan referensi gambar lainnya.
 
 \section{Membuat List atau Daftar}
-Terdapat 2 cara yaitu dengan list yang terdapat penomoran 1,2,3 dst atau dengan bullet poin. Secara detail dapat dibaca pada subsection di bawah.
+Terdapat 2 cara yaitu dengan list yang terdapat penomoran 1,2,3 dst atau dengan bullet poin. Secara detail dapat dibaca di bawah.
 \subsection{List atau Daftar dengan \texttt{packed\_enum}}
 Lingkungan \texttt{packed\_enum} digunakan untuk membuat daftar bernomor dengan jarak yang lebih rapat antar item. Ini sangat berguna untuk menampilkan langkah atau tahapan yang memiliki urutan. Berikut adalah contoh penggunaannya:
 
@@ -45,22 +57,29 @@ Hasilnya akan tampak seperti berikut:
 \section{Menuliskan Kode Program dengan Listing}
 Lingkungan \texttt{lstlisting} memungkinkan kita untuk menuliskan atau menyisipkan kode Python, C++, Arduino, Java atau lainnya dalam dokumen LaTeX dengan format yang rapi dan terstruktur. Pada bagian ini, kita akan melihat dua cara untuk menuliskan kode Python: secara langsung di dalam dokumen dan dengan mengambil dari file eksternal.
 
-\Cref{lst:python_direct} menunjukkan fungsi Python yang menghitung faktorial dari sebuah angka. Kode ini ditulis langsung di dalam dokumen LaTeX menggunakan lingkungan \texttt{lstlisting} dengan format diawali dengan \texttt{\textbackslash begin\{lstlisting\}[language=Python, caption=Contoh Kode Python Langsung, label=lst:python\_direct]} dan diakhiri dengan \texttt{\textbackslash end\{lstlisting\}}, dimana:
+\subsection{Kode Python Langsung}
+
+\Lstref{lst:python-direct} menunjukkan fungsi Python yang menghitung faktorial dari sebuah angka. Kode ini ditulis langsung di dalam dokumen LaTeX menggunakan lingkungan \texttt{lstlisting} dengan format diawali dengan \texttt{\textbackslash begin\{lstlisting\}[language=Python, caption=Contoh Kode Python Langsung, label=lst:python-direct]} dan diakhiri dengan \texttt{\textbackslash end\{lstlisting\}}, dimana:
 \begin{packed_item}
     \item \texttt{language=Python}: Mengatur pewarnaan sintaksis untuk Python.
     \item \texttt{caption}: Menambahkan keterangan di atas kode untuk menjelaskan isi kode.
     \item \texttt{label}: Menambahkan label untuk memudahkan referensi kode dalam dokumen.
 \end{packed_item}
 
-\begin{lstlisting}[language=Python, caption=Contoh Kode Python Langsung, label=lst:python_direct]
-    def factorial(n):
-        if n == 0:
-            return 1
-        else:
-            return n * factorial(n-1)
+\begin{lstlisting}[language=Python, caption=Contoh Kode Python Langsung, label=lst:python-direct]
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+# Contoh penggunaan
+print(factorial(5))  # Output: 120
 \end{lstlisting}
 
-Jika Anda memiliki file kode Python di folder tertentu (misalnya, di \texttt{kode/code\_sample.py}), Anda bisa menyisipkan kode tersebut langsung ke dalam dokumen LaTeX menggunakan perintah \texttt{\textbackslash lstinputlisting}. Berikut \cref{lst:python_file} dengan format penulisan \texttt{\textbackslash lstinputlisting[language=Python, caption=Contoh Kode Python dari File, label=lst:python\_file]\{kode/code\_sample.py\}}, dimana:
+\subsection{Kode Python dari File Eksternal}
+
+Jika Anda memiliki file kode Python di folder tertentu (misalnya, di \texttt{kode/code\_sample.py}), Anda bisa menyisipkan kode tersebut langsung ke dalam dokumen LaTeX menggunakan perintah \texttt{\textbackslash lstinputlisting}. Berikut \lstref{lst:python-file} dengan format penulisan \texttt{\textbackslash lstinputlisting[language=Python, caption=Contoh Kode Python dari File, label=lst:python-file]\{kode/code\_sample.py\}}, dimana:
 \begin{packed_item}
     \item \texttt{language=Python}: Mengatur pewarnaan sintaksis untuk Python.
     \item \texttt{caption}: Menambahkan keterangan untuk kode yang diambil dari file.
@@ -68,23 +87,23 @@ Jika Anda memiliki file kode Python di folder tertentu (misalnya, di \texttt{kod
     \item \texttt{\{kode/code\_sample.py\}}: Menentukan path atau lokasi file Python yang akan disisipkan. Pastikan file berada di dalam folder \texttt{kode} atau path yang sesuai.
 \end{packed_item}
 
-\lstinputlisting[language=Python, caption=Contoh Kode Python dari File, label=lst:python_file]{kode/code_sample.py}
+\lstinputlisting[language=Python, caption=Contoh Kode Python dari File, label=lst:python-file]{kode/code_sample.py}
 
 \section{Menambahkan Gambar}
 Untuk menambahkan gambar hal yang harus dilakukan adalah:
 \begin{packed_enum}
     \item Menyalin file gambar (dalam format jpg \/ png) ke dalam folder \textit{gambar}
     \item Mengganti nama file dari gambar agar mudah dikenali, jangan diberi nama gambar-1,-2, dst
-    \item Memasukkan seperti \cref{lst:kode_gambar}
+    \item Memasukkan seperti \lstref{lst:kode-gambar}
 \end{packed_enum}
 
-\begin{lstlisting}[language=TeX, caption=Kode untuk Menyisipkan Gambar dalam Dokumen, label=lst:kode_gambar]
-    \begin{figure}[H]
-        \centering
-        \includegraphics[scale=0.2]{gambar-kucing.jpg}
-        \caption{Gambar Kucing Lucu dan Imut}
-        \label{fig:kucing}
-    \end{figure}
+\begin{lstlisting}[caption=Kode untuk Menyisipkan Gambar dalam Dokumen, label=lst:kode-gambar]
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.2]{gambar-kucing.jpg}
+    \caption{Gambar Kucing Lucu dan Imut}
+    \label{fig:nama-gambar}
+\end{figure}
 \end{lstlisting}
 
 \noindent Berikut adalah penjelasan dari setiap baris pada kode di atas:
@@ -94,19 +113,19 @@ Untuk menambahkan gambar hal yang harus dilakukan adalah:
     \item \texttt{\textbackslash centering}: Mengatur gambar agar berada di tengah halaman.
     \item \texttt{\textbackslash includegraphics[scale=0.2]\{gambar-kucing.jpg\}}: Memasukkan gambar dengan nama file \texttt{gambar-kucing.jpg}. Parameter \texttt{scale=0.2} mengatur ukuran gambar pada 20\% dari ukuran aslinya. Ubah nilainya untuk memperbesar atau memperkecil gambar.
     \item \texttt{\textbackslash caption\{Gambar Kucing Lucu dan Imut\}}: Menambahkan keterangan (caption) di bawah gambar yang akan muncul di Daftar Gambar dan disertai nomor gambar secara otomatis.
-    \item \texttt{\textbackslash label\{fig:kucing\}}: Memberikan label pada gambar untuk merujuk gambar ini dalam teks menggunakan \texttt{\textbackslash cref\{fig:kucing\}} atau \texttt{\textbackslash ref\{fig:kucing\}} yang menghasilkan "Gambar 1" atau penomoran gambar sesuai urutan.
+    \item \texttt{\textbackslash label\{fig:kucing\}}: Memberikan label pada gambar untuk merujuk gambar ini dalam teks menggunakan \texttt{\textbackslash figref\{fig:kucing\}} atau \texttt{\textbackslash ref\{fig:kucing\}} yang menghasilkan "gambar 1" atau penomoran gambar sesuai urutan.
 \end{packed_enum}
 
-Hasilnya adalah terlihat seperti pada \cref{fig:kucing}.
+Hasilnya adalah terlihat seperti pada \figref{fig:kucing-demo}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.1]{gambar-kucing}
     \caption{Gambar Kucing Lucu dan Imut dengan scala 0.1}
-    \label{fig:kucing}
+    \label{fig:kucing-demo}
 \end{figure}
 
-Setiap gambar harus dimention atau disebutkan didalam bacaan seperti berikut ini \cref{fig:kucing} dan \cref{fig:logoUNY}.
+Setiap gambar harus dimention atau disebutkan didalam bacaan seperti berikut ini \figref{fig:kucing-demo} dan \figref{fig:logoUNY}.
 
 \begin{figure}[H]
     \centering
@@ -115,502 +134,274 @@ Setiap gambar harus dimention atau disebutkan didalam bacaan seperti berikut ini
     \label{fig:logoUNY}
 \end{figure}
 
-Untuk menyisipkan beberapa gambar dalam satu kelompok dan satu caption utama, kita dapat menggunakan lingkungan \texttt{subfigure} di dalam lingkungan \texttt{figure}. Metode ini sangat bermanfaat jika kita ingin menyusun beberapa gambar berukuran kecil dalam satu baris atau kolom, dengan setiap gambar diberi caption masing-masing dan satu caption utama untuk keseluruhan gambar.
-
-Kode berikut menunjukkan cara menyusun tiga gambar secara berdampingan dengan satu caption utama.
-
-\begin{lstlisting}[language=TeX, caption=Kode untuk Menyisipkan Gambar dalam Dokumen dengan Subfigure, label=lst:kode_gambar_multi]
-    \begin{figure}
-        \centering
-        \begin{subfigure}[b]{0.3\textwidth}
-            \centering
-            \includegraphics[width=\linewidth]{gambar-kucing.jpg}
-            \caption{Kucing Lucu 1}
-            \label{fig:kucing-a}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.3\textwidth}
-            \centering
-            \includegraphics[width=\linewidth]{logo-uny.png}
-            \caption{Logo UNY}
-            \label{fig:logo-uny-b}
-        \end{subfigure}
-        \hfill
-        \begin{subfigure}[b]{0.3\textwidth}
-            \centering
-            \includegraphics[width=\linewidth]{gambar-kucing.jpg}
-            \caption{Kucing Lucu 2}
-            \label{fig:kucing-c}
-        \end{subfigure}
-        \caption{Beberapa gambar yang disusun menjadi 1 bagian dengan penomoran (a), (b), dan (c)}
-        \label{fig:kucingdanUNY}
-    \end{figure}
-\end{lstlisting}
-
-\noindent Berikut adalah penjelasan dari setiap bagian kode di atas:
-
-\begin{packed_enum}
-    \item \texttt{\textbackslash begin\{figure\} ... \textbackslash end\{figure\}}: Lingkungan \texttt{figure} utama yang berfungsi sebagai wadah untuk menyisipkan beberapa gambar dalam satu bagian.
-    
-    \item \texttt{\textbackslash begin\{subfigure\}[b]\{0.3\textbackslash textwidth\} ... \textbackslash end\{subfigure\}}: Lingkungan \texttt{subfigure} digunakan untuk setiap gambar yang ingin disusun dalam satu bagian. Parameter \texttt{0.3\textbackslash textwidth} mengatur lebar setiap gambar menjadi sepertiga dari lebar teks, sehingga tiga gambar dapat ditampilkan berdampingan dalam satu baris.
-    
-    \item \texttt{\textbackslash includegraphics[width=\textbackslash linewidth]\{gambar-nama\}}: Memasukkan setiap gambar dengan lebar yang sesuai dengan lebar yang telah ditentukan untuk \texttt{subfigure}. 
-        \begin{packed_enum}
-            \item Gambar pertama menggunakan file \texttt{gambar-kucing}, dengan caption "Kucing Lucu 1".
-            \item Gambar kedua menggunakan file \texttt{logo-uny}, dengan caption "Logo UNY".
-            \item Gambar ketiga juga menggunakan file \texttt{gambar-kucing}, dengan caption "Kucing Lucu 2".
-        \end{packed_enum}
-    
-    \item \texttt{\textbackslash hfill}: Menyisipkan ruang kosong antar gambar, agar setiap \texttt{subfigure} memiliki jarak yang merata.
-    
-    \item \texttt{\textbackslash caption\{...\}}: Caption utama yang menjelaskan ketiga gambar sekaligus. Caption ini akan ditampilkan di bawah semua gambar dalam lingkungan \texttt{figure}.
-
-    \item \texttt{\textbackslash label\{fig:kucingdanUNY\}}: Memberikan label untuk keseluruhan kelompok gambar, sehingga kita bisa merujuk ke seluruh bagian gambar ini dalam teks dengan \texttt{\textbackslash cref\{fig:kucingdanUNY\}}.
-\end{packed_enum}
-
-Dengan menggunakan metode ini, Anda dapat menyisipkan beberapa gambar dalam satu bagian dengan satu caption utama seperti pada \cref{fig:kucingdanUNY}. Setiap gambar dapat memiliki caption terpisah dan nomor (misalnya, (a), (b), (c)), sehingga rujukan spesifik untuk masing-masing gambar dapat dibuat, seperti \texttt{\textbackslash cref\{fig:kucing-a\}} untuk merujuk ke \cref{fig:kucing-a}.
-
-\begin{figure}
-    \centering
-    \begin{subfigure}[b]{0.3\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{gambar-kucing.jpg}
-        \caption{Kucing Lucu 1}
-        \label{fig:kucing-a}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.3\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{logo-uny.png}
-        \caption{Logo UNY}
-        \label{fig:logo-uny-b}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.3\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{gambar-kucing.jpg}
-        \caption{Kucing Lucu 2}
-        \label{fig:kucing-c}
-    \end{subfigure}
-    \caption{Beberapa gambar yang disusun menjadi 1 bagian dengan penomoran (a), (b), dan (c)}
-    \label{fig:kucingdanUNY}
-\end{figure}
-
-\section{Membuat Grafik dengan Tikz}
-TikZ adalah sebuah paket LaTeX yang digunakan untuk membuat grafik vektor. Berikut adalah beberapa contoh dasar penggunaan TikZ.
-
-\subsection{Menggambar Garis dan Bentuk Dasar}
-Untuk menggambar garis dan bentuk dasar, kita bisa menggunakan perintah-perintah berikut:
-\begin{lstlisting}[language=TeX, caption=Kode untuk Menggambar Garis dan Bentuk Dasar, label=lst:Menggambar Garis dan Bentuk Dasar]
-    \begin{figure}[H]
-        \centering
-        \begin{tikzpicture}
-            \draw (0,0) -- (2,0);
-            \draw (0,0) rectangle (2,2);
-            \draw (1,1) circle (1);
-        \end{tikzpicture}
-        \caption{Menggambar Garis dan Bentuk Dasar}
-        \label{fig:tikzExample}
-    \end{figure}
-\end{lstlisting}
-
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \draw (0,0) -- (2,0);
-        \draw (0,0) rectangle (2,2);
-        \draw (1,1) circle (1);
-    \end{tikzpicture}
-    \caption{Menggambar Garis dan Bentuk Dasar}
-    \label{fig:tikzExample}
-\end{figure}
-
-Pada Gambar \ref{fig:tikzExample} dapat dilihat contoh gambar sederhana.
-
-\subsection{Menggambar Grafik Fungsi}
-TikZ juga bisa digunakan untuk menggambar grafik fungsi matematika:
-\begin{lstlisting}[language=TeX, caption=Kode untuk Menggambar Grafik Fungsi, label=lst:Menggambar Grafik Fungsi]
-    \begin{figure}[H]
-        \centering
-        \begin{tikzpicture}
-            \begin{axis}[
-                axis lines = middle,
-                xlabel = $x$,
-                ylabel = {$f(x)$},
-                title = {Grafik Fungsi Kuadrat},
-                grid = major,
-                xmin = -10, 
-                xmax = 10,
-                ymin = 0, 
-                ymax = 100
-            ]
-            \addplot [
-                domain=-10:10, 
-                samples=100, 
-                color=blue,
-            ]
-            {x^2};
-            \end{axis}
-        \end{tikzpicture}
-        \caption{Grafik fungsi \( f(x) = x^2 \) dengan domain \( [-10, 10] \)}
-        \label{fig:grafik_kuadrat}
-    \end{figure}
-\end{lstlisting}
-
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            axis lines = middle,
-            xlabel = $x$,
-            ylabel = {$f(x)$},
-            title = {Grafik Fungsi Kuadrat},
-            grid = major,
-            xmin = -10, 
-            xmax = 10,
-            ymin = 0, 
-            ymax = 100
-        ]
-        \addplot [
-            domain=-10:10, 
-            samples=100, 
-            color=blue,
-        ]
-        {x^2};
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Grafik fungsi \( f(x) = x^2 \) dengan domain \( [-10, 10] \)}
-    \label{fig:grafik_kuadrat}
-\end{figure}
-
-Pada Gambar \ref{fig:grafik_kuadrat} ditunjukkan grafik fungsi kuadrat.
-
-\subsection{Menggambar Diagram Alir}
-TikZ juga mendukung pembuatan diagram alir (flowchart):
-\begin{lstlisting}[language=TeX, caption=Kode untuk Menggambar Diagram Alir, label=lst:Menggambar Diagram Alir]
-    \begin{figure}[H]
-        \centering
-        \begin{tikzpicture}[node distance=2cm]
-            \node (start) [startstop] {Start};
-            \node (process1) [process, below of=start] {Process 1};
-            \node (decision) [decision, below of=process1] {Decision};
-            \node (process2a) [process, below of=decision, yshift=-1cm] {Process 2a};
-            \node (process2b) [process, right of=decision, xshift=2cm] {Process 2b};
-            \node (stop) [startstop, below of=process2a] {Stop};
-    
-            \draw [arrow] (start) -- (process1);
-            \draw [arrow] (process1) -- (decision);
-            \draw [arrow] (decision) -- node[anchor=east] {yes} (process2a);
-            \draw [arrow] (decision) -- node[anchor=south] {no} (process2b);
-            \draw [arrow] (process2a) -- (stop);
-        \end{tikzpicture}
-        \caption{Diagram alir sederhana dengan kondisi percabangan}
-        \label{fig:flowchart_sederhana}
-    \end{figure}
-\end{lstlisting}
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}[node distance=2cm]
-        \node (start) [startstop] {Start};
-        \node (process1) [process, below of=start] {Process 1};
-        \node (decision) [decision, below of=process1] {Decision};
-        \node (process2a) [process, below of=decision, yshift=-1cm] {Process 2a};
-        \node (process2b) [process, right of=decision, xshift=2cm] {Process 2b};
-        \node (stop) [startstop, below of=process2a] {Stop};
-
-        \draw [arrow] (start) -- (process1);
-        \draw [arrow] (process1) -- (decision);
-        \draw [arrow] (decision) -- node[anchor=east] {yes} (process2a);
-        \draw [arrow] (decision) -- node[anchor=south] {no} (process2b);
-        \draw [arrow] (process2a) -- (stop);
-    \end{tikzpicture}
-    \caption{Diagram alir sederhana dengan kondisi percabangan}
-    \label{fig:flowchart_sederhana}
-\end{figure}
-Pada Gambar \ref{fig:flowchart_sederhana} ditunjukkan contoh diagram alir sederhana dengan satu kondisi percabangan.
-
-\subsection{Menggambar Grafik Batang}
-Untuk menggambar grafik batang, kita bisa menggunakan perintah berikut:
-\begin{lstlisting}[language=TeX, caption=Kode untuk Menggambar Grafik Batang, label=lst:Menggambar Grafik Batang]
-    \begin{figure}[H]
-        \centering
-        \begin{tikzpicture}
-            \begin{axis}[
-                ybar,
-                symbolic x coords={A, B, C, D},
-                xtick=data,
-                ylabel={Nilai},
-                xlabel={Kategori},
-                title={Grafik Batang Sederhana},
-                bar width=0.5cm,
-                ymin=0,
-                ymajorgrids=true
-            ]
-            \addplot[fill=blue!50] coordinates {(A,1) (B,3) (C,2) (D,4)};
-            \end{axis}
-        \end{tikzpicture}
-        \caption{Grafik batang yang menunjukkan nilai untuk kategori A, B, C, dan D}
-        \label{fig:grafik_batang}
-    \end{figure}
-\end{lstlisting}
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            ybar,
-            symbolic x coords={A, B, C, D},
-            xtick=data,
-            ylabel={Nilai},
-            xlabel={Kategori},
-            title={Grafik Batang Sederhana},
-            bar width=0.5cm,
-            ymin=0,
-            ymajorgrids=true
-        ]
-        \addplot[fill=blue!50] coordinates {(A,1) (B,3) (C,2) (D,4)};
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Grafik batang yang menunjukkan nilai untuk kategori A, B, C, dan D}
-    \label{fig:grafik_batang}
-\end{figure}
-Pada Gambar \ref{fig:grafik_batang} dapat dilihat distribusi nilai pada berbagai kategori.
-
-\subsection{Menggambar Grafik Pie}
-TikZ juga mendukung pembuatan grafik pie:
-\begin{lstlisting}[language=TeX, caption=Kode untuk Menggambar Grafik Pie, label=lst:Menggambar Grafik Pie]
-    \begin{figure}[H]
-        \centering
-        \begin{tikzpicture}
-            \pie{30/A, 20/B, 50/C}
-        \end{tikzpicture}
-        \caption{Diagram lingkaran yang menunjukkan distribusi persentase A, B, dan C}
-        \label{fig:pie_chart}
-    \end{figure}
-\end{lstlisting}
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \pie{30/A, 20/B, 50/C}
-    \end{tikzpicture}
-    \caption{Diagram lingkaran yang menunjukkan distribusi persentase A, B, dan C}
-    \label{fig:pie_chart}
-\end{figure}
-Pada Gambar \ref{fig:pie_chart} ditunjukkan pembagian persentase untuk kategori A, B, dan C.
-
-Dengan contoh-contoh di atas, Anda dapat mulai membuat berbagai jenis grafik menggunakan TikZ di \LaTeX. Untuk informasi lebih lanjut, Anda dapat merujuk ke dokumentasi resmi TikZ.
-
 \section{Membuat Tabel}
-Pada bagian ini akan dijelaskan bagaimana membuat tabel dalam sebuah dokumen \LaTeX. untuk membuat tabel memang agak sedikit sulit, sehingga saya menyarankan menggunakan tool berikut \url{https://www.tablesgenerator.com/} atau \url{https://www.latex-tables.com/} kemudian isikan tabel pada tool generator tersebut dan salin kodenya ke dalam dokumen \LaTeX. Berikut adalah contoh dari sebuah tabel yang telah dibuat. Jangan lupa setiap tabel harus dimention dan dijelaskan dibacaan seperti berikut ini \cref{tab:hresult}. Contoh pembuatan tabel terlihat kodenya pada \cref{lst:kode_tabel}.
+Tabel dalam LaTeX dapat dibuat menggunakan lingkungan \texttt{table} dan \texttt{tabular}. Tabel sangat berguna untuk menyajikan data secara terstruktur dan mudah dibaca. Berikut ini adalah contoh pembuatan tabel sederhana dan tabel yang lebih kompleks.
 
-\begin{lstlisting}[language=TeX, caption=Kode untuk Membuat Tabel dalam Dokumen, label=lst:kode_tabel]
-    \begin{table}[h]
-        \caption{Performance Using Hard Decision Detection}
-        \label{tab:hresult}
-        \centering
-        \begin{tabular}{c rrrrrrr}
-            \hline\hline
-            Audio Name&\multicolumn{7}{c}{Sum of Extracted Bits} \\ [0.5ex] 
-            \hline
-            Police & 5 & -1 & 5& 5& -7& -5& 3\\
-            Midnight & 7 & -3 & 5& 3& -1& -3& 5\\
-            News & 9 & -3 & 7& 9& -5& -1& 9\\[0.8ex]
-            \hline
-        \end{tabular}
-    \end{table}
-\end{lstlisting}
+\subsection{Tabel Sederhana}
+\Tabref{tab:contoh-sederhana} menunjukkan contoh tabel sederhana dengan data hasil pengujian. Tabel ini menggunakan format dasar dengan garis pembatas horizontal dan vertikal.
 
-\noindent Berikut adalah penjelasan dari setiap bagian kode di atas:
-
-\begin{packed_enum}
-    \item \texttt{\textbackslash begin\{table\}[h] ... \textbackslash end\{table\}}: Lingkungan \texttt{table} digunakan untuk membuat tabel dan menempatkannya di posisi tertentu dalam dokumen. Parameter \texttt{[h]} menginstruksikan LaTeX untuk menempatkan tabel di posisi yang paling mendekati lokasi kode tersebut dalam teks. Jika posisi ini tidak berfungsi dengan baik, Anda bisa menggunakan parameter lain, seperti \texttt{[H]} (dari paket \texttt{float}) untuk menempatkan tabel di lokasi yang lebih spesifik.
-    \item \texttt{\textbackslash caption\{Performance Using Hard Decision Detection\}}: Menambahkan keterangan (caption) di atas tabel. Caption ini akan otomatis ditampilkan dalam Daftar Tabel dan diberi nomor secara otomatis oleh LaTeX.
-    \item \texttt{\textbackslash label\{tab:hresult\}}: Memberi label pada tabel, memungkinkan tabel dirujuk dalam teks menggunakan perintah \texttt{\textbackslash cref\{tab:hresult\}} atau \texttt{\textbackslash ref\{tab:hresult\}}, yang akan menghasilkan "Tabel 1" atau sesuai penomoran tabel.
-    \item \texttt{\textbackslash centering}: Mengatur tabel agar berada di tengah halaman.
-    \item \texttt{\textbackslash begin\{tabular\}\{c rrrrrrr\} ... \textbackslash end\{tabular\}}: Lingkungan \texttt{tabular} digunakan untuk membuat struktur tabel. Pengaturan kolom menggunakan karakter:
-        \begin{packed_enum}
-            \item \texttt{c}: Mengatur kolom pertama rata tengah.
-            \item \texttt{r}: Mengatur tujuh kolom berikutnya rata kanan.
-        \end{packed_enum}
-    \item \texttt{\textbackslash hline}: Menambahkan garis horizontal di tabel. Dua \texttt{\textbackslash hline} berturut-turut digunakan untuk garis ganda pada bagian header tabel.
-    \item \texttt{\textbackslash multicolumn\{7\}\{c\}\{Sum of Extracted Bits\}}: Menggabungkan tujuh kolom berikutnya menjadi satu sel besar yang berisi teks "Sum of Extracted Bits", yang disejajarkan ke tengah dengan pengaturan \texttt{c}.
-    \item Isi tabel, seperti:
-        \begin{packed_enum}
-            \item \texttt{Police}: Data pada baris ini terkait audio "Police", dengan tujuh angka di kolom berikutnya yang merepresentasikan "Sum of Extracted Bits".
-            \item Baris lain mengikuti format yang sama.
-        \end{packed_enum}
-    \item Jarak tambahan antara baris terakhir dan \texttt{\textbackslash hline} berikutnya diberikan dengan parameter opsional \texttt{[0.8ex]}, yang menambahkan spasi vertikal untuk keterbacaan.
-\end{packed_enum}
-
-Dengan penjelasan ini, kode menghasilkan tabel terstruktur yang diberi nomor secara otomatis dan dapat dirujuk di teks dokumen. Hasil tabel dari \cref{lst:kode_tabel} adalah terlihat pada \cref{tab:hresult}.
-
-\begin{table}[h]
-    \caption{Performance Using Hard Decision Detection}
-    \label{tab:hresult}
+\begin{table}[H]
     \centering
-    \begin{tabular}{c rrrrrrr}
-        \hline\hline
-        Audio Name&\multicolumn{7}{c}{Sum of Extracted Bits} \\ [0.5ex] 
+    \caption{Hasil Pengujian Sensor}
+    \label{tab:contoh-sederhana}
+    \begin{tabular}{|c|c|c|}
         \hline
-        Police & 5 & -1 & 5& 5& -7& -5& 3\\
-        Midnight & 7 & -3 & 5& 3& -1& -3& 5\\
-        News & 9 & -3 & 7& 9& -5& -1& 9\\[0.8ex]
+        \textbf{No} & \textbf{Sensor} & \textbf{Akurasi (\%)} \\
+        \hline
+        1 & DHT22 & 95.2 \\
+        \hline
+        2 & BMP280 & 98.5 \\
+        \hline
+        3 & MPU6050 & 92.8 \\
+        \hline
+        4 & HC-SR04 & 89.7 \\
         \hline
     \end{tabular}
 \end{table}
 
-Kita juga bisa menambahkan tabel yang besar dengan format halaman landscape seperti contoh berikut dan mention tabel seperti berikut ini \cref{tab:LPer} dan berikut ini \cref{tab:PPer}.
+\subsection{Tabel dengan Format Lanjutan}
+\Tabref{tab:perbandingan-metode} menunjukkan contoh tabel yang lebih kompleks dengan penggabungan kolom dan baris. Tabel ini menggunakan paket \texttt{multirow} untuk menggabungkan sel.
 
-\begin{lstlisting}[language=TeX, caption=Kode untuk Membuat Tabel dalam Dokumen dengan Sideway, label=lst:kode_tabel_sideway]
-    \begin{sidewaystable}[htbp]
-        \caption{Performance After Post Filtering}
-        \label{tab:LPer}
-        \centering
-        \begin{tabular}{l c c rrrrrrr}
-            \hline\hline
-            Audio &Audibility & Decision &\multicolumn{7}{c}{Sum of Extracted Bits} 
-            \\ [0.5ex] 
-            \hline
-            & &soft &1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
-            \raisebox{1.5ex}{Police} & \raisebox{1.5ex}{5}&hard
-            & 2 & $-4$ & 4 & 4 & $-2$ & $-4$ & 4 \\[1ex]
-            & &soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
-            \raisebox{1.5ex}{Beethoven} & \raisebox{1.5ex}{5}& hard
-            &8 & $-8$ & 2 & 8 & $-8$ & $-8$ & 6 \\[1ex]
-            & &soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
-            \raisebox{1.5ex}{Metallica} & \raisebox{1.5ex}{5}& hard
-            &4 & $-8$ & 8 & 4 & $-8$ & $-8$ & 8 \\[1ex]
-            \hline
-        \end{tabular}
-    \end{sidewaystable}
-\end{lstlisting}
-
-\noindent Berikut adalah penjelasan dari setiap bagian kode di atas:
-
-\begin{packed_enum}
-    \item \texttt{\textbackslash begin\{sidewaystable\}[htbp] ... \textbackslash end\{sidewaystable\}}: Lingkungan \texttt{sidewaystable} dari paket \texttt{rotating} digunakan untuk menampilkan tabel dalam orientasi landscape. Parameter \texttt{[htbp]} menunjukkan preferensi posisi tabel pada dokumen. Pastikan Anda telah memuat paket \texttt{rotating} di preamble dengan perintah \texttt{\textbackslash usepackage\{rotating\}}.
-    \item \texttt{\textbackslash caption\{Performance After Post Filtering\}}: Menambahkan caption (keterangan) di atas tabel. Caption ini akan otomatis dimasukkan dalam Daftar Tabel dan diberi nomor secara otomatis.
-    \item \texttt{\textbackslash label\{tab:LPer\}}: Memberi label pada tabel, memungkinkan Anda merujuk tabel ini dalam teks menggunakan perintah \texttt{\textbackslash cref\{tab:LPer\}} atau \texttt{\textbackslash ref\{tab:LPer\}}, yang akan menghasilkan "Tabel 1" atau sesuai penomoran tabel.
-    \item \texttt{\textbackslash centering}: Mengatur tabel agar berada di tengah halaman.
-    \item \texttt{\textbackslash begin\{tabular\}\{l c c rrrrrrr\} ... \textbackslash end\{tabular\}}: Lingkungan \texttt{tabular} digunakan untuk membuat struktur tabel dengan pengaturan kolom sebagai berikut:
-        \begin{packed_enum}
-            \item \texttt{l}: Mengatur kolom pertama rata kiri untuk kolom "Audio".
-            \item \texttt{c}: Mengatur kolom kedua dan ketiga rata tengah untuk kolom "Audibility" dan "Decision".
-            \item \texttt{r}: Tujuh kolom berikutnya rata kanan untuk data "Sum of Extracted Bits".
-        \end{packed_enum}
-    \item \texttt{\textbackslash hline}: Menambahkan garis horizontal di tabel. Dua \texttt{\textbackslash hline} berturut-turut digunakan untuk garis ganda pada bagian header tabel.
-    \item \texttt{\textbackslash multicolumn\{7\}\{c\}\{Sum of Extracted Bits\}}: Menggabungkan tujuh kolom berikutnya menjadi satu sel besar yang berisi teks "Sum of Extracted Bits", yang disejajarkan ke tengah dengan pengaturan \texttt{c}.
-    \item Isi tabel, misalnya:
-        \begin{packed_enum}
-            \item Data pada baris pertama terkait audio "Police", dengan kolom audibility berisi nilai 5, dan data decision dengan dua opsi: "soft" dan "hard".
-            \item Data "soft" pada baris pertama dan "hard" pada baris kedua diisi dengan angka sesuai kolom masing-masing.
-            \item Untuk beberapa entri seperti "Police", "Beethoven", dan "Metallica", kolom audibility dan audio di tengah (seperti nilai 5) diangkat dengan perintah \texttt{\textbackslash raisebox} untuk memberikan efek centering pada teks.
-        \end{packed_enum}
-    \item \texttt{[1ex]} atau \texttt{[-1ex]}: Mengatur jarak antar baris untuk menjaga keterbacaan dan posisi elemen tabel yang lebih seimbang.
-\end{packed_enum}
-
-Kode ini akan menghasilkan tabel landscape dengan satu caption, beberapa kolom gabungan, dan penomoran otomatis dan hasilnya terlihat pada \cref{tab:LPer}.
-
-\begin{sidewaystable}[htbp]
-    \caption{Performance After Post Filtering}
-    \label{tab:LPer}
+\begin{table}[H]
     \centering
-    \begin{tabular}{l c c rrrrrrr}
-        \hline\hline
-        Audio &Audibility & Decision &\multicolumn{7}{c}{Sum of Extracted Bits} 
-        \\ [0.5ex] 
+    \caption{Perbandingan Metode Pembelajaran Mesin}
+    \label{tab:perbandingan-metode}
+    \begin{tabular}{|l|c|c|c|c|}
         \hline
-        & &soft &1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
-        \raisebox{1.5ex}{Police} & \raisebox{1.5ex}{5}&hard
-        & 2 & $-4$ & 4 & 4 & $-2$ & $-4$ & 4 \\[1ex]
-        & &soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
-        \raisebox{1.5ex}{Beethoven} & \raisebox{1.5ex}{5}& hard
-        &8 & $-8$ & 2 & 8 & $-8$ & $-8$ & 6 \\[1ex]
-        & &soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
-        \raisebox{1.5ex}{Metallica} & \raisebox{1.5ex}{5}& hard
-        &4 & $-8$ & 8 & 4 & $-8$ & $-8$ & 8 \\[1ex]
+        \multirow{2}{*}{\textbf{Metode}} & \multicolumn{2}{c|}{\textbf{Dataset A}} & \multicolumn{2}{c|}{\textbf{Dataset B}} \\
+        \cline{2-5}
+        & \textbf{Akurasi} & \textbf{Waktu (s)} & \textbf{Akurasi} & \textbf{Waktu (s)} \\
+        \hline
+        Random Forest & 94.2\% & 12.5 & 91.8\% & 15.3 \\
+        \hline
+        SVM & 92.6\% & 8.7 & 89.4\% & 11.2 \\
+        \hline
+        Neural Network & 96.1\% & 45.8 & 94.7\% & 52.1 \\
+        \hline
+        Decision Tree & 88.9\% & 3.2 & 85.6\% & 4.1 \\
         \hline
     \end{tabular}
-\end{sidewaystable}
-
-Contoh lain \cref{lst:kode_tabel_lain} untuk pembuatan tabel seperti di bawah ini dan hasilnya tertampil pada \cref{tab:PPer}.
-
-\begin{lstlisting}[language=TeX, caption=Kode untuk Membuat Tabel dalam Dokumen, label=lst:kode_tabel_lain]
-    \begin{table}[ht]
-        \caption{Performance After Post Filtering}
-        \label{tab:PPer}
-        \centering
-        \begin{tabular}{l c c rrrrrrr}
-            \hline\hline
-            Audio &Audibility & Decision &\multicolumn{7}{c}{Sum of Extracted Bits} 
-            \\ [0.5ex] 
-            \hline
-            & &soft &1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
-            \raisebox{1.5ex}{Police} & \raisebox{1.5ex}{5}&hard
-            & 2 & $-4$ & 4 & 4 & $-2$ & $-4$ & 4 \\[1ex]
-            & &soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
-            \raisebox{1.5ex}{Beethoven} & \raisebox{1.5ex}{5}& hard
-            &8 & $-8$ & 2 & 8 & $-8$ & $-8$ & 6 \\[1ex]
-            & &soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
-            \raisebox{1.5ex}{Metallica} & \raisebox{1.5ex}{5}& hard
-            &4 & $-8$ & 8 & 4 & $-8$ & $-8$ & 8 \\[1ex]
-            \hline
-        \end{tabular}
-    \end{table}
-\end{lstlisting}
-
-\begin{table}[ht]
-	\caption{Performance After Post Filtering}
-	\label{tab:PPer}
-	\centering
-	\begin{tabular}{l c c rrrrrrr}
-		\hline\hline
-		Audio &Audibility & Decision &\multicolumn{7}{c}{Sum of Extracted Bits} 
-		\\ [0.5ex] 
-		\hline
-		& &soft &1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
-		\raisebox{1.5ex}{Police} & \raisebox{1.5ex}{5}&hard
-		& 2 & $-4$ & 4 & 4 & $-2$ & $-4$ & 4 \\[1ex]
-		& &soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
-		\raisebox{1.5ex}{Beethoven} & \raisebox{1.5ex}{5}& hard
-		&8 & $-8$ & 2 & 8 & $-8$ & $-8$ & 6 \\[1ex]
-		& &soft & 1 & $-1$ & 1 & 1 & $-1$ & $-1$ & 1 \\[-1ex]
-		\raisebox{1.5ex}{Metallica} & \raisebox{1.5ex}{5}& hard
-		&4 & $-8$ & 8 & 4 & $-8$ & $-8$ & 8 \\[1ex]
-		\hline
-	\end{tabular}
 \end{table}
 
-\section{Menambahkan Persamaan}
+\subsection{Penjelasan Pembuatan Tabel}
+Berikut adalah penjelasan dari komponen-komponen pembuat tabel:
 
-Persamaan tidak lepas dari bidang ilmu teknik dan kadang perlu dituliskan dalam sebuah laporan. Sangat mudah menuliskan persamaan pada sebuah dokumen \LaTeX. Terdapat 2 jenis penulisan persamaan, yaitu inline dengan text seperti contoh ini \(x^2 + y^2 = z^2\) atau seperti ini $E=mc^2$. Jenis lain adalah dituliskan seperti di bawah ini, yang otomatis akan mendapatkan penomoran. Apabila belum familiar dengan kode untuk penulisan persamaan pada \LaTeX, Anda bisa menggunakan tool berikut \url{https://latex.codecogs.com/eqneditor/editor.php} atau \url{https://latexeditor.lagrida.com/}. Setiap persamaan harus disebutkan dalam teks seperti \cref{eq:satu} dan \cref{eq:equationDua} dan dijelaskan terkait persamaan tersebut untuk apa.
+\begin{packed_enum}
+    \item \texttt{\textbackslash begin\{table\}[H] ... \textbackslash end\{table\}}: Membuat lingkungan \texttt{table} untuk tabel. Parameter \texttt{[H]} digunakan agar tabel diletakkan tepat di posisi yang ditentukan.
+    \item \texttt{\textbackslash centering}: Mengatur tabel agar berada di tengah halaman.
+    \item \texttt{\textbackslash caption\{...\}}: Menambahkan judul tabel yang akan muncul di Daftar Tabel.
+    \item \texttt{\textbackslash label\{tab:...\}}: Memberikan label pada tabel untuk referensi menggunakan \texttt{\textbackslash tabref\{tab:...\}}.
+    \item \texttt{\textbackslash begin\{tabular\}\{|c|c|c|\}}: Mendefinisikan struktur kolom tabel, dimana \texttt{c} = center, \texttt{l} = left, \texttt{r} = right, dan \texttt{|} = garis vertikal.
+    \item \texttt{\textbackslash hline}: Membuat garis horizontal.
+    \item \texttt{\textbackslash multirow\{2\}\{*\}\{teks\}}: Menggabungkan beberapa baris dalam satu kolom.
+    \item \texttt{\textbackslash multicolumn\{2\}\{c|\}\{teks\}}: Menggabungkan beberapa kolom dalam satu baris.
+    \item \texttt{\textbackslash cline\{2-5\}}: Membuat garis horizontal hanya pada kolom 2-5.
+\end{packed_enum}
 
-\begin{lstlisting}[language=TeX, caption=Kode untuk Menulis Persamaan, label=lst:kode_persamaan_emc]
-    \begin{equation}
-        \label{eq:satu}
-        E=mc^2
-    \end{equation}
-\end{lstlisting}
+Referensi tabel dapat dilakukan dengan mudah seperti ini: "Berdasarkan data pada \tabref{tab:contoh-sederhana}, sensor BMP280 memiliki akurasi tertinggi", atau "Seperti yang ditunjukkan pada \tabref{tab:perbandingan-metode}, Neural Network memberikan hasil terbaik."
 
-\begin{lstlisting}[language=TeX, caption=Kode untuk Menulis Persamaan, label=lst:kode_persamaan_mn]
-    \begin{equation}
-        \label{eq:equationDua}
-        m_n = k_p*e_n + \frac{k_e*T}{T_{reset}}\sum_{i=0}^{n}e_i + k_d\frac{e_n - e_{n-1}}{\delta t} + m_{R}
-    \end{equation}
-\end{lstlisting}
+\section{Menggambar dengan TikZ}
+TikZ adalah salah satu paket LaTeX yang sangat powerful untuk membuat diagram, grafik, dan ilustrasi teknis. TikZ memungkinkan pembuatan gambar vektor yang presisi dan dapat diintegrasikan sempurna dengan teks LaTeX. Pada bagian ini, kita akan melihat beberapa contoh penggunaan TikZ untuk membuat berbagai jenis gambar.
 
-\noindent Berikut adalah penjelasan dari setiap bagian kode di atas:
+\subsection{Diagram Sederhana}
+\Figref{fig:tikz-simple} menunjukkan contoh diagram sederhana menggunakan TikZ. Diagram ini menunjukkan proses alur kerja sistem dengan menggunakan bentuk-bentuk dasar dan panah.
 
-Dengan menggunakan lingkungan \texttt{equation}, Anda bisa menulis dan memberi nomor persamaan secara otomatis serta merujuknya dengan mudah dalam teks menggunakan \texttt{\textbackslash cref}.
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[node distance=2cm, auto]
+        % Define styles
+        \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=red!30]
+        \tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+        \tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+        \tikzstyle{arrow} = [thick,->,>=stealth]
+        
+        % Draw nodes
+        \node (start) [startstop] {Start};
+        \node (input) [process, below of=start] {Input Data};
+        \node (process1) [process, below of=input] {Process Data};
+        \node (decision1) [decision, below of=process1, yshift=-0.5cm] {Valid?};
+        \node (output) [process, below of=decision1, yshift=-0.5cm] {Output Result};
+        \node (stop) [startstop, below of=output] {End};
+        \node (error) [process, right of=decision1, xshift=2cm] {Show Error};
+        
+        % Draw arrows
+        \draw [arrow] (start) -- (input);
+        \draw [arrow] (input) -- (process1);
+        \draw [arrow] (process1) -- (decision1);
+        \draw [arrow] (decision1) -- node[anchor=east] {Yes} (output);
+        \draw [arrow] (decision1) -- node[anchor=south] {No} (error);
+        \draw [arrow] (error) |- (input);
+        \draw [arrow] (output) -- (stop);
+    \end{tikzpicture}
+    \caption{Diagram Alur Kerja Sistem dengan TikZ}
+    \label{fig:tikz-simple}
+\end{figure}
 
-\begin{equation}
-    \label{eq:satu}
-    E=mc^2
-\end{equation}
+\subsection{Grafik dan Plot}
+TikZ juga dapat digunakan untuk membuat grafik matematika dan plot data. \Figref{fig:tikz-plot} menunjukkan contoh grafik fungsi matematika yang dibuat menggunakan pgfplots, yang merupakan bagian dari TikZ.
 
-\begin{equation}
-    \label{eq:equationDua}
-    m_n = k_p*e_n + \frac{k_e*T}{T_{reset}}\sum_{i=0}^{n}e_i + k_d\frac{e_n - e_{n-1}}{\delta t} + m_{R}
-\end{equation}
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[
+            title={Grafik Fungsi Trigonometri},
+            xlabel={x},
+            ylabel={y},
+            xmin=-6.28, xmax=6.28,
+            ymin=-1.5, ymax=1.5,
+            xtick={-6.28,-3.14,0,3.14,6.28},
+            xticklabels={$-2\pi$,$-\pi$,0,$\pi$,$2\pi$},
+            ytick={-1,0,1},
+            legend pos=north east,
+            ymajorgrids=true,
+            grid style=dashed,
+        ]
+        
+        \addplot[
+            color=blue,
+            mark=none,
+            samples=100,
+            domain=-6.28:6.28,
+            thick
+        ] {sin(deg(x))};
+        \addlegendentry{$\sin(x)$}
+        
+        \addplot[
+            color=red,
+            mark=none,
+            samples=100,
+            domain=-6.28:6.28,
+            thick
+        ] {cos(deg(x))};
+        \addlegendentry{$\cos(x)$}
+        
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Grafik Fungsi Sinus dan Cosinus}
+    \label{fig:tikz-plot}
+\end{figure}
+
+\subsection{Diagram Blok Sistem}
+\Figref{fig:tikz-block} menampilkan diagram blok sistem kontrol yang umum digunakan dalam teknik. Diagram ini menunjukkan hubungan antara komponen-komponen sistem.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[auto, node distance=2cm, >=stealth']
+        % Define block styles
+        \tikzstyle{block} = [draw, fill=blue!20, rectangle, minimum height=3em, minimum width=6em]
+        \tikzstyle{sum} = [draw, fill=blue!20, circle, node distance=1cm]
+        \tikzstyle{input} = [coordinate]
+        \tikzstyle{output} = [coordinate]
+        \tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+        
+        % Place nodes
+        \node [input, name=input] {};
+        \node [sum, right of=input] (sum) {};
+        \node [block, right of=sum] (controller) {Controller};
+        \node [block, right of=controller, node distance=3cm] (system) {Plant/System};
+        \node [output, right of=system] (output) {};
+        \node [block, below of=system] (sensor) {Sensor};
+        
+        % Draw connections
+        \draw [->] (input) -- node {$r(t)$} (sum);
+        \draw [->] (sum) -- node {$e(t)$} (controller);
+        \draw [->] (controller) -- node {$u(t)$} (system);
+        \draw [->] (system) -- node [name=y] {$y(t)$} (output);
+        \draw [->] (y) |- (sensor);
+        \draw [->] (sensor) -| node[pos=0.99] {$-$} node [near end] {$y_m(t)$} (sum);
+        
+        % Labels
+        \draw [->] (input) -- node[above] {Reference} +(-1,0);
+        \draw [->] (output) -- node[above] {Output} +(1,0);
+    \end{tikzpicture}
+    \caption{Diagram Blok Sistem Kontrol Feedback}
+    \label{fig:tikz-block}
+\end{figure}
+
+\subsection{Diagram Jaringan}
+\Figref{fig:tikz-network} menunjukkan contoh diagram jaringan yang dapat digunakan untuk menggambarkan topologi jaringan komputer atau arsitektur sistem.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[
+        node distance=3cm,
+        server/.style={rectangle, draw, fill=yellow!30, minimum width=2cm, minimum height=1cm},
+        client/.style={circle, draw, fill=blue!20, minimum size=1cm},
+        router/.style={diamond, draw, fill=orange!30, minimum size=1.5cm}
+    ]
+        % Server
+        \node[server] (server) at (0,0) {Server};
+        
+        % Router
+        \node[router] (router) at (4,0) {Router};
+        
+        % Clients
+        \node[client] (client1) at (7,2) {PC1};
+        \node[client] (client2) at (7,0) {PC2};
+        \node[client] (client3) at (7,-2) {PC3};
+        
+        % Internet cloud (simplified as ellipse)
+        \node[draw, ellipse, fill=gray!20, minimum width=2cm, minimum height=1cm] (internet) at (-3,0) {Internet};
+        
+        % Connections
+        \draw[thick] (internet) -- (server);
+        \draw[thick] (server) -- (router);
+        \draw[thick] (router) -- (client1);
+        \draw[thick] (router) -- (client2);
+        \draw[thick] (router) -- (client3);
+        
+        % Labels
+        \node[above] at ($(internet)!0.5!(server)$) {WAN};
+        \node[above] at ($(server)!0.5!(router)$) {LAN};
+        \node[above right] at ($(router)!0.5!(client1)$) {Ethernet};
+        \node[right] at ($(router)!0.5!(client2)$) {Ethernet};
+        \node[below right] at ($(router)!0.5!(client3)$) {Ethernet};
+    \end{tikzpicture}
+    \caption{Diagram Topologi Jaringan}
+    \label{fig:tikz-network}
+\end{figure}
+
+\subsection{Pie Chart dengan TikZ}
+\Figref{fig:tikz-pie} menampilkan cara membuat pie chart menggunakan paket pgf-pie yang merupakan ekstensi dari TikZ.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \pie[
+            text=legend,
+            radius=3,
+            color={blue!60, red!60, green!60, yellow!60, purple!60}
+        ]{
+            35/Programming,
+            25/Documentation,
+            20/Testing,
+            15/Analysis,
+            5/Others
+        }
+    \end{tikzpicture}
+    \caption{Distribusi Waktu Pengembangan Software}
+    \label{fig:tikz-pie}
+\end{figure}
+
+\subsection{Tips Penggunaan TikZ}
+Berikut adalah beberapa tips penting dalam menggunakan TikZ:
+
+\begin{packed_enum}
+    \item \textbf{Perencanaan}: Selalu buat sketsa manual terlebih dahulu sebelum coding dengan TikZ.
+    \item \textbf{Koordinat}: Gunakan sistem koordinat yang konsisten dan mudah dipahami.
+    \item \textbf{Style}: Definisikan style untuk elemen yang berulang agar kode lebih rapi.
+    \item \textbf{Library}: Manfaatkan library TikZ seperti \texttt{positioning}, \texttt{shapes}, \texttt{arrows}, dll.
+    \item \textbf{Modularitas}: Pisahkan gambar kompleks menjadi bagian-bagian kecil.
+    \item \textbf{Dokumentasi}: Tambahkan komentar pada kode TikZ yang kompleks.
+\end{packed_enum}
+
+\begin{packed_item}
+    \item \textbf{Shapes Library}: Untuk bentuk-bentuk khusus seperti diamond, ellipse, dll.
+    \item \textbf{Positioning Library}: Untuk positioning node yang lebih fleksibel.
+    \item \textbf{Arrows Library}: Untuk berbagai jenis panah dan garis.
+    \item \textbf{Calc Library}: Untuk kalkulasi koordinat yang kompleks.
+    \item \textbf{Patterns Library}: Untuk pola pengisian area.
+\end{packed_item}
 
 \section{Referensi dan Sitasi}
 Referensi dan sitasi pada dokumen \LaTeX juga cukup mudah. Silahkan buka file \textit{pustaka.bib} dan amati beberapa contoh penulisan referensi yang ada. Untuk menggenerate bentuk referensi seperti ini dapat menggunakan Mendeley atau Zotero. Mensitasi referensi seperti ini \citep{Priambodo_2021}, \citep{Nasuha_2017}, \citep{Dhewa_Dharmawan_Priyambodo_2017}, \citep{Arifin_2015} dapat dilakukan dengan perintah \verb|\citep{nama_label}|. Pemberian sitasi dengan benar membuat sitasi tersebut dapat di klik dan akan mengarahkan ke daftar pustaka.

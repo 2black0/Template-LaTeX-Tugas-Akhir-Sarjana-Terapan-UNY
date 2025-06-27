@@ -10,6 +10,32 @@ Mengacu pada praktik terbaik dokumentasi pengembangan perangkat lunak dan format
 
 ---
 
+## 📅 2025
+
+### 🗓️ 27 Juni 2025
+- **[MAJOR]** Perbaikan sistem cross-reference dan label di Bab 6 (`b6-bab6.tex`):
+  - Penggantian semua `\cref` dengan custom macros (`\figref`, `\tabref`, `\lstref`) untuk kompatibilitas yang lebih baik
+  - Perbaikan dan unifikasi semua label gambar, tabel, dan kode untuk menghindari duplikasi
+  - Implementasi custom reference commands di `untouch/xx-preambles.tex`
+- **[NEW]** Penambahan bagian "Membuat Tabel" di Bab 6:
+  - Contoh tabel sederhana dengan hasil pengujian sensor
+  - Contoh tabel kompleks dengan `multirow` dan `multicolumn` untuk perbandingan metode pembelajaran mesin
+  - Penjelasan lengkap komponen-komponen pembuat tabel dan penggunaan referensi
+- **[NEW]** Penambahan bagian komprehensif "Menggambar dengan TikZ" di Bab 6:
+  - Diagram alur kerja sistem dengan flowchart sederhana
+  - Grafik fungsi matematika menggunakan `pgfplots` (sinus dan cosinus)
+  - Diagram blok sistem kontrol feedback
+  - Diagram topologi jaringan komputer
+  - Pie chart distribusi waktu pengembangan software menggunakan `pgf-pie`
+  - Tips dan best practices penggunaan TikZ
+  - Dokumentasi library TikZ yang berguna
+- **[ENHANCEMENT]** Penambahan library TikZ di preamble:
+  - Library `calc` untuk kalkulasi koordinat kompleks
+  - Library `shapes` untuk bentuk-bentuk tambahan
+  - Konfigurasi `pgfplots` dengan compatibility mode terbaru
+
+---
+
 ## 📅 2024
 
 ### 🗓️ 24 Desember 2024

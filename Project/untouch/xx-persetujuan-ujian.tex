@@ -4,6 +4,20 @@
 
 %% DILARANG EDIT BAGIAN INI
 \newpage
+
+% Macro to resize both name and NIP if name would wrap to two lines
+\newcommand{\smartsignature}[2]{%
+    % Test if name fits in one line at normal size
+    \setbox0=\hbox{#1}%
+    \ifdim\wd0>0.47\textwidth
+        % Name is too wide, use smaller font for both name and NIP
+        {\small #1\\[0.3em]#2}%
+    \else
+        % Name fits, use normal size for both
+        {#1\\[0.3em]#2}%
+    \fi
+}
+
 \addcontentsline{toc}{chapter}{LEMBAR PERSETUJUAN UJIAN}
 \begin{center}
     \begin{doublespace}
@@ -29,19 +43,22 @@
     telah memenuhi syarat dan disetujui oleh Dosen Pembimbing untuk dilaksanakan Ujian {\tipe} bagi yang bersangkutan.\\[0.75cm]
 \end{center}
 
-\begin{minipage}{0.35\textwidth}
-    \hfill\\[2em]
+\vspace{0.75cm}
+\noindent\begin{minipage}[t]{0.47\textwidth}
+    \centering
+    \vspace{1.5em}
     Mengetahui,\\
-    Koordinator Program Studi,\\[2cm]
-    \resizebox{\textwidth}{!}{\koorprodi}\\
-    NIP. \NIPkoorprodi
-\end{minipage}
-\hfill
-\begin{minipage}{0.47\textwidth}
+    Koordinator Program Studi,\\[2.5cm]
+    
+    \smartsignature{\koorprodi}{NIP. \NIPkoorprodi}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.47\textwidth}
+    \centering
     Wates, \tglpersetujuan\\[1em]
     Disetujui,\\
-    Dosen Pembimbing TA,\\[2cm]
-    \resizebox{\textwidth}{!}{\pembimbing}\\
-    NIP. \NIPpembimbing
+    Dosen Pembimbing TA,\\[2.5cm]
+    
+    \smartsignature{\pembimbing}{NIP. \NIPpembimbing}
 \end{minipage}%
 %% DILARANG EDIT BAGIAN INI

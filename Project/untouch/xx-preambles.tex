@@ -119,25 +119,17 @@
 
 % Paket untuk bibliografi menggunakan BibTeX
 \usepackage[sort]{natbib}
-\bibliographystyle{newapa} % Ganti dengan apalike jika menggunakan Overleaf
+\bibliographystyle{apalike} % Ganti dengan apalike jika menggunakan Overleaf
 
 % Paket untuk tabel yang panjang dan melampaui satu halaman
 \usepackage{longtable}
 
-% Paket untuk memasukkan hyperlink dalam dokumen
-\usepackage{hyperref}
+% Paket untuk menampilkan kode program - HARUS DIMUAT SEBELUM HYPERREF
+\usepackage{xcolor}
+\usepackage{listings}
 
-% Pengaturan label otomatis untuk berbagai elemen (gambar, tabel, persamaan)
-\usepackage{cleveref}
-\crefname{figure}{gambar}{gambar}
-\Crefname{figure}{Gambar}{Gambar}
-\crefname{table}{tabel}{tabel}
-\Crefname{table}{Tabel}{Tabel}
-\crefformat{equation}{persamaan~#2#1#3}
-\crefname{equation}{persamaan}{persamaan}
-\Crefname{equation}{Persamaan}{Persamaan}
-\crefname{lstlisting}{kode}{kode}
-\Crefname{lstlisting}{Kode}{Kode}
+% Paket untuk memasukkan hyperlink dalam dokumen - HARUS DIMUAT SETELAH LISTINGS
+\usepackage{hyperref}
 
 %\AtBeginDocument{\renewcommand{\lstlistingname}{Kode}} 
 %\AtBeginDocument{\renewcommand{\thelstlisting}{\thechapter.\arabic{lstlisting}}}
@@ -152,10 +144,6 @@
   singlelinecheck=false,
   labelsep=space
 }
-
-% Paket untuk menampilkan kode program
-\usepackage{listings}
-\usepackage{xcolor}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -187,7 +175,7 @@
 \usepackage{pgfplots}
 \usepackage{pgf-pie}
 \pgfplotsset{compat=1.18}
-\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{shapes.geometric, arrows, positioning, calc, shapes}
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
 \tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
 \tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
@@ -195,4 +183,25 @@
 
 %untuk if-then
 \usepackage{ifthen}
+
+% PRACTICAL SOLUTION FOR CLEVEREF LABEL ISSUE
+% Due to a complex bug interaction between packages, we'll use a different approach
+% Remove cleveref temporarily and use standard referencing with custom formatting
+
+% For now, comment out cleveref and use standard LaTeX references
+% Users can uncomment the line below if they want to try cleveref again
+% \usepackage[nameinlink,capitalise]{cleveref}
+
+% Custom reference commands that provide similar functionality to cleveref
+\newcommand{\figref}[1]{gambar~\ref{#1}}
+\newcommand{\Figref}[1]{Gambar~\ref{#1}}
+\newcommand{\tabref}[1]{tabel~\ref{#1}}
+\newcommand{\Tabref}[1]{Tabel~\ref{#1}}
+\newcommand{\equref}[1]{persamaan~(\ref{#1})}
+\newcommand{\Equref}[1]{Persamaan~(\ref{#1})}
+\newcommand{\lstref}[1]{kode~\ref{#1}}
+\newcommand{\Lstref}[1]{Kode~\ref{#1}}
+
+% If cleveref is needed, users should replace \cref{fig:xxx} with \figref{fig:xxx} etc.
+
 %% DILARANG EDIT BAGIAN INI
