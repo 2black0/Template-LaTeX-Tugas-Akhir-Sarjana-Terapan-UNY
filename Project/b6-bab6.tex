@@ -367,17 +367,7 @@ TikZ juga dapat digunakan untuk membuat grafik matematika dan plot data. \Figref
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}
-        \pie[
-            text=legend,
-            radius=3,
-            color={blue!60, red!60, green!60, yellow!60, purple!60}
-        ]{
-            35/Programming,
-            25/Documentation,
-            20/Testing,
-            15/Analysis,
-            5/Others
-        }
+        \pie{35/Programming, 25/Documentation, 20/Testing, 15/Analysis, 5/Others}
     \end{tikzpicture}
     \caption{Distribusi Waktu Pengembangan Software}
     \label{fig:tikz-pie}

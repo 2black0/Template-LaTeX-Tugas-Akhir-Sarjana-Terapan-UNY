@@ -13,6 +13,7 @@ MAGENTA='\033[0;35m'
 NC='\033[0m' # No Color
 
 # Required LaTeX packages for this project
+# Note: Most packages are already included in TeX Live Full
 REQUIRED_PACKAGES=(
     "babel"
     "inputenc"
@@ -126,6 +127,39 @@ log_message() {
     fi
 }
 
+# Function to analyze and report warnings
+analyze_warnings() {
+    local log_file="${MAIN_DOC}.log"
+    
+    if [ ! -f "$log_file" ]; then
+        return
+    fi
+    
+    # Count different types of warnings
+    local reference_warnings=$(grep -c "LaTeX Warning: Reference.*undefined" "$log_file" 2>/dev/null || echo 0)
+    local citation_warnings=$(grep -c "Package natbib Warning:.*undefined" "$log_file" 2>/dev/null || echo 0)
+    local rerun_warnings=$(grep -c "Rerun to get.*right" "$log_file" 2>/dev/null || echo 0)
+    
+    if [ $VERBOSITY -ge 3 ] && [ "$reference_warnings" -gt 0 -o "$citation_warnings" -gt 0 -o "$rerun_warnings" -gt 0 ]; then
+        log_message 3 "" ""
+        log_message 3 "${YELLOW}" "📊 Warning Summary (final compilation):"
+        if [ "$reference_warnings" -gt 0 ]; then
+            log_message 3 "${YELLOW}" "  • $reference_warnings undefined reference(s) - check \\label{} and \\ref{} pairs"
+        fi
+        if [ "$citation_warnings" -gt 0 ]; then
+            log_message 3 "${YELLOW}" "  • $citation_warnings undefined citation(s) - check .bib entries and \\cite{} keys"
+        fi
+        if [ "$rerun_warnings" -gt 0 ]; then
+            log_message 3 "${YELLOW}" "  • $rerun_warnings rerun warning(s) - normal, handled by multiple compilations"
+        fi
+        log_message 3 "" ""
+        log_message 3 "${CYAN}" "💡 Tips to fix warnings:"
+        log_message 3 "${CYAN}" "  • Ensure all \\label{} have corresponding \\ref{} or \\figref{}"
+        log_message 3 "${CYAN}" "  • Check that all \\cite{} keys exist in a7-pustaka.bib"
+        log_message 3 "${CYAN}" "  • Verify .bib entries have proper format and required fields"
+    fi
+}
+
 # Function to check if a command exists
 command_exists() {
     command -v "$1" >/dev/null 2>&1
@@ -235,8 +269,14 @@ EOF
 
 pdflatex_version: $(pdflatex --version 2>/dev/null | head -n 1 | xargs)
 bibtex_version: $(bibtex --version 2>/dev/null | head -n 1 | xargs)
-tlmgr_version: $(tlmgr --version 2>/dev/null | head -n 1 | xargs)
 EOF
+
+    # Add package manager version info
+    if command_exists tlmgr; then
+        echo "tlmgr_version: $(tlmgr --version 2>/dev/null | head -n 1 | xargs)" >> "$DEPS_VERSION_FILE"
+    elif command_exists miktex; then
+        echo "miktex_version: $(miktex --version 2>/dev/null | head -n 1 | xargs)" >> "$DEPS_VERSION_FILE"
+    fi
 
     log_message 3 "${BLUE}" "Dependency status cached for future use"
 }
@@ -321,6 +361,7 @@ check_latex_installation() {
     
     # Check for essential LaTeX tools
     local missing_tools=()
+    local latex_manager=""
     
     if ! command_exists pdflatex; then
         missing_tools+=("pdflatex")
@@ -330,8 +371,15 @@ check_latex_installation() {
         missing_tools+=("bibtex")
     fi
     
-    if ! command_exists tlmgr; then
-        missing_tools+=("tlmgr (TeX Live Manager)")
+    # Check for package managers (TeX Live Manager or MiKTeX)
+    if command_exists tlmgr; then
+        latex_manager="tlmgr"
+        log_message 3 "${GREEN}" "✓ Found TeX Live Manager (tlmgr)"
+    elif command_exists miktex; then
+        latex_manager="miktex"
+        log_message 3 "${GREEN}" "✓ Found MiKTeX package manager"
+    else
+        missing_tools+=("package manager (tlmgr or miktex)")
     fi
     
     if [ ${#missing_tools[@]} -eq 0 ]; then
@@ -341,6 +389,12 @@ check_latex_installation() {
         if [ $VERBOSITY -ge 3 ]; then
             local latex_version=$(pdflatex --version | head -n 1)
             log_message 3 "${BLUE}" "  $latex_version"
+            
+            # Show package manager info
+            if [ "$latex_manager" = "miktex" ]; then
+                local miktex_version=$(miktex --version | head -n 1)
+                log_message 3 "${BLUE}" "  $miktex_version"
+            fi
         fi
         return 0
     else
@@ -348,7 +402,8 @@ check_latex_installation() {
         log_message 1 "${YELLOW}" "Please install a LaTeX distribution:"
         log_message 1 "${YELLOW}" "  macOS: Install MacTeX from https://www.tug.org/mactex/"
         log_message 1 "${YELLOW}" "  Windows: Install MiKTeX from https://miktex.org/"
-        log_message 1 "${YELLOW}" "  Linux: Install TeX Live using your package manager"
+        log_message 1 "${YELLOW}" "  Linux: Install TeX Live or MiKTeX using your package manager"
+        log_message 1 "${YELLOW}" "         For MiKTeX on Linux: https://miktex.org/download"
         return 1
     fi
 }
@@ -377,17 +432,32 @@ EOF
     fi
 }
 
-# Function to install LaTeX package using tlmgr
+# Function to install LaTeX package using package manager
 install_latex_package() {
     local package=$1
     
     log_message 2 "${YELLOW}" "  Installing package: $package"
     
-    if tlmgr install "$package" >/dev/null 2>&1; then
-        log_message 2 "${GREEN}" "  ✓ Successfully installed: $package"
-        return 0
+    # Determine which package manager to use
+    if command_exists tlmgr; then
+        if tlmgr install "$package" >/dev/null 2>&1; then
+            log_message 2 "${GREEN}" "  ✓ Successfully installed: $package"
+            return 0
+        else
+            log_message 2 "${RED}" "  ✗ Failed to install: $package"
+            return 1
+        fi
+    elif command_exists miktex; then
+        # MiKTeX uses different command syntax
+        if miktex packages install "$package" >/dev/null 2>&1; then
+            log_message 2 "${GREEN}" "  ✓ Successfully installed: $package"
+            return 0
+        else
+            log_message 2 "${RED}" "  ✗ Failed to install: $package"
+            return 1
+        fi
     else
-        log_message 2 "${RED}" "  ✗ Failed to install: $package"
+        log_message 2 "${RED}" "  ✗ No package manager available (tlmgr or miktex)"
         return 1
     fi
 }
@@ -452,7 +522,13 @@ check_latex_packages() {
         log_message 1 "${RED}" "✗ Failed to install packages: ${failed_installs[*]}"
         log_message 1 "${YELLOW}" "Please install these packages manually:"
         for package in "${failed_installs[@]}"; do
-            log_message 1 "${YELLOW}" "  tlmgr install $package"
+            if command_exists tlmgr; then
+                log_message 1 "${YELLOW}" "  tlmgr install $package"
+            elif command_exists miktex; then
+                log_message 1 "${YELLOW}" "  miktex packages install $package"
+            else
+                log_message 1 "${YELLOW}" "  Install $package using your LaTeX package manager"
+            fi
         done
         
         # Save failed check to cache
@@ -466,7 +542,7 @@ check_package_updates() {
     log_message 3 "${YELLOW}" "Checking for LaTeX package updates..."
     
     if command_exists tlmgr; then
-        # Check if there are any updates available
+        # Check if there are any updates available (TeX Live)
         local update_output
         update_output=$(tlmgr update --list 2>/dev/null | grep -v "^tlmgr:" | wc -l)
         
@@ -475,8 +551,18 @@ check_package_updates() {
         else
             log_message 3 "${GREEN}" "✓ LaTeX packages are up to date"
         fi
+    elif command_exists miktex; then
+        # Check if there are any updates available (MiKTeX)
+        local update_output
+        update_output=$(miktex packages check-update 2>/dev/null | wc -l)
+        
+        if [ "$update_output" -gt 0 ]; then
+            log_message 2 "${YELLOW}" "⚠ LaTeX package updates available. Consider running: miktex packages update"
+        else
+            log_message 3 "${GREEN}" "✓ LaTeX packages are up to date"
+        fi
     else
-        log_message 2 "${YELLOW}" "⚠ Cannot check for updates (tlmgr not available)"
+        log_message 2 "${YELLOW}" "⚠ Cannot check for updates (no package manager available)"
     fi
 }
 
@@ -678,6 +764,9 @@ log_message 3 "" ""
 # Clean temporary files
 clean_temp_files
 
+# Analyze warnings from final compilation
+analyze_warnings
+
 log_message 3 "" ""
 log_message 1 "${GREEN}" "=== Compilation Complete ==="
 if [ $VERBOSITY -ge 3 ]; then
@@ -685,5 +774,10 @@ if [ $VERBOSITY -ge 3 ]; then
     log_message 3 "${GREEN}" "✓ Bibliography processed"
     log_message 3 "${GREEN}" "✓ Cross-references resolved"
     log_message 3 "${GREEN}" "✓ Temporary files cleaned"
+    log_message 3 "" ""
+    log_message 3 "${CYAN}" "Note about warnings:"
+    log_message 3 "${CYAN}" "• LaTeX Reference warnings in early passes are normal"
+    log_message 3 "${CYAN}" "• Bibliography citation warnings are resolved after BibTeX + recompilation"
+    log_message 3 "${CYAN}" "• 'Rerun to get cross-references right' warnings are handled automatically"
 fi
 log_message 1 "${BLUE}" "Final output: ${MAIN_DOC}.pdf"
